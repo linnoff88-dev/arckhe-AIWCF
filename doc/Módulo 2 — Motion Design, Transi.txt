@@ -1,0 +1,277 @@
+# Módulo 2 — Motion Design, Transições Cinematográficas e Vídeo com IA
+
+## Visão Geral do Módulo
+
+O Módulo 2 aborda a transformação de um site estático em um **site vivo, interativo e cinematográfico**. O foco está no uso estratégico de motion design, animações modernas, interações baseadas em scroll e integração de vídeos gerados por IA para criar experiências web mais profissionais, envolventes e memoráveis.
+
+O princípio central do módulo é que **motion não é decoração**, mas sim uma ferramenta funcional para guiar, informar, engajar e criar conexão emocional com o usuário.
+
+---
+
+## Capítulo 1 — Fundamentos de Motion Design para Web
+
+Este capítulo estabelece a base conceitual do motion design aplicado à web.
+
+### Três Leis do Motion Digital
+- **Timing (Duração):** define a velocidade das animações e influencia diretamente a percepção do usuário.
+- **Easing (Aceleração):** garante movimentos naturais, suaves e fisicamente plausíveis.
+- **Hierarquia Visual:** usa o motion para guiar a atenção e definir a ordem de leitura do conteúdo.
+
+### Tipos de Motion
+- **Motion Estético:** microinterações sutis que melhoram usabilidade e feedback (ex: hover de botões).
+- **Motion Cinematográfico:** movimentos expressivos e narrativos que criam fluxo e storytelling.
+
+### Propósitos do Motion
+- Guiar a atenção  
+- Fornecer feedback  
+- Encantar e criar conexão emocional  
+
+---
+
+## Capítulo 2 — Motion Aplicado à Estrutura do Site
+
+O motion passa a ser aplicado de forma progressiva nas seções do site, criando uma experiência fluida e controlada.
+
+### Principais Conceitos
+- Conteúdo revelado conforme o scroll
+- Seções entrando de forma suave e natural
+- Evitar que tudo apareça ao mesmo tempo
+
+### Seções Trabalhadas
+- Hero
+- About
+- Portfólio / Cards
+- Call to Action (CTA)
+- Footer
+
+O objetivo é fazer o usuário **sentir que controla a experiência** ao navegar.
+
+---
+
+## Capítulo 3 — Foco Visual, Ritmo e Boas Práticas
+
+Este capítulo ensina a controlar a atenção do usuário e evitar excesso de movimento.
+
+### Boas Práticas
+- Animar apenas **3 a 5 elementos** por vez
+- Elementos secundários devem permanecer estáticos
+- Microinterações rápidas (cliques, hovers)
+- Animações grandes mais suaves e elegantes
+
+### Erros Comuns
+- Animar tudo ao mesmo tempo
+- Usar animações muito lentas em tudo
+- Aplicar o mesmo timing para microinterações e grandes transições
+- Alterar layout constantemente (tamanho/posição)
+
+---
+
+## Capítulo 4 — Transições Cinematográficas
+
+O site passa a ser tratado como uma **história visual contínua**, não como seções isoladas.
+
+### Conceitos-Chave
+- Revelação sequencial de elementos
+- Transições suaves entre seções
+- Cada seção tem um “momento cinematográfico”
+
+### Exemplo de Fluxo
+- Hero funciona como abertura de filme
+- Seções se dissolvem umas nas outras
+- Footer encerra a narrativa visual
+
+O foco é criar **ritmo, emoção e intenção** na navegação.
+
+---
+
+## Capítulo 5 — Visual Focus Aplicado a Prompts de IA
+
+Este capítulo aprofunda como escrever prompts eficazes para gerar motion de qualidade com IA.
+
+### Diretrizes de Prompt
+- Limitar quantidade de elementos animados
+- Definir timings diferentes para interações pequenas e grandes
+- Priorizar movimento e opacidade (slide, lift, fade)
+- Evitar alterações que quebrem o layout
+- Garantir consistência entre desktop e mobile
+
+---
+
+## Capítulo 6 — Integração de Vídeo com IA
+
+Apresenta o processo de criação e integração de vídeos gerados por IA no site.
+
+### Etapas
+1. Criação do vídeo via prompt (clipe curto, ~5s)
+2. Exportação em MP4
+3. Hospedagem do vídeo (ex: Cloudinary)
+4. Integração via URL
+
+### Uso do Vídeo
+- Background do hero
+- Scroll scrubbing (vídeo sincronizado com scroll)
+- Overlay escuro para legibilidade
+- Fallback para imagem estática no mobile
+
+O vídeo deve “**respirar com o scroll**”, criando imersão.
+
+---
+
+## Capítulo 7 — Otimização, Performance e Revisão Final
+
+Foco em garantir fluidez, estabilidade e boa performance.
+
+### Otimizações
+- Compressão adequada do vídeo
+- Lazy loading eficiente
+- Mapeamento preciso do scroll
+- Definição de fallbacks para baixa performance
+
+### Testes
+- Verificação em desktop
+- Verificação em mobile
+- Checagem de animações, hovers e interações
+
+---
+
+## Resultado Final do Módulo
+
+Ao final do Módulo 2, o site se torna:
+- Interativo
+- Cinematográfico
+- Fluido
+- Responsivo
+- Profissional e polido
+
+O usuário deixa de apenas rolar a página e passa a **vivenciar uma narrativa visual contínua**. O módulo encerra incentivando experimentação, iteração e personalização dos projetos.
+
+---
+
+# Módulo 2 — Conteúdo Original dos Vídeos (Transcrições)
+
+---
+
+## Introdução ao Módulo 2 — De Site Estático para Site Vivo
+
+Now, we are in module two. So after we built the static page in the previous module, we're now going to move on to building a living website. This is the point where things start to feel more real and more interactive.
+
+I'm going to walk you through the transition from a static page to something that actually feels alive, responsive, and engaging so you can clearly understand what changes and why it matters.
+
+Here, we can create a cinematic website using modern web animation together with video AI. This is where we start adding motion and visual flow to the experience.
+
+Before we jump into the hands-on part of prompt development, I want to first give you a short introduction. In this section, I'm going to explain a bit about what motion actually is and how we should think about it in web design.
+
+Motion can be a bridge between the user and the interface of our website. If you think about the previous static website we built, it's basically just a document on a screen. What we need is a more dynamic experience that can guide, inform, and engage our users.
+
+Our goal is to use motion to improve usability, help users understand what's happening, and create a more professional and polished feeling for the overall website experience.
+
+The key thing to remember is balance. Motion should help clarify what's happening, not distract the user from the message. When motion is used correctly, it supports the content instead of competing with it.
+
+---
+
+## Capítulo 1 — Motion Design para Web (Fundamentos)
+
+Now we're going to chapter one, where I'll introduce motion design for the web. At this stage, we're setting the foundation for how motion should behave and feel.
+
+As we already know, there are three core laws of digital motion that we need to understand first.
+
+The very first one is timing, which is also referred to as duration. The speed of an animation has a big impact on how users feel. If an animation is too fast, it can feel jarring or even unpleasant for the user. On the other hand, if it's too slow, it can become frustrating and break the flow of interaction.
+
+Users might even think something is wrong, like the website is lagging or the server is slow, which creates a bad impression. Timing helps set the mood and personality of the experience.
+
+The second law is easing, or acceleration. When we move objects on a website, we should treat them like real-world objects. In the real world, things don't instantly start or instantly stop, so our animations shouldn't behave that way either.
+
+Instead, we want movement that feels natural, smooth, and physically believable. Motion should flow in and out in a way that feels comfortable to the eye.
+
+The last law is visual hierarchy. This is about using motion to guide the user's attention to what matters most, creating a clear and intuitive flow through the page.
+
+When it comes to motion, there are generally two types we'll be working with. The first one is aesthetic motion, and the second one is cinematic motion.
+
+Aesthetic motion is usually more subtle and functional. It focuses on small animations that improve usability and clarity. A simple example would be a button hover effect.
+
+Cinematic motion is more immersive and expressive. It's designed to create a sense of story and flow between different sections of the website.
+
+Motion should always have a purpose. The first purpose is to guide attention. The second is to provide feedback. The third is to delight the user.
+
+---
+
+## Capítulo 2 — Aplicação de Motion nas Seções do Site
+
+The main idea is that as users move down the page, I want each section to come alive naturally instead of appearing all at once.
+
+The first section I want to work on is the hero section. Here, I want the hero content to gently fade in while also lifting smoothly into view as it first enters the screen.
+
+Next, we move into the about section. For this part, I want the text to slide in gradually from the left side, while the image softly fades in and grows into place.
+
+Then, we have the call to action section. I want the call to action to ease into view from below. This kind of movement naturally draws attention without being too aggressive.
+
+Next is the footer section. For the footer, I want the content to rise smoothly from the bottom, almost like it's emerging from the page itself.
+
+---
+
+## Capítulo 3 — Visual Focus, Ritmo e Timing
+
+Now let's look at an example focused on visual focus. In a correct prompt, we should limit motion so only a small handful of elements are moving at any given moment.
+
+Ideally, we let around three to five key pieces of content animate in while everything else stays calm and stable.
+
+A wrong prompt would be asking the AI to animate every element on the page as the user scrolls so everything is constantly moving. This is clearly incorrect and results in visual overload.
+
+For rhythm and timing, quick feedback animations like button presses or hover effects should feel almost instant.
+
+At the same time, larger cinematic reveals such as entire sections entering the screen should feel smooth and graceful.
+
+Using the same long animation timing for tiny interactions and big transitions makes the experience feel confusing and unresponsive.
+
+We should focus on animating movement and opacity and avoid constantly changing layout properties like size and position.
+
+---
+
+## Capítulo 4 — Transições Cinematográficas
+
+Now we've arrived at chapter four, which is cinematic transition.
+
+The idea is to adjust how content is revealed so it feels more dramatic and intentional when users first enter the page or move through it.
+
+Elements can appear sequentially, such as the headline, the text, and then the button.
+
+For the hero section, I want the reveal to feel like a movie opening. The background appears first, then the headline, then the subheading, and finally the button.
+
+Transitions between sections should feel smooth and continuous, like sections dissolving into each other.
+
+The final goal is for the website to feel like one continuous cinematic sequence rather than separate animations stacked together.
+
+---
+
+## Capítulo 6 — Integração de Vídeo com IA
+
+Now we're moving into chapter six, which is AI video integration.
+
+First, we'll create the AI-generated video itself. The goal is to generate a short, high-quality motion clip, usually around five seconds.
+
+Once the video is generated, we export it in MP4 format and upload it to Cloudinary.
+
+Next, we create the AI video integration prompt, which defines how the video behaves within the website.
+
+The video is used as the hero section background and is synchronized with scroll behavior.
+
+On mobile devices, the experience should fall back to a static image to ensure performance and responsiveness.
+
+---
+
+## Capítulo 7 — Otimização e Revisão Final
+
+This chapter focuses on optimization for smooth playback, especially for scroll scrubbing video.
+
+We compress the video, adjust lazy loading, refine scroll mapping, and define fallback mechanisms.
+
+After refining the prompt, the interaction feels smooth and performs well on both desktop and mobile.
+
+In the final review, we confirm that scroll-based motion works correctly, cinematic effects trigger as expected, and all interactions feel natural.
+
+At this point, the website feels complete, interactive, and polished.
+
+Now it's your turn to create your own interactive website using these techniques.
+
+---
+

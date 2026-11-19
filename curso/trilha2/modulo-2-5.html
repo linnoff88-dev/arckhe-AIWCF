@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulo 2.5 - Transicoes Cinematograficas | AI WCF</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+
+    /* Light mode overrides - OBRIGATORIO */
+    html:not(.dark) body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🎨</span>
+            <span class="font-bold text-lg hidden sm:inline">AI WCF</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
+            <span class="sm:hidden">T1</span>
+            <span class="hidden sm:inline">Fundamentos</span>
+          </a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10">
+            <span class="sm:hidden">T2</span>
+            <span class="hidden sm:inline">Animacao</span>
+          </a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span>
+            <span class="hidden sm:inline">Infra</span>
+          </a>
+
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../index.html" class="hover:text-blue-400">Inicio</a>
+      <span>/</span>
+      <a href="index.html" class="hover:text-blue-400">Trilha 2</a>
+      <span>/</span>
+      <span class="text-blue-400">Modulo 2.5</span>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">
+        MODULO 2.5
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🎬 Transicoes Cinematograficas</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Transforme seu site em uma experiencia visual fluida, onde cada secao se conecta como cenas de um filme.</p>
+
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-blue-400">6</div>
+          <div class="text-xs text-neutral-400">Topicos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-blue-400">45</div>
+          <div class="text-xs text-neutral-400">Minutos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-blue-400">Avancado</div>
+          <div class="text-xs text-neutral-400">Nivel</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-blue-400">Pratico</div>
+          <div class="text-xs text-neutral-400">Tipo</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEUDO -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- TOPICO 1 -->
+    <section id="topico-1" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
+        <h2 class="text-2xl font-bold">🎬 Site como Narrativa Visual</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Um site cinematografico nao e uma colecao de secoes isoladas - e uma <strong class="text-blue-400">historia continua</strong> que guia o usuario atraves de uma jornada visual. Cada secao tem seu proprio "momento cinematografico" que contribui para a narrativa geral.
+      </p>
+
+      <!-- Box Conceito Principal -->
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center">
+          <span class="mr-2">🎯</span> Conceito Central
+        </h3>
+        <p class="text-xl text-neutral-100 font-medium text-center py-4">
+          "O usuario nao le paginas, ele vivencia jornadas"
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+          <h4 class="font-semibold text-white mb-2">Tratar o site como historia continua</h4>
+          <p class="text-neutral-400 text-sm">Cada elemento deve fluir naturalmente para o proximo, criando uma experiencia coesa e envolvente.</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+          <h4 class="font-semibold text-white mb-2">Cada secao tem um "momento cinematografico"</h4>
+          <p class="text-neutral-400 text-sm">Como cenas de um filme, cada secao deve ter seu proposito, ritmo e impacto visual unico.</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
+          <h4 class="font-semibold text-white mb-2">Criar ritmo, emocao e intencao</h4>
+          <p class="text-neutral-400 text-sm">A navegacao deve evocar sentimentos e guiar o usuario com proposito, nao apenas exibir conteudo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 2 -->
+    <section id="topico-2" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
+        <h2 class="text-2xl font-bold">🎥 O Fluxo Cinematografico</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Assim como um filme tem uma estrutura narrativa, seu site deve seguir um <strong class="text-blue-400">fluxo cinematografico</strong> que guia o usuario do inicio ao fim com transicoes suaves e momentos impactantes.
+      </p>
+
+      <!-- Timeline -->
+      <div class="space-y-6 mb-6">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">1</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Hero como abertura de filme</h4>
+            <p class="text-neutral-400 text-sm">O Hero e sua "cena de abertura" - deve capturar atencao imediatamente e estabelecer o tom de toda a experiencia.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">2</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Secoes se dissolvem umas nas outras</h4>
+            <p class="text-neutral-400 text-sm">Transicoes suaves entre secoes criam fluidez - como cortes de cena que mantem a narrativa fluindo.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">3</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Conteudo revelado com timing dramatico</h4>
+            <p class="text-neutral-400 text-sm">Elementos aparecem no momento certo, criando suspense e mantendo o interesse do usuario.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">4</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">CTAs como momentos de decisao</h4>
+            <p class="text-neutral-400 text-sm">Call-to-actions sao os "pontos de virada" - momentos onde o usuario decide agir, como climax de uma cena.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">5</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Footer encerra a narrativa</h4>
+            <p class="text-neutral-400 text-sm">O footer e os "creditos finais" - encerra a experiencia de forma elegante e deixa uma ultima impressao.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 3 -->
+    <section id="topico-3" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
+        <h2 class="text-2xl font-bold">✨ Tecnicas de Reveal</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        As tecnicas de reveal sao ferramentas cinematograficas que controlam <strong class="text-blue-400">como e quando</strong> os elementos aparecem na tela, criando drama e hierarquia visual.
+      </p>
+
+      <!-- Grid 4 exemplos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">🎭</div>
+          <h4 class="font-semibold text-white mb-2">Revelacao Sequencial</h4>
+          <p class="text-neutral-400 text-sm mb-3">Elementos aparecem em ordem: headline primeiro, depois texto, por fim o botao.</p>
+          <code class="text-xs text-blue-400 bg-dark-700 px-2 py-1 rounded">headline > text > button</code>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">🌫️</div>
+          <h4 class="font-semibold text-white mb-2">Fade Dissolve</h4>
+          <p class="text-neutral-400 text-sm mb-3">Secoes se fundem suavemente umas nas outras com transicoes de opacidade.</p>
+          <code class="text-xs text-blue-400 bg-dark-700 px-2 py-1 rounded">opacity: 0 → 1</code>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">⏳</div>
+          <h4 class="font-semibold text-white mb-2">Stagger Timing</h4>
+          <p class="text-neutral-400 text-sm mb-3">Grupos de elementos aparecem com delays progressivos entre cada item.</p>
+          <code class="text-xs text-blue-400 bg-dark-700 px-2 py-1 rounded">delay: 0.1s, 0.2s, 0.3s...</code>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">🏔️</div>
+          <h4 class="font-semibold text-white mb-2">Parallax</h4>
+          <p class="text-neutral-400 text-sm mb-3">Camadas se movem em velocidades diferentes criando sensacao de profundidade.</p>
+          <code class="text-xs text-blue-400 bg-dark-700 px-2 py-1 rounded">translateY com scroll</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 4 -->
+    <section id="topico-4" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
+        <h2 class="text-2xl font-bold">⏱️ Timing Cinematografico</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        O timing e crucial para criar a sensacao cinematografica certa. Muito rapido perde o impacto, muito lento frustra o usuario. Aqui estao os <strong class="text-blue-400">valores ideais</strong>.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <h4 class="font-semibold text-white mb-4">Duracoes Recomendadas</h4>
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <span class="text-neutral-300">Hero (dramatico)</span>
+              <span class="text-blue-400 font-mono font-bold">0.8 - 1.2s</span>
+            </div>
+            <div class="w-full bg-dark-700 rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-neutral-300">Secoes (fluido)</span>
+              <span class="text-blue-400 font-mono font-bold">0.4 - 0.6s</span>
+            </div>
+            <div class="w-full bg-dark-700 rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full" style="width: 50%"></div>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-neutral-300">Delay entre elementos</span>
+              <span class="text-blue-400 font-mono font-bold">0.1 - 0.2s</span>
+            </div>
+            <div class="w-full bg-dark-700 rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full" style="width: 20%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <h4 class="font-semibold text-white mb-4">Regra de Ouro</h4>
+          <div class="bg-blue-900/30 rounded-lg p-4 mb-4">
+            <p class="text-blue-400 font-bold text-2xl text-center">Max 2s</p>
+            <p class="text-neutral-400 text-sm text-center mt-2">Total da sequencia de animacao</p>
+          </div>
+          <p class="text-neutral-400 text-sm">A sequencia completa de entrada de uma secao nao deve ultrapassar 2 segundos do inicio ao fim.</p>
+        </div>
+      </div>
+
+      <!-- Box Importante -->
+      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center">
+          <span class="mr-2">⚠️</span> Atencao
+        </h3>
+        <p class="text-neutral-300">
+          <strong class="text-white">Lento demais = frustrante.</strong> Usuarios modernos esperam respostas rapidas. Animacoes devem enriquecer a experiencia, nao atrapalhar. Se o usuario precisa esperar para ver o conteudo, voce esta fazendo errado.
+        </p>
+      </div>
+    </section>
+
+    <!-- TOPICO 5 -->
+    <section id="topico-5" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
+        <h2 class="text-2xl font-bold">🎯 Visual Focus</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        O foco visual determina <strong class="text-blue-400">onde o olho do usuario vai</strong>. Animar tudo ao mesmo tempo e como gritar em uma sala barulhenta - ninguem escuta nada.
+      </p>
+
+      <!-- Grid Fazer vs Evitar -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+          <h4 class="font-bold text-blue-400 mb-4">Fazer</h4>
+          <ul class="space-y-3 text-neutral-300">
+            <li class="flex items-start space-x-2">
+              <span class="text-blue-400">✓</span>
+              <span>Limitar 3-5 elementos animando por vez</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-blue-400">✓</span>
+              <span>Elementos secundarios estáticos</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-blue-400">✓</span>
+              <span>Ritmo consistente entre animacoes</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-blue-400">✓</span>
+              <span>Hierarquia clara de movimento</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+          <h4 class="font-bold text-red-400 mb-4">Evitar</h4>
+          <ul class="space-y-3 text-neutral-300">
+            <li class="flex items-start space-x-2">
+              <span class="text-red-400">✗</span>
+              <span>Animar tudo ao mesmo tempo</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-red-400">✗</span>
+              <span>Mesma duracao para tudo</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-red-400">✗</span>
+              <span>Ignorar hierarquia visual</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-red-400">✗</span>
+              <span>Animacoes competindo por atencao</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+        <h4 class="font-semibold text-white mb-3">Principio do Foco</h4>
+        <p class="text-neutral-400">
+          Em qualquer momento, apenas <strong class="text-blue-400">um ponto focal</strong> deve dominar a atencao. Outros elementos podem ter micro-animacoes sutis, mas o protagonista da cena deve ser claro.
+        </p>
+      </div>
+    </section>
+
+    <!-- TOPICO 6 -->
+    <section id="topico-6" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
+        <h2 class="text-2xl font-bold">🎯 Montagem Final</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        A montagem final e onde tudo se une. Voce combina <strong class="text-blue-400">sequencias de entrada</strong>, <strong class="text-blue-400">transicoes entre secoes</strong> e <strong class="text-blue-400">micro-animacoes de suporte</strong> em uma experiencia coesa.
+      </p>
+
+      <div class="space-y-6 mb-6">
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="flex items-center space-x-3 mb-4">
+            <span class="text-2xl">🎬</span>
+            <h4 class="font-semibold text-white">Sequencia Completa de Entrada</h4>
+          </div>
+          <p class="text-neutral-400 text-sm mb-3">A primeira impressao e crucial. O Hero deve carregar com uma sequencia coreografada que estabelece o tom.</p>
+          <div class="bg-dark-700 rounded-lg p-3">
+            <code class="text-blue-400 text-sm">Background → Logo → Headline → Subtext → CTA → Scroll indicator</code>
+          </div>
+        </div>
+
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="flex items-center space-x-3 mb-4">
+            <span class="text-2xl">🔄</span>
+            <h4 class="font-semibold text-white">Transicoes Entre Secoes</h4>
+          </div>
+          <p class="text-neutral-400 text-sm mb-3">Cada scroll deve revelar a proxima secao de forma cinematografica, nao abrupta.</p>
+          <div class="bg-dark-700 rounded-lg p-3">
+            <code class="text-blue-400 text-sm">Fade out suave → Parallax transition → Fade in com stagger</code>
+          </div>
+        </div>
+
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="flex items-center space-x-3 mb-4">
+            <span class="text-2xl">✨</span>
+            <h4 class="font-semibold text-white">Micro-animacoes de Suporte</h4>
+          </div>
+          <p class="text-neutral-400 text-sm mb-3">Pequenos detalhes que dao vida ao site: hovers, pulsos sutis, indicadores de scroll.</p>
+          <div class="bg-dark-700 rounded-lg p-3">
+            <code class="text-blue-400 text-sm">Button hover → Card lift → Icon pulse → Cursor effects</code>
+          </div>
+        </div>
+      </div>
+
+      <!-- Citacao -->
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6">
+        <p class="text-xl text-neutral-100 italic text-center mb-4">
+          "One continuous cinematic sequence"
+        </p>
+        <p class="text-blue-400 text-sm text-center">
+          O site inteiro deve fluir como uma unica sequencia cinematografica - do primeiro pixel ao ultimo scroll.
+        </p>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center">
+          <span class="mr-3">📋</span> Resumo do Modulo
+        </h2>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Narrativa Visual</strong>
+              <span class="text-neutral-400"> - Site como historia continua, nao secoes isoladas</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Fluxo Cinematografico</strong>
+              <span class="text-neutral-400"> - Hero, transicoes, CTAs e footer como atos de um filme</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Tecnicas de Reveal</strong>
+              <span class="text-neutral-400"> - Sequencial, fade, stagger e parallax</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Timing</strong>
+              <span class="text-neutral-400"> - Hero 0.8-1.2s, secoes 0.4-0.6s, max 2s total</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Visual Focus</strong>
+              <span class="text-neutral-400"> - 3-5 elementos por vez, hierarquia clara</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Montagem</strong>
+              <span class="text-neutral-400"> - Entrada + transicoes + micro-animacoes = experiencia coesa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+          <h3 class="font-semibold text-blue-400 mb-2">Proximo Modulo:</h3>
+          <p class="text-neutral-300">2.6 - Continua a jornada de animacoes avancadas</p>
+        </div>
+
+        <div class="flex justify-start space-x-4 flex-wrap gap-y-3">
+          <a href="modulo-2-4.html" class="px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
+            ← Modulo Anterior
+          </a>
+          <a href="modulo-2-6.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">
+            Proximo Modulo →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>AI WCF - Vibe Coding | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> - 2026</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden');
+      html.classList.remove('dark');
+    } else {
+      themeToggleLightIcon.classList.remove('hidden');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+
+</body>
+</html>

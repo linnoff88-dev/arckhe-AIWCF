@@ -1,0 +1,208 @@
+1.2 — The “One Prompt Website” Formula
+
+
+
+- Structure of a successful one-prompt website 
+- How to describe layout, spacing, typography, and visuals 
+- How to make AI produce clean, modern, premium layouts 
+- How to avoid cluttered, inconsistent AI-generated UI
+
+Full prompt example
+
+-----
+1. Page Structure
+-----
+ANDYNOCODE Marketing Agency
+├── HEADER
+├── HERO
+├── ABOUT
+├── SERVICES
+├── CTA
+└── FOOTER
+
+-----
+2. Branding Guidelines:
+-----
+
+1. Visual Identity ("Titanium & Glass")
+- Typography: Use Inter or SF Pro Display. Headlines should be massive (60px+) and tight. Body text should be small but high-contrast.
+- Color Palette: Deep "Space Gray" background (#0d0d0d), Text is "Off-White" (#f5f5f7). Accents are subtle "Titanium Blue" gradients, not bright neon.
+- Shapes: Everything uses "Squircle" (super-ellipse) corners (30px radius).
+- Materials: Extensive use of backdrop-filter: blur(20px) (frosted glass) with very thin, subtle white borders (1px, 10% opacity).
+
+2. Motion ("Fluid Physics")
+- No jerky movements. Use distinct ease-out curves (cubic-bezier).
+- Parallax: As I scroll, the text should slide over the images.
+- Scrollytelling: Elements shouldn't just appear; they should bloom or fade in upwards as if they are heavy.
+
+3. Mobile & Quality
+- Responsiveness: On mobile, the experience must feel like a native app. Full-width images, large touch areas.
+- Imagery: Images should be the "Hero." Give them massive scale, often edge-to-edge.
+
+-----
+3. Content Instructions:
+-----
+
+1. HEADER (Navigation)
+
+Content Inputs
+- Logo Text: `ANDYNOCODE`
+- Navigation Links: `Home`, `About`, `Services`, `Contact`
+- Mobile Menu: Hamburger icon (auto)
+
+Content Elements
+- Navigation bar shape: Pill / Dynamic Island style
+- Link style: Uppercase, 14px, tight letter spacing
+- Logo placement: Left-aligned
+
+Background
+- Frosted glass (backdrop-filter: blur 20px)
+- Semi-transparent (5–10% opacity white)
+
+Extra Elements
+- Subtle drop shadow (soft, diffused)
+- Stays centered at the top (floating)
+
+Style References
+- Apple.com nav bar transparency
+- iOS Control Center glass effect
+- Dynamic Island shape language
+
+---
+2. HERO SECTION
+
+Content Inputs
+- Headline (H1): “Your SEO Growth Engine.”
+- Subtitle: One sentence about how ANDYNOCODE helps clients grow.
+- Primary CTA: e.g., “Get Free Audit”
+- Optional Image/Graphic: None required (background handles visuals)
+
+Content Elements
+- CTA is a glass button (no pulse animation)
+- Subtitle fades in 0.5s after the headline
+
+Background
+- Slow-moving 3D abstract mesh OR fluid light ribbons
+- Dark void base (#0d0d0d)
+- Extremely subtle motion
+
+Extra Elements
+- Light vignette around edges
+- Very large H1 (60–80px)
+
+Style References
+- Apple TV screensaver light ribbons
+- macOS Sonoma dynamic wallpaper
+- “Fluid physics” motions with ease-outs
+
+---
+3. ABOUT SECTION
+
+Content Inputs
+- Section Title (H2): e.g., “Who We Are”
+- Stats (3×):
+  - Metric 1: “+230% Average SEO Lift”
+  - Metric 2: “120+ Campaigns Delivered”
+  - Metric 3: “8 Years Experience”
+- Bio Text: 2–3 sentences about ANDYNOCODE
+- Profile Image: Black & white portrait
+
+Content Elements
+- Bento Grid layout:
+  - Left: 3 small square stat cards
+  - Right: one tall portrait card + bio
+
+Background
+- Deep space gray (#0d0d0d)
+- Cards slightly lighter (#1a1a1c)
+
+Extra Elements
+- Portrait image has inner shadow (no borders)
+- Stats use large, bold numbers
+
+Style References
+- Apple Bento-style components (Settings app sections)
+- macOS Finder “squircle” shape system
+
+---
+4. SERVICES SECTION
+
+Content Inputs
+- Section Title (H2): e.g., “What We Do”
+- Three Services:
+  - Service 1 Title: “SEO Analytics”
+  - Service 2 Title: “Campaign Automation”
+  - Service 3 Title: “ROI Performance”
+- Each service needs 1–2 sentences describing value.
+
+Content Elements
+- 3 equal-height tall cards
+- Each card includes:
+  - Thin-line icon (minimal, abstract)
+  - Title
+  - Description
+
+Background
+- Cards: #1c1c1e dark mode
+- Page background: #0d0d0d
+
+Extra Elements
+- Hover effect: text lights up from grey → white
+- No movement / lift
+- Icons are not generic; more like SF Symbols
+
+Style References
+- iOS Settings section card design
+- Apple’s thin-line iconography
+
+---
+5. CTA SECTION
+
+Content Inputs
+- Headline (H2): “Ready to 10x?”
+- Supporting Copy: 1–2 lines explaining the offer
+- Primary CTA Button: e.g., “Book Strategy Call”
+- Secondary CTA Button: e.g., “View Case Studies”
+
+Content Elements
+- Two pill-shaped buttons
+  - Primary: White text on Black
+  - Secondary: Glass-style with border
+
+Background
+- Subtle centered deep blue spotlight gradient
+  (barely visible)
+
+Extra Elements
+- Slight upward fade-in
+- Large spacing around the section
+
+Style References
+- Apple Homepage: call-to-action spacing
+- Subtle radial lights (Apple Vision Pro landing page)
+
+---
+6. FOOTER
+
+Content Inputs
+- Company Name: `ANDYNOCODE`
+- Contact Email: student chooses
+- Social Icons: Instagram, LinkedIn, X, YouTube
+- Copyright: “© 2025 ANDYNOCODE. All Rights Reserved.”
+
+Content Elements
+- Icons monochrome & tiny
+- Text opacity: 50%
+
+Background
+- Solid black
+- No gradients, no glass
+
+Extra Elements
+- Tight spacing, very minimal
+- Icons on one row, small gaps
+
+Style References
+- Apple.com minimal footers
+- Clean legal text sections
+---

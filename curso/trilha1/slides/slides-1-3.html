@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slides 1.3 - Executando no Firebase Studio | AI WCF</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+
+    html:not(.dark) body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+
+    .slide-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .slide-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    .slide-card img { cursor: zoom-in; }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.95);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal.active { display: flex; }
+    .modal img {
+      max-width: 95vw;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🎨</span>
+            <span class="font-bold text-lg hidden sm:inline">AI WCF</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
+            <span class="sm:hidden">T1</span>
+            <span class="hidden sm:inline">Fundamentos</span>
+          </a>
+          <a href="../../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
+            <span class="sm:hidden">T2</span>
+            <span class="hidden sm:inline">Animacao</span>
+          </a>
+          <a href="../../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span>
+            <span class="hidden sm:inline">Infra</span>
+          </a>
+
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../../index.html" class="hover:text-emerald-400">Inicio</a>
+      <span>/</span>
+      <a href="../index.html" class="hover:text-emerald-400">Trilha 1</a>
+      <span>/</span>
+      <a href="../modulo-1-3.html" class="hover:text-emerald-400">Modulo 1.3</a>
+      <span>/</span>
+      <span class="text-emerald-400">Slides</span>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">
+        📊 SLIDES DO MODULO 1.3
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔥 Executando no Firebase Studio</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Screenshots reais do processo de criacao de um site no Firebase Studio - do prompt inicial ao codigo gerado.</p>
+
+      <div class="grid grid-cols-3 gap-4 mt-8 max-w-xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">5</div>
+          <div class="text-xs text-neutral-400">Screenshots</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">~10</div>
+          <div class="text-xs text-neutral-400">Minutos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">Pratico</div>
+          <div class="text-xs text-neutral-400">Tipo</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEUDO -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <div class="space-y-12">
+
+      <!-- Slide 1 -->
+      <div class="slide-card bg-dark-800 rounded-xl border border-dark-600 overflow-hidden">
+        <div class="p-4 border-b border-dark-600 flex items-center space-x-3">
+          <span class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">1</span>
+          <h3 class="font-bold text-lg">Acessando o Firebase Studio</h3>
+        </div>
+        <div class="p-6">
+          <img src="../../../doc/13/photo_5147843901891742652_x.jpg" alt="Slide 1" class="w-full rounded-lg mb-4" onclick="openModal(this.src)">
+          <p class="text-neutral-400">Acesse <strong>studio.firebase.google.com</strong>. Na pagina inicial voce encontra opcoes como "Prototype an app with AI" e "Start coding an app". Voce pode criar um novo workspace ou importar um repositorio existente.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide-card bg-dark-800 rounded-xl border border-dark-600 overflow-hidden">
+        <div class="p-4 border-b border-dark-600 flex items-center space-x-3">
+          <span class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">2</span>
+          <h3 class="font-bold text-lg">Configurando o App e Inserindo o Prompt</h3>
+        </div>
+        <div class="p-6">
+          <img src="../../../doc/13/photo_5147843901891742653_x.jpg" alt="Slide 2" class="w-full rounded-lg mb-4" onclick="openModal(this.src)">
+          <p class="text-neutral-400">Defina o nome do app (ex: "MarkeTop") e suas funcionalidades. A IA interpreta seu prompt com detalhes sobre <strong>Core Features</strong> e <strong>Style Guidelines</strong>. No painel direito, voce ve o blueprint sendo construido em tempo real.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide-card bg-dark-800 rounded-xl border border-dark-600 overflow-hidden">
+        <div class="p-4 border-b border-dark-600 flex items-center space-x-3">
+          <span class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">3</span>
+          <h3 class="font-bold text-lg">Site Gerado - Preview Visual</h3>
+        </div>
+        <div class="p-6">
+          <img src="../../../doc/13/photo_5147843901891742654_x.jpg" alt="Slide 3" class="w-full rounded-lg mb-4" onclick="openModal(this.src)">
+          <p class="text-neutral-400">O site e gerado instantaneamente! Neste exemplo, "MarkeTop - Your SEO Growth Engine" com hero section, navegacao funcional e CTA. No painel direito voce pode continuar refinando com novos prompts ou ajustar configuracoes.</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide-card bg-dark-800 rounded-xl border border-dark-600 overflow-hidden">
+        <div class="p-4 border-b border-dark-600 flex items-center space-x-3">
+          <span class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">4</span>
+          <h3 class="font-bold text-lg">Ambiente de Desenvolvimento (IDE)</h3>
+        </div>
+        <div class="p-6">
+          <img src="../../../doc/13/photo_5147843901891742657_x.jpg" alt="Slide 4" class="w-full rounded-lg mb-4" onclick="openModal(this.src)">
+          <p class="text-neutral-400">O Firebase Studio oferece um ambiente completo de desenvolvimento. No painel esquerdo voce ve a estrutura de arquivos gerada automaticamente. Use os atalhos de teclado para comandos rapidos como "Go to File" ou "Open Settings".</p>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="slide-card bg-dark-800 rounded-xl border border-dark-600 overflow-hidden">
+        <div class="p-4 border-b border-dark-600 flex items-center space-x-3">
+          <span class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center">5</span>
+          <h3 class="font-bold text-lg">Projeto no GitHub - Estrutura Final</h3>
+        </div>
+        <div class="p-6">
+          <img src="../../../doc/13/photo_5147843901891742659_x.jpg" alt="Slide 5" class="w-full rounded-lg mb-4" onclick="openModal(this.src)">
+          <p class="text-neutral-400">O projeto pode ser exportado para o GitHub. Voce recebe uma estrutura completa com <strong>Next.js</strong>: package.json, tailwind.config.ts, components, e mais. O README explica como comecar: "This is a Next.js starter in Firebase Studio. To get started, take a look at src/app/page.tsx".</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- NAVEGACAO -->
+    <div class="mt-16 flex justify-between items-center">
+      <a href="slides-1-2.html" class="px-6 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors flex items-center space-x-2">
+        <span>←</span>
+        <span>Slides 1.2</span>
+      </a>
+      <a href="../modulo-1-3.html" class="px-4 py-3 bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">
+        Voltar ao Modulo
+      </a>
+      <a href="../index.html" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors flex items-center space-x-2">
+        <span>Trilha 1</span>
+        <span>→</span>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- MODAL -->
+  <div id="image-modal" class="modal" onclick="closeModal()">
+    <button class="absolute top-4 right-4 text-white text-4xl hover:text-neutral-300" onclick="closeModal()">&times;</button>
+    <img id="modal-image" src="" alt="Slide ampliado">
+  </div>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    if (localStorage.getItem('color-theme') === 'light' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+      document.documentElement.classList.remove('dark');
+      lightIcon.classList.remove('hidden');
+    } else {
+      document.documentElement.classList.add('dark');
+      darkIcon.classList.remove('hidden');
+    }
+
+    themeToggle.addEventListener('click', function() {
+      darkIcon.classList.toggle('hidden');
+      lightIcon.classList.toggle('hidden');
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    });
+
+    function openModal(src) {
+      document.getElementById('modal-image').src = src;
+      document.getElementById('image-modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('image-modal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+
+</body>
+</html>

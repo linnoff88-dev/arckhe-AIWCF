@@ -1,0 +1,160 @@
+Dia 1 – Check-in: Vamos Montar Sua Base! 🎯
+
+Bem-vindos ao Dia 1 do nosso Sprint de 7 Dias!
+Hoje é totalmente focado em preparar sua base para que você esteja pronto para construir. Este é o dia mais importante, pois define o tom de toda a semana.
+
+### Sua Missão do Dia 1:
+
+1. Assista ao Módulo 1: Site Demo de Uma Página
+
+* Mergulhe nos conceitos principais com estas seções objetivas:
+
+> 1.1 — Entendendo o Vibecoding
+> 1.2 — A fórmula do “Site com Um Prompt”
+> 1.3 — Construindo o site no Firebase Studio
+
+2. Configure suas contas:
+Garanta que você tenha acesso a todas as ferramentas de IA que usaremos ao longo do sprint.
+
+3. Escolha seu projeto:
+Decida qual site você vai construir — pode ser uma vitrine de produto, portfólio ou site de marca.
+
+### Check-in:
+
+Responda a este post com:
+• ✅ “Módulo 1 concluído!”
+• Uma frase descrevendo o site que você pretende construir
+
+
+Na primeira semana do curso, você aprende um novo método de criação de sites chamado vibe coding, em que, em vez de programar, você descreve o clima, o estilo e a intenção do site, e a IA faz o trabalho técnico. O objetivo do Dia 1 é criar um site profissional de uma página a partir de um único prompt, sem necessidade de experiência técnica.
+
+O foco está em aprender a formular um prompt bem estruturado que descreva layout, espaçamento, hierarquia, tipografia e atmosfera visual. Esse prompt é usado no Firebase Studio, que gera automaticamente a estrutura em HTML e CSS. A partir disso, o site é refinado com ajustes de UX, identidade visual, cores, tipografia, textos e imagens gerados por IA.
+
+O processo segue três passos principais: definir as vibes → escrever um prompt claro → deixar a IA construir e depois refinar e aplicar a marca. Esse é apresentado como o novo paradigma da criação de sites, mais criativo, rápido e acessível.
+
+========
+
+### 1. Introdução ao curso e à nova forma de criar sites
+
+Apresenta a proposta do curso e a ideia de que estamos entrando em uma nova era da criação web, onde a IA assume o trabalho técnico e o criador foca na visão criativa.
+
+---
+
+### 2. Vibe Coding (Programação por “vibes”)
+
+É um método em que você não escreve código, mas descreve em linguagem natural o clima do site: estilo, energia, estética, organização e sensação desejada. A IA interpreta essas descrições e constrói o site.
+
+---
+
+### 3. Objetivo da Semana 1
+
+Criar, ainda no primeiro dia, um site profissional de uma página, totalmente funcional, gerado a partir de um único prompt. O foco é velocidade, clareza e qualidade visual.
+
+---
+
+### 4. Mudança de mentalidade: de programar para direcionar
+
+Em vez de construir o site linha por linha, você atua como um diretor criativo, dizendo à IA o que fazer. A IA cuida de HTML, CSS e estrutura técnica, enquanto você define a intenção do design.
+
+---
+
+### 5. Descrição de design em linguagem natural
+
+Ensina como explicar para a IA elementos como:
+
+* Espaçamento
+* Hierarquia visual
+* Tipografia
+* Mood/atmosfera
+* Estrutura do layout
+
+Quanto mais claro e específico o comando, melhor o resultado.
+
+---
+
+### 6. Fórmula do “One Prompt Website”
+
+É a técnica de criar um prompt único e bem estruturado que serve como o blueprint completo do site. A qualidade do site final depende diretamente da qualidade desse prompt.
+
+---
+
+### 7. Uso do Firebase Studio
+
+O prompt é inserido no Firebase Studio, que gera automaticamente a estrutura base do site (HTML e CSS) em segundos, já com layout responsivo.
+
+---
+
+### 8. Refinamento do layout e da experiência do usuário
+
+Após a geração inicial, o site é ajustado para melhorar:
+
+* Espaçamento
+* Hierarquia visual
+* Clareza das informações
+* Sensação de profissionalismo e intenção no design
+
+---
+
+### 9. Branding e identidade visual
+
+Nesta etapa, o site recebe:
+
+* Cores da marca
+* Tipografia
+* Logo
+* Hero section
+* Mensagem principal
+
+A IA também auxilia na geração de textos e imagens.
+
+---
+
+### 10. Importância da especificidade no prompt
+
+Quanto mais detalhadas forem as instruções (ex.: estilo “neon glassmorphism”, layout moderno, informações bem posicionadas), menor a chance de inconsistências e melhor o resultado final.
+
+---
+
+### 11. Processo final da criação web com IA
+
+O método completo segue esta sequência:
+Definir as vibes → escrever um prompt claro → deixar a IA construir → refinar → aplicar branding
+
+Esse processo representa a nova geração da criação de sites, mais rápida, acessível e criativa.
+
+======
+
+## Resumo das 3 Etapas do Vibe Coding
+
+### Etapa 1 — Conceito e mentalidade (Vibe Coding)
+
+Nesta fase, o foco é mudar a forma tradicional de criar sites. Em vez de escrever código, você passa a descrever a intenção do design: clima, estilo, hierarquia, espaçamento e experiência. O objetivo é criar um site profissional de uma página a partir de um único prompt, atuando como diretor criativo enquanto a IA cuida da parte técnica.
+
+---
+
+### Etapa 2 — Estruturação do Prompt Único
+
+Aqui entra a fórmula do “One Prompt Website”, onde todo o site é definido em um único prompt bem organizado. Essa etapa tem três pilares:
+
+* Estrutura da página (header, hero, sobre, serviços, CTA e footer)
+* Branding e identidade visual (tipografia, cores, materiais, animações e comportamento mobile)
+* Conteúdo detalhado por seção (textos exatos, layout dos elementos e estilo visual)
+
+Quanto mais clara e específica for essa estrutura, mais consistente, premium e intencional será o site gerado pela IA.
+
+---
+
+### Etapa 3 — Execução, refinamento e publicação no Firebase Studio
+
+Na última etapa, o prompt é executado no Firebase Studio, que converte as instruções em código real (HTML e CSS). O site já nasce funcional e pode ser facilmente refinado com ajustes visuais, alterações de texto, animações e layout usando prompts, seleção direta de elementos ou anotações na página.
+Além disso, é possível editar o código, integrar com GitHub e publicar o site diretamente ou em outra plataforma.
+
+---
+
+### Visão geral
+
+O processo completo segue este fluxo:
+definir as vibes → estruturar um prompt claro → gerar, refinar e publicar o site
+
+Esse método permite criar sites modernos, profissionais e prontos para produção de forma rápida, criativa e acessível, representando a essência do vibe coding.
+

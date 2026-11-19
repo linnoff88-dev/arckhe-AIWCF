@@ -1,0 +1,149 @@
+1.4/5 - Arquitetura do Site
+
+Direto e objetivo:
+
+➡️ Comparado com soluções de mercado (como construtores no-code tradicionais, CMS ou builders com IA), esse modelo não é apenas uma ferramenta — é uma *metodologia estruturada*.
+
+Ele é a estrutura de um framework de produção de sites, onde cada site é criado seguindo regras claras de:
+
+✔️ Estruturação (layout base padronizado)
+✔️ Diretrizes de marca (visual, motion, experiência)
+✔️ Separação e instruções de conteúdo
+✔️ Modelo de prompt reutilizável e preciso
+
+Esse modelo é mais do que um gerador aleatório de layouts:
+👉 é uma arquitetura de processo para criar sites de forma consistente, eficiente e com identidade premium.
+
+Em termos de mercado, ele funciona como um:
+
+### 🔹 *Framework de criação de websites baseado em IA*
+
+Não é apenas “usar IA para gerar um site” —
+É ter um padrão repetível assim como soluções profissionais utilizam em workflows corporativos.
+
+✅ Estrutura
+✅ Identidade visual definida
+✅ Conteúdo bem organizado
+✅ Resultados previsíveis
+✅ Reutilizável e escalável
+
+---
+
+Se quiser colocar isso numa frase de impacto:
+
+### “Temos um modelo estruturado para criar sites com IA — mais próximo de um framework profissional do que de um simples gerador de páginas.”
+
+Abaixo estão 5 modelos estruturais diferentes, todos compatíveis com o método AI WCF👇
+(seja direto, reutilizável e claro)
+
+---
+
+## 🔹 MODELO 1 — One Page Clássico (Base)
+
+👉 Ideal para landing pages, serviços, MVPs
+
+HEADER
+HERO
+ABOUT
+SERVICES
+CTA
+FOOTER
+
+Uso:
+
+* Mais conversão
+* Mais simples
+* Alta clareza para IA
+
+---
+
+## 🔹 MODELO 2 — Authority / Thought Leadership
+
+👉 Ideal para marcas pessoais, consultorias, experts
+
+HEADER
+HERO
+AUTHORITY PROOF (stats, logos, social proof)
+ABOUT (story + visão)
+SERVICES
+CTA
+FOOTER
+
+Diferença-chave:
+
+* Prova vem antes do “sobre”
+* Mais foco em credibilidade
+
+---
+
+## 🔹 MODELO 3 — Product / SaaS Landing
+
+👉 Ideal para produtos digitais, SaaS, apps
+
+HEADER
+HERO (value proposition)
+FEATURES (bento / cards)
+HOW IT WORKS
+INTEGRATIONS / BENEFITS
+CTA
+FOOTER
+
+Diferença-chave:
+
+* Menos storytelling
+* Mais explicação funcional
+* Estrutura orientada a produto
+
+---
+
+## 🔹 MODELO 4 — Creative / Brand Experience
+
+👉 Ideal para marcas premium, estúdios, design, moda
+
+HEADER (minimal / floating)
+HERO (visual dominante)
+MANIFESTO
+SELECTED WORK / SERVICES
+BRAND FEEL / VALUES
+CTA
+FOOTER
+
+Diferença-chave:
+
+* Visual antes do texto
+* Emoção > explicação
+* IA recebe mais instruções estéticas
+
+---
+
+## 🔹 MODELO 5 — Conversion-Driven (Performance)
+
+👉 Ideal para marketing, tráfego pago, campanhas
+
+HERO (headline forte + CTA)
+BENEFITS
+PROOF (cases, números)
+SERVICES / OFFER
+URGENCY CTA
+FOOTER (mínimo)
+
+Diferença-chave:
+
+* Header pode ser embutido
+* CTA aparece múltiplas vezes
+* Estrutura agressiva de conversão
+
+---
+
+## 🧠 Conclusão direta
+
+✔️ O modelo NÃO é rígido
+✔️ Você pode ter 5 (ou mais) estruturas oficiais
+✔️ Todas usam:
+
+* Diretrizes de marca
+* Instruções de motion
+* Conteúdo bem separado
+* Prompt estruturado
+
+### 👉 Isso transforma o método em um framework modular de criação de sites com IA.

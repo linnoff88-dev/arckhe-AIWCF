@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilha 2 - Motion Design para Web | AI WCF</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+
+    /* Light mode overrides */
+    html:not(.dark) body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(4px);
+    }
+    .modal-content {
+      width: 95%;
+      max-width: 1200px;
+      height: 90vh;
+      border-radius: 1rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-content iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🎨</span>
+            <span class="font-bold text-lg hidden sm:inline">AI WCF</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
+            <span class="sm:hidden">T1</span>
+            <span class="hidden sm:inline">Fundamentos</span>
+          </a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10">
+            <span class="sm:hidden">T2</span>
+            <span class="hidden sm:inline">Animacao</span>
+          </a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span>
+            <span class="hidden sm:inline">Infra</span>
+          </a>
+          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
+            <span class="sm:hidden">T4</span>
+            <span class="hidden sm:inline">SEO</span>
+          </a>
+
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-16 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">
+        TRILHA 2
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">🎬 Motion Design para Web</h1>
+      <p class="text-xl text-neutral-400 max-w-3xl mb-8">Transforme sites estaticos em experiencias vivas e cinematograficas. Domine animacoes, transicoes e integracao de video com IA.</p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
+          <div class="text-2xl font-bold text-blue-400">8</div>
+          <div class="text-sm text-neutral-400">Modulos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
+          <div class="text-2xl font-bold text-blue-400">48</div>
+          <div class="text-sm text-neutral-400">Topicos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
+          <div class="text-2xl font-bold text-blue-400">~6.5h</div>
+          <div class="text-sm text-neutral-400">Duracao</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
+          <div class="text-2xl font-bold text-blue-400">Inter</div>
+          <div class="text-sm text-neutral-400">Nivel</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- VISAO GERAL DOS MODULOS -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6">Visao Geral dos Modulos</h2>
+      <p class="text-neutral-400 mb-8">Clique em um card para acessar o modulo completo.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+      <!-- Card 2.1 -->
+      <a href="modulo-2-1.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-blue-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-blue-400 font-bold">2.1</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">🎯 Introducao ao Motion Design</h3>
+        <p class="text-neutral-400 text-sm">As 3 leis do motion digital: timing, easing e hierarquia visual</p>
+      </a>
+
+      <!-- Card 2.2 -->
+      <a href="modulo-2-2.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-blue-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-blue-400 font-bold">2.2</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">⚡ CSS Animations Nativo</h3>
+        <p class="text-neutral-400 text-sm">@keyframes, transitions, transforms e propriedades de animacao</p>
+      </a>
+
+      <!-- Card 2.3 -->
+      <a href="modulo-2-3.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-blue-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-blue-400 font-bold">2.3</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">📜 Scroll-Based Motion</h3>
+        <p class="text-neutral-400 text-sm">Parallax, reveal, scroll-driven CSS e Intersection Observer</p>
+      </a>
+
+      <!-- Card 2.4 -->
+      <a href="modulo-2-4.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-blue-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-blue-400 font-bold">2.4</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">✨ Microinteracoes</h3>
+        <p class="text-neutral-400 text-sm">Feedback visual, estados, hover effects e loading states</p>
+      </a>
+
+      <!-- Card 2.5 -->
+      <a href="modulo-2-5.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-blue-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-blue-400 font-bold">2.5</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">🎬 Transicoes Cinematograficas</h3>
+        <p class="text-neutral-400 text-sm">Page transitions, hero animations e narrativa visual</p>
+      </a>
+
+      <!-- Card 2.6 -->
+      <a href="modulo-2-6.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-blue-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-blue-400 font-bold">2.6</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">🚀 GSAP & Bibliotecas Pro</h3>
+        <p class="text-neutral-400 text-sm">Timeline, ScrollTrigger, stagger e plugins avancados</p>
+      </a>
+
+      <!-- Card 2.7 -->
+      <a href="modulo-2-7.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-blue-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-blue-400 font-bold">2.7</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">🎥 AI Video Integration</h3>
+        <p class="text-neutral-400 text-sm">Veo, Runway, scroll scrubbing e video como background</p>
+      </a>
+
+      <!-- Card 2.8 -->
+      <a href="modulo-2-8.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-blue-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-blue-400 font-bold">2.8</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">⚙️ Otimizacao de Performance</h3>
+        <p class="text-neutral-400 text-sm">FPS, GPU acceleration, lazy loading e Core Web Vitals</p>
+      </a>
+    </div>
+    </section>
+
+    <!-- MODULOS DETALHADOS -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6">Conteudo Detalhado</h2>
+      <p class="text-neutral-400 mb-8">Explore os topicos de cada modulo. Clique para expandir.</p>
+
+    <!-- MODULO 2.1 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-blue-400 font-bold">2.1</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">🎯 Introducao ao Motion Design</h3>
+        <p class="text-neutral-400">Entenda os fundamentos que transformam sites estaticos em experiencias vivas e envolventes.</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <!-- Topico 1 -->
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🎬</span>
+            <div>
+              <span class="font-medium">O que e Motion Design</span>
+              <span class="text-neutral-500 text-sm ml-2">- De estatico para vivo</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-blue-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Motion design e a arte de dar vida a interfaces atraves de movimento intencional. Nao e decoracao - e uma ferramenta funcional para guiar, informar, engajar e criar conexao emocional com o usuario.</p>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Um site com motion bem aplicado parece mais profissional, polido e memoravel. O usuario deixa de apenas "rolar" e passa a vivenciar uma experiencia.</p>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Motion como ponte usuario-interface, experiencia dinamica, movimento com proposito, balanco entre clareza e encantamento.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topico 2 -->
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">⏱️</span>
+            <div>
+              <span class="font-medium">Timing (Duracao)</span>
+              <span class="text-neutral-500 text-sm ml-2">- A primeira lei do motion</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-blue-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Timing define a velocidade das animacoes e influencia diretamente a percepcao do usuario. Animacoes muito rapidas parecem bruscas; muito lentas, frustrantes.</p>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Timing errado faz o usuario pensar que algo esta quebrado ou lento. Timing correto estabelece o humor e personalidade da experiencia.</p>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Microinteracoes rapidas (100-300ms), transicoes medias (300-500ms), animacoes cinematograficas (500-1000ms).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topico 3 -->
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">📈</span>
+            <div>
+              <span class="font-medium">Easing (Aceleracao)</span>
+              <span class="text-neutral-500 text-sm ml-2">- A segunda lei do motion</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-blue-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Easing garante movimentos naturais, suaves e fisicamente plausiveis. Objetos no mundo real nao comecam ou param instantaneamente - suas animacoes tambem nao devem.</p>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Easing transforma animacoes roboticas em movimentos organicos. E a diferenca entre "funciona" e "parece incrivel".</p>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">ease-in (acelera), ease-out (desacelera), ease-in-out (ambos), cubic-bezier (customizado), fisica de fluidos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topico 4 -->
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">👁️</span>
+            <div>
+              <span class="font-medium">Hierarquia Visual</span>
+              <span class="text-neutral-500 text-sm ml-2">- A terceira lei do motion</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-blue-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Usar motion para guiar a atencao do usuario e definir a ordem de leitura do conteudo. O movimento direciona o olhar para o que importa primeiro.</p>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Sem hierarquia, tudo compete por atencao e nada se destaca. Com hierarquia, voce controla a narrativa visual da pagina.</p>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Stagger (escalonamento), delays progressivos, elementos primarios vs secundarios, foco visual controlado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topico 5 -->
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🎨</span>
+            <div>
+              <span class="font-medium">Motion Estetico vs Cinematografico</span>
+              <span class="text-neutral-500 text-sm ml-2">- Os dois tipos de motion</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-blue-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Motion estetico e sutil e funcional (hover de botoes). Motion cinematografico e expressivo e narrativo (transicoes entre secoes como cenas de filme).</p>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Saber quando usar cada tipo evita exageros e cria experiencias equilibradas. Microinteracoes precisam de sutileza; transicoes grandes pedem drama.</p>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Hover effects (estetico), page reveals (cinematografico), feedback de clique (estetico), hero animations (cinematografico).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topico 6 -->
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🎯</span>
+            <div>
+              <span class="font-medium">Os 3 Propositos do Motion</span>
+              <span class="text-neutral-500 text-sm ml-2">- Guiar, feedback, encantar</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-blue-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Todo motion deve ter um proposito claro: guiar a atencao do usuario, fornecer feedback de acoes, ou encantar e criar conexao emocional.</p>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Motion sem proposito e distracao. Cada animacao deve passar no teste: "Isso ajuda o usuario ou so parece legal?"</p>
+              </div>
+              <div>
+                <span class="text-blue-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Atencao direcionada, confirmacao de acao, deleite do usuario, balanco funcional vs emocional, motion com intencao.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botoes (ESQUERDA!) -->
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-1')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">
+          Ver em Modal
+        </button>
+        <a href="slides/slides-2-1.html" class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors">
+          📊 Slides
+        </a>
+        <a href="modulo-2-1.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">
+          Ver Completo
+        </a>
+      </div>
+    </div>
+
+    <!-- MODULO 2.2 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-blue-400 font-bold">2.2</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">⚡ CSS Animations Nativo</h3>
+        <p class="text-neutral-400">Domine as ferramentas nativas do CSS para criar animacoes sem dependencias externas.</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🎞️</span>
+            <div>
+              <span class="font-medium">@keyframes</span>
+              <span class="text-neutral-500 text-sm ml-2">- A base das animacoes CSS</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">@keyframes define os estados intermediarios de uma animacao, permitindo controle total sobre cada etapa do movimento.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">E a fundacao de animacoes complexas no CSS. Com keyframes voce pode criar qualquer tipo de movimento.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">from/to, porcentagens (0%, 50%, 100%), estados intermediarios, reutilizacao de animacoes.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🔄</span>
+            <div>
+              <span class="font-medium">CSS Transitions</span>
+              <span class="text-neutral-500 text-sm ml-2">- Animacoes de estado</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Transitions animam mudancas de propriedades CSS automaticamente quando um valor muda (hover, focus, class toggle).</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mais simples que keyframes para animacoes de estado. Perfeito para hovers, menus e toggles.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">transition-property, transition-duration, transition-timing-function, transition-delay, shorthand.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🔀</span>
+            <div>
+              <span class="font-medium">Transform</span>
+              <span class="text-neutral-500 text-sm ml-2">- Translate, scale, rotate</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Transform modifica a posicao, tamanho e rotacao de elementos sem afetar o layout (GPU accelerated).</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Transforms sao as animacoes mais performaticas. Sempre prefira transform a animar width/height/top/left.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">translateX/Y/Z, scale(), rotate(), skew(), transform-origin, composicao de transforms.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">⚙️</span>
+            <div>
+              <span class="font-medium">Animation Properties</span>
+              <span class="text-neutral-500 text-sm ml-2">- Controle total</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Propriedades que controlam como a animacao se comporta: duracao, delay, repeticao, direcao e estado final.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Dominar essas propriedades permite criar loops, animacoes reversas, staggers e comportamentos complexos.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">animation-duration, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">💡</span>
+            <div>
+              <span class="font-medium">Exemplos Praticos</span>
+              <span class="text-neutral-500 text-sm ml-2">- Patterns comuns</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Animacoes pre-prontas que voce pode usar imediatamente: fade-in, slide-up, pulse, shake, bounce.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ter um repertorio de animacoes acelera o desenvolvimento e garante consistencia visual no projeto.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">fadeIn, slideInUp, scaleIn, pulse, shake, skeleton loading, spinner, progress bar.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">✅</span>
+            <div>
+              <span class="font-medium">Boas Praticas CSS</span>
+              <span class="text-neutral-500 text-sm ml-2">- Performance e manutencao</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Regras e padroes para animacoes CSS performaticas, acessiveis e faceis de manter.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Animacoes mal feitas causam jank (travadas), drenam bateria e prejudicam acessibilidade.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">will-change, prefers-reduced-motion, composite layers, evitar layout triggers, 60fps target.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-2')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="slides/slides-2-2.html" class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors">📊 Slides</a>
+        <a href="modulo-2-2.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 2.3 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-blue-400 font-bold">2.3</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">📜 Scroll-Based Motion</h3>
+        <p class="text-neutral-400">Crie experiencias que respondem ao scroll do usuario de forma fluida e intencional.</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">📍</span>
+            <div><span class="font-medium">Intersection Observer</span><span class="text-neutral-500 text-sm ml-2">- Detectando visibilidade</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">API nativa que detecta quando elementos entram ou saem da viewport, sem precisar de scroll events custosos.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mais performatico que scroll listeners. Base para lazy loading e animacoes de reveal.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">threshold, rootMargin, isIntersecting, observe/unobserve, trigger once.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">✨</span>
+            <div><span class="font-medium">Reveal Animations</span><span class="text-neutral-500 text-sm ml-2">- Conteudo que aparece</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Elementos que aparecem suavemente conforme o usuario rola a pagina, criando sensacao de descoberta.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Evita que tudo apareca de uma vez. O usuario sente que controla a experiencia ao navegar.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">fade-in, slide-up, scale-in, stagger entre elementos, trigger point (threshold).</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🏔️</span>
+            <div><span class="font-medium">Parallax</span><span class="text-neutral-500 text-sm ml-2">- Profundidade e movimento</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Tecnica onde camadas se movem em velocidades diferentes, criando ilusao de profundidade 3D.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Adiciona dimensao e interesse visual. Muito usado em heroes e backgrounds.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Velocidades diferentes por camada, transform: translateY, performance considerations, mobile fallback.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">📊</span>
+            <div><span class="font-medium">Scroll Progress</span><span class="text-neutral-500 text-sm ml-2">- Indicadores de progresso</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Elementos visuais que mostram quanto do conteudo ja foi visto (barras de progresso, indicadores).</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Orienta o usuario sobre sua posicao. Muito usado em artigos longos e landing pages.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">scrollY / scrollHeight, barra fixa no topo, indicador de secao ativa, scroll percentage.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🎯</span>
+            <div><span class="font-medium">Scroll Snap</span><span class="text-neutral-500 text-sm ml-2">- Navegacao por secoes</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">CSS que faz a pagina "encaixar" automaticamente em pontos especificos, criando navegacao por secoes.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Perfeito para apresentacoes, portfolios e experiencias full-page. Nativo do CSS, sem JS.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">scroll-snap-type, scroll-snap-align, mandatory vs proximity, scroll-padding.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🚀</span>
+            <div><span class="font-medium">Scroll-Driven Animations</span><span class="text-neutral-500 text-sm ml-2">- CSS moderno</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Nova API CSS que vincula animacoes diretamente ao scroll, sem JavaScript. O futuro das scroll animations.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mais performatico e declarativo. Suporte crescente nos browsers modernos.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">animation-timeline, scroll(), view(), timeline-scope, @supports para fallback.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-3')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="slides/slides-2-3.html" class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors">📊 Slides</a>
+        <a href="modulo-2-3.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 2.4 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-blue-400 font-bold">2.4</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">✨ Microinteracoes</h3>
+        <p class="text-neutral-400">Feedback visual que faz a interface parecer viva e responsiva a cada acao do usuario.</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">👆</span>
+            <div><span class="font-medium">Hover Effects</span><span class="text-neutral-500 text-sm ml-2">- Alem do opacity</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Respostas visuais quando o cursor passa sobre elementos interativos, indicando que sao clicaveis.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Hover bem feito melhora usabilidade e adiciona polish. E o primeiro nivel de feedback do usuario.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Scale sutil (1.02-1.05), cor de fundo, elevacao (shadow), underline animado, icon shift.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🖱️</span>
+            <div><span class="font-medium">Click Feedback</span><span class="text-neutral-500 text-sm ml-2">- Confirmacao de acao</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Resposta visual imediata ao clique, confirmando que a acao foi registrada pelo sistema.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem feedback, usuarios clicam multiplas vezes achando que nao funcionou. Click feedback previne frustacao.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">:active state, scale down (0.95-0.98), ripple effect, bounce back, press depth.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🔄</span>
+            <div><span class="font-medium">Loading States</span><span class="text-neutral-500 text-sm ml-2">- Feedback de espera</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Indicadores visuais de que algo esta sendo processado: spinners, skeletons, progress bars.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Usuarios toleram espera se sabem que algo esta acontecendo. Sem feedback, 3 segundos parece uma eternidade.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Spinner rotation, skeleton pulse, progress determinado vs indeterminado, loading em botoes.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">📝</span>
+            <div><span class="font-medium">Form Interactions</span><span class="text-neutral-500 text-sm ml-2">- Inputs que respondem</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Animacoes em campos de formulario: labels flutuantes, validacao em tempo real, focus states.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Formularios sao pontos criticos de conversao. Microinteracoes reduzem erros e abandonos.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Floating labels, border highlight, success/error shake, checkbox/toggle animations.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🎭</span>
+            <div><span class="font-medium">State Transitions</span><span class="text-neutral-500 text-sm ml-2">- Mudancas suaves</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Transicoes entre estados de componentes: aberto/fechado, ativo/inativo, selecionado/nao-selecionado.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mudancas abruptas confundem. Transicoes suaves ajudam o usuario a acompanhar o que mudou.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Accordion expand, tab switch, modal enter/exit, menu slide, card flip.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">⚖️</span>
+            <div><span class="font-medium">Timing de Microinteracoes</span><span class="text-neutral-500 text-sm ml-2">- Rapido mas nao instantaneo</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">A faixa ideal de duracao para microinteracoes: rapidas o suficiente para parecer responsivas, lentas o suficiente para serem percebidas.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Microinteracoes muito lentas frustram. Muito rapidas passam despercebidas. O sweet spot faz a diferenca.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">100-150ms para hover, 150-300ms para click, 200-400ms para state change, ease-out sempre.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-4')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="slides/slides-2-4.html" class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors">📊 Slides</a>
+        <a href="modulo-2-4.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 2.5 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-blue-400 font-bold">2.5</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">🎬 Transicoes Cinematograficas</h3>
+        <p class="text-neutral-400">Trate seu site como uma historia visual continua, nao como secoes isoladas.</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🎥</span>
+            <div><span class="font-medium">Pensamento Cinematografico</span><span class="text-neutral-500 text-sm ml-2">- Site como filme</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Abordar o design do site como uma sequencia cinematografica onde cada secao e uma "cena" que flui para a proxima.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cria experiencias memoraveis e imersivas. O usuario nao apenas le, ele vivencia a narrativa.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Ritmo narrativo, momentos dramaticos, respiro entre cenas, climax visual, resolucao.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🌅</span>
+            <div><span class="font-medium">Hero como Abertura</span><span class="text-neutral-500 text-sm ml-2">- A primeira impressao</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Tratar a hero section como a abertura de um filme: background aparece primeiro, depois headline, subheading, e finalmente o CTA.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">A hero define o tom de toda a experiencia. Uma abertura cinematografica cria expectativa e engajamento.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Sequencia de reveal, stagger entre elementos, timing dramatico, primeiro impacto cognitivo.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🔀</span>
+            <div><span class="font-medium">Transicoes entre Secoes</span><span class="text-neutral-500 text-sm ml-2">- Dissolves e flows</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Secoes que se dissolvem umas nas outras em vez de terminar abruptamente, criando fluxo continuo.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Elimina a sensacao de "blocos empilhados". O site parece uma experiencia unica e integrada.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Gradiente de transicao, overlap de elementos, z-index control, background blending.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">📋</span>
+            <div><span class="font-medium">Stagger Sequencial</span><span class="text-neutral-500 text-sm ml-2">- Elementos em cascata</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Animacao onde elementos aparecem um apos o outro com delays progressivos, criando efeito cascata.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Stagger guia o olhar e cria hierarquia temporal. Mais elegante que tudo aparecendo junto.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Delay incremental (50-150ms), direcao do stagger, grupamento logico, timing curves.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🎭</span>
+            <div><span class="font-medium">Momentos Cinematograficos</span><span class="text-neutral-500 text-sm ml-2">- Pontos de impacto</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Momentos especificos no scroll onde algo dramatico acontece: uma revelacao, um numero animando, uma imagem expandindo.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cria pontos de interesse que prendem atencao e ficam na memoria. Sao os "plot twists" do seu site.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Counter animations, image reveals, text splits, color transitions, full-screen takeovers.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🎬</span>
+            <div><span class="font-medium">Footer como Encerramento</span><span class="text-neutral-500 text-sm ml-2">- Fechando a narrativa</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">O footer como os creditos finais de um filme: fecha a narrativa visual com elegancia e clareza.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Um bom encerramento deixa impressao positiva. O footer e a ultima coisa que o usuario ve antes de decidir agir.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Rise from bottom, fade to dark, final CTA destacado, sensacao de completude, call to action final.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-5')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-2-5.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 2.6 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-blue-400 font-bold">2.6</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">🚀 GSAP & Bibliotecas Pro</h3>
+        <p class="text-neutral-400">Ferramentas profissionais para animacoes complexas que vao alem do CSS nativo.</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🎯</span>
+            <div><span class="font-medium">Por que GSAP</span><span class="text-neutral-500 text-sm ml-2">- Quando CSS nao basta</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">GSAP (GreenSock Animation Platform) e a biblioteca de animacao mais poderosa e performatica para web.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Para animacoes complexas, sequencias, scroll-triggered e controle preciso, GSAP e o padrao da industria.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Consistencia cross-browser, performance otimizada, API intuitiva, ecossistema de plugins.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">⏱️</span>
+            <div><span class="font-medium">Timeline</span><span class="text-neutral-500 text-sm ml-2">- Sequencias orquestradas</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Linha do tempo que permite encadear multiplas animacoes com controle preciso de quando cada uma comeca.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Essencial para animacoes cinematograficas. Substitui dezenas de setTimeout com uma API elegante.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">gsap.timeline(), .to(), .from(), position parameter ("<", "+=0.2"), labels.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">📜</span>
+            <div><span class="font-medium">ScrollTrigger</span><span class="text-neutral-500 text-sm ml-2">- O plugin mais usado</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Plugin GSAP que vincula animacoes ao scroll com controle total sobre triggers, pins, e scrubbing.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Transforma scroll animations de complexas para triviais. O padrao para sites com scroll interativo.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">trigger, start/end, scrub, pin, markers (debug), toggleActions.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">📋</span>
+            <div><span class="font-medium">Stagger Avancado</span><span class="text-neutral-500 text-sm ml-2">- Cascatas complexas</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Sistema de stagger do GSAP que permite padroes complexos: grid, random, from center, ease distribution.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Vai muito alem do delay incremental do CSS. Cria patterns visuais impressionantes com poucas linhas.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">stagger object, from: "center"/"edges"/"random", grid stagger, ease in stagger, amount vs each.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🔌</span>
+            <div><span class="font-medium">Outros Plugins</span><span class="text-neutral-500 text-sm ml-2">- SplitText, MorphSVG, etc</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Ecossistema de plugins GSAP para casos especificos: texto animado, morphing de SVG, fisica, drag.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cada plugin resolve um problema especifico com a mesma qualidade e API do core GSAP.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">SplitText (letras/palavras), MorphSVG, DrawSVG, MotionPath, Flip, Draggable.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">📚</span>
+            <div><span class="font-medium">Alternativas ao GSAP</span><span class="text-neutral-500 text-sm ml-2">- Framer Motion, Anime.js</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Outras bibliotecas de animacao populares: Framer Motion (React), Anime.js, Lottie, Motion One.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cada uma tem seu nicho. Framer Motion e ideal para React; Lottie para animacoes vetoriais do After Effects.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Framework-specific vs agnostic, bundle size, learning curve, use cases ideais.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-6')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-2-6.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 2.7 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-blue-400 font-bold">2.7</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">🎥 AI Video Integration</h3>
+        <p class="text-neutral-400">Integre videos gerados por IA para criar experiencias web imersivas e unicas.</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🤖</span>
+            <div><span class="font-medium">Ferramentas de Video AI</span><span class="text-neutral-500 text-sm ml-2">- Veo, Runway, Pika</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Ferramentas de IA que geram videos a partir de prompts de texto: Google Veo, Runway Gen-2, Pika Labs.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Video customizado sem equipe de producao. Perfeito para backgrounds, demos e conteudo unico.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Text-to-video, image-to-video, video extension, style control, motion intensity.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">📝</span>
+            <div><span class="font-medium">Prompts para Video</span><span class="text-neutral-500 text-sm ml-2">- Gerando o clipe perfeito</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Tecnicas para escrever prompts que geram videos adequados para web: curtos (~5s), loopaveis, com movimento sutil.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Prompt ruim = video inutilizavel. Saber pedir o que funciona economiza tempo e creditos.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Duracao curta, camera estatica ou movimento lento, cores que combinam com marca, loopabilidade.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🎞️</span>
+            <div><span class="font-medium">Video como Background</span><span class="text-neutral-500 text-sm ml-2">- Hero sections imersivas</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Usar video como fundo de secoes, especialmente hero, criando imersao sem atrapalhar legibilidade.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Video background bem feito eleva o site a outro nivel. Mal feito, e distrativo e pesado.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Overlay escuro para texto, autoplay muted, loop, object-fit: cover, poster image.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">📜</span>
+            <div><span class="font-medium">Scroll Scrubbing</span><span class="text-neutral-500 text-sm ml-2">- Video sincronizado</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Tecnica onde o progresso do video e controlado pela posicao do scroll, nao pelo tempo.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cria interatividade unica onde o video "respira com o scroll". Efeito impressionante e memoravel.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">currentTime control, scroll position mapping, requestAnimationFrame, debouncing.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">☁️</span>
+            <div><span class="font-medium">Hospedagem e CDN</span><span class="text-neutral-500 text-sm ml-2">- Cloudinary, Bunny</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Servicos especializados para hospedar e entregar video com performance: Cloudinary, Bunny.net, Mux.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Video hospedado no servidor proprio e lento. CDNs especializados fazem adaptive streaming e otimizacao.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Transcoding automatico, adaptive bitrate, global CDN, transformacoes on-the-fly.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">📱</span>
+            <div><span class="font-medium">Mobile Fallbacks</span><span class="text-neutral-500 text-sm ml-2">- Quando video nao funciona</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Estrategias para quando video nao e viavel: conexao lenta, mobile, prefers-reduced-motion.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Video que trava ou consome dados do usuario e pior que nenhum video. Fallbacks sao obrigatorios.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Poster image estatica, GIF como alternativa, detectar conexao lenta, respeitarprefers-reduced-motion.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-7')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-2-7.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    <!-- MODULO 2.8 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-blue-400 font-bold">2.8</span>
+          <span class="text-xs text-neutral-500">~50 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">⚙️ Otimizacao de Performance</h3>
+        <p class="text-neutral-400">Garanta que suas animacoes sejam fluidas, estaveis e nao prejudiquem a experiencia.</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🎯</span>
+            <div><span class="font-medium">60 FPS Target</span><span class="text-neutral-500 text-sm ml-2">- O padrao de fluidez</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">60 frames por segundo e o alvo para animacoes fluidas. Abaixo disso, o usuario percebe travadas (jank).</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Animacoes bonitas que travam sao piores que nenhuma animacao. Performance e nao-negociavel.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">16.67ms per frame, frame budget, jank, dropped frames, requestAnimationFrame.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🖥️</span>
+            <div><span class="font-medium">GPU Acceleration</span><span class="text-neutral-500 text-sm ml-2">- Composite layers</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Tecnicas para mover o trabalho de animacao para a GPU, que e muito mais rapida para esse tipo de tarefa.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">A diferenca entre animacao travada e fluida geralmente e usar ou nao a GPU corretamente.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">transform e opacity (GPU), will-change, composite layers, layer promotion, avoiding paint.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">⚠️</span>
+            <div><span class="font-medium">Layout Thrashing</span><span class="text-neutral-500 text-sm ml-2">- O inimigo da performance</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Quando o browser precisa recalcular layout repetidamente por ler e escrever propriedades de layout em sequencia.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Layout thrashing e uma das causas mais comuns de animacoes lentas. Facil de causar, facil de evitar.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Forced synchronous layout, batch reads then writes, avoid offsetWidth/Height em loops.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">💤</span>
+            <div><span class="font-medium">Lazy Loading</span><span class="text-neutral-500 text-sm ml-2">- Carregar sob demanda</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Tecnica de carregar recursos (imagens, videos, scripts) apenas quando estao proximos de serem vistos.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Reduz tempo de carregamento inicial e economiza dados. Essencial para sites com muito conteudo visual.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">loading="lazy" nativo, Intersection Observer, placeholder blur, skeleton screens.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🔧</span>
+            <div><span class="font-medium">DevTools Performance</span><span class="text-neutral-500 text-sm ml-2">- Debugging animacoes</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Usar as ferramentas de performance do browser para identificar e corrigir problemas em animacoes.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem debugging, voce esta no escuro. DevTools mostra exatamente onde esta o problema.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Performance tab, Paint flashing, Layer borders, FPS meter, Timeline recording.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">📊</span>
+            <div><span class="font-medium">Core Web Vitals</span><span class="text-neutral-500 text-sm ml-2">- Metricas que importam</span></div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div><span class="text-blue-400 font-semibold">O que e:</span><p class="text-neutral-300 text-sm">Metricas do Google que medem experiencia do usuario: LCP, FID/INP, CLS. Animacoes afetam todas elas.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Core Web Vitals afetam SEO. Animacoes mal feitas podem derrubar sua pontuacao e ranking.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">CLS (evitar layout shifts), INP (interatividade), LCP (nao bloquear renderizacao), Lighthouse.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-2-8')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+        <a href="modulo-2-8.html" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">Ver Completo</a>
+      </div>
+    </div>
+
+    </section>
+  </main>
+
+  <!-- MODAL CONTAINER -->
+  <div id="modal-container" class="modal hidden" onclick="if(event.target === this) closeModal()">
+    <div class="modal-content bg-dark-900 border border-dark-600">
+      <div class="p-3 bg-dark-800 border-b border-dark-600 flex justify-between items-center">
+        <span id="modal-title" class="text-blue-400 font-bold text-sm"></span>
+        <button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button>
+      </div>
+      <iframe id="modal-iframe" src="" class="bg-dark-900"></iframe>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>AI WCF - Vibe Coding | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> - 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    if (localStorage.getItem('color-theme') === 'light' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+      document.documentElement.classList.remove('dark');
+      lightIcon.classList.remove('hidden');
+    } else {
+      document.documentElement.classList.add('dark');
+      darkIcon.classList.remove('hidden');
+    }
+
+    themeToggle.addEventListener('click', function() {
+      darkIcon.classList.toggle('hidden');
+      lightIcon.classList.toggle('hidden');
+
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    });
+
+    // Topic toggle
+    function toggleTopic(button) {
+      const topicItem = button.parentElement;
+      const explanation = topicItem.querySelector('.topic-explanation');
+      const moduleCard = topicItem.closest('.bg-dark-800');
+
+      // Close other topics in same module
+      moduleCard.querySelectorAll('.topic-explanation.active').forEach(exp => {
+        if (exp !== explanation) {
+          exp.classList.remove('active');
+        }
+      });
+
+      explanation.classList.toggle('active');
+    }
+
+    // Modal functions
+    const moduleNames = {
+      'modal-2-1': '2.1 - Introducao ao Motion Design',
+      'modal-2-2': '2.2 - CSS Animations Nativo',
+      'modal-2-3': '2.3 - Scroll-Based Motion',
+      'modal-2-4': '2.4 - Microinteracoes',
+      'modal-2-5': '2.5 - Transicoes Cinematograficas',
+      'modal-2-6': '2.6 - GSAP & Bibliotecas Pro',
+      'modal-2-7': '2.7 - AI Video Integration',
+      'modal-2-8': '2.8 - Otimizacao de Performance'
+    };
+
+    function openModal(modalId) {
+      const container = document.getElementById('modal-container');
+      const iframe = document.getElementById('modal-iframe');
+      const title = document.getElementById('modal-title');
+
+      const moduleNum = modalId.replace('modal-', '');
+      title.textContent = moduleNames[modalId] || modalId;
+      iframe.src = 'modulo-' + moduleNum + '.html';
+
+      container.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const container = document.getElementById('modal-container');
+      const iframe = document.getElementById('modal-iframe');
+
+      container.classList.add('hidden');
+      iframe.src = '';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal with ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+
+</body>
+</html>

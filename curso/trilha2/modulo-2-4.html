@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulo 2.4 - Microinteracoes | AI WCF</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+
+    /* Light mode overrides - OBRIGATORIO */
+    html:not(.dark) body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🎨</span>
+            <span class="font-bold text-lg hidden sm:inline">AI WCF</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
+            <span class="sm:hidden">T1</span>
+            <span class="hidden sm:inline">Fundamentos</span>
+          </a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10">
+            <span class="sm:hidden">T2</span>
+            <span class="hidden sm:inline">Animacao</span>
+          </a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span>
+            <span class="hidden sm:inline">Infra</span>
+          </a>
+
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../index.html" class="hover:text-blue-400">Inicio</a>
+      <span>/</span>
+      <a href="index.html" class="hover:text-blue-400">Trilha 2</a>
+      <span>/</span>
+      <span class="text-blue-400">Modulo 2.4</span>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">
+        MODULO 2.4
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔬 Microinteracoes</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Aprenda a criar pequenas animacoes funcionais que dao vida a interface e melhoram a experiencia do usuario.</p>
+
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-blue-400">6</div>
+          <div class="text-xs text-neutral-400">Topicos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-blue-400">45</div>
+          <div class="text-xs text-neutral-400">Minutos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-blue-400">Intermediario</div>
+          <div class="text-xs text-neutral-400">Nivel</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-blue-400">Pratico</div>
+          <div class="text-xs text-neutral-400">Tipo</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEUDO -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- TOPICO 1 -->
+    <section id="topico-1" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
+        <h2 class="text-2xl font-bold">🔬 O que sao Microinteracoes</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        <strong class="text-blue-400">Microinteracoes</strong> sao pequenas animacoes funcionais que fornecem feedback visual para acoes do usuario. Elas transformam interfaces estaticas em experiencias vivas e responsivas.
+      </p>
+
+      <!-- Box Conceito Principal -->
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center">
+          <span class="mr-2">🎯</span> Definicao Central
+        </h3>
+        <p class="text-neutral-300 mb-4">
+          Microinteracoes sao <strong>animacoes sutis e rapidas</strong> que comunicam mudancas de estado, confirmam acoes e guiam o usuario:
+        </p>
+        <ul class="space-y-2 text-neutral-300">
+          <li class="flex items-start space-x-2">
+            <span class="text-blue-400 mt-1">•</span>
+            <span><strong>Pequenas animacoes funcionais:</strong> Nao decorativas, mas com proposito</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-blue-400 mt-1">•</span>
+            <span><strong>Feedback para acoes:</strong> Confirmam que algo aconteceu</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-blue-400 mt-1">•</span>
+            <span><strong>Duracao tipica:</strong> 100-300ms (rapidas, mas percetiveis)</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-blue-400 mt-1">•</span>
+            <span><strong>Proposito:</strong> Tornar a interface mais humana e responsiva</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Box Citacao -->
+      <div class="bg-dark-800 rounded-xl border-l-4 border-blue-500 p-6">
+        <p class="text-lg text-neutral-300 italic">
+          "Os detalhes nao sao detalhes. Eles fazem o design."
+        </p>
+        <p class="text-blue-400 text-sm mt-2">— Charles Eames</p>
+      </div>
+    </section>
+
+    <!-- TOPICO 2 -->
+    <section id="topico-2" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
+        <h2 class="text-2xl font-bold">🎯 Os 4 Momentos</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Toda microinteracao segue um ciclo de <strong class="text-blue-400">4 momentos</strong> que garantem uma experiencia completa e coerente para o usuario.
+      </p>
+
+      <!-- Timeline -->
+      <div class="space-y-6 mb-6">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">1</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Trigger - Gatilho da Acao</h4>
+            <p class="text-neutral-400 text-sm mb-2">O que inicia a microinteracao</p>
+            <p class="text-neutral-300 text-sm">Click, hover, focus, scroll, gestos touch - qualquer acao do usuario que dispara a animacao.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">2</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Rules - O que Acontece</h4>
+            <p class="text-neutral-400 text-sm mb-2">A logica por tras da interacao</p>
+            <p class="text-neutral-300 text-sm">Define o que acontece quando o trigger e ativado - a mudanca de estado, a transformacao visual.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">3</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Feedback - Resposta Visual</h4>
+            <p class="text-neutral-400 text-sm mb-2">Comunicacao com o usuario</p>
+            <p class="text-neutral-300 text-sm">A animacao visivel que confirma a acao - mudanca de cor, movimento, transformacao.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">4</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Loops - Estados Continuos</h4>
+            <p class="text-neutral-400 text-sm mb-2">Comportamento repetido ou persistente</p>
+            <p class="text-neutral-300 text-sm">Estados que se repetem ou persistem - spinners de loading, pulsacoes de atencao.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 3 -->
+    <section id="topico-3" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
+        <h2 class="text-2xl font-bold">🖱️ Hover States</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        <strong class="text-blue-400">Hover states</strong> sao as microinteracoes mais comuns no desktop. Eles indicam que um elemento e interativo e respondem ao cursor do usuario.
+      </p>
+
+      <!-- Grid de Exemplos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">🔘</div>
+          <h4 class="font-semibold text-white mb-2">Botoes</h4>
+          <ul class="space-y-1 text-neutral-400 text-sm">
+            <li>• Mudanca de cor de fundo</li>
+            <li>• Adicao de sombra (box-shadow)</li>
+            <li>• Scale sutil (1.02 - 1.05)</li>
+            <li>• Transicao suave (200-300ms)</li>
+          </ul>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">🃏</div>
+          <h4 class="font-semibold text-white mb-2">Cards</h4>
+          <ul class="space-y-1 text-neutral-400 text-sm">
+            <li>• Lift effect (translateY + shadow)</li>
+            <li>• Border glow (border-color)</li>
+            <li>• Background highlight</li>
+            <li>• Cursor pointer</li>
+          </ul>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">🔗</div>
+          <h4 class="font-semibold text-white mb-2">Links</h4>
+          <ul class="space-y-1 text-neutral-400 text-sm">
+            <li>• Underline animado</li>
+            <li>• Mudanca de cor</li>
+            <li>• Background slide</li>
+            <li>• Opacity transition</li>
+          </ul>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">🎨</div>
+          <h4 class="font-semibold text-white mb-2">Icons</h4>
+          <ul class="space-y-1 text-neutral-400 text-sm">
+            <li>• Rotacao sutil (15-45deg)</li>
+            <li>• Bounce effect</li>
+            <li>• Scale up</li>
+            <li>• Color fill animation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Box Codigo -->
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center">
+          <span class="mr-2">💻</span> Exemplo CSS
+        </h3>
+        <pre class="bg-dark-900 rounded-lg p-4 text-sm text-neutral-300 overflow-x-auto"><code>.btn {
+  transition: all 0.2s ease-out;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.5);
+}</code></pre>
+      </div>
+    </section>
+
+    <!-- TOPICO 4 -->
+    <section id="topico-4" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
+        <h2 class="text-2xl font-bold">✅ Feedback de Acao</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        <strong class="text-blue-400">Feedback de acao</strong> confirma que o sistema recebeu e processou a acao do usuario. E essencial para uma boa experiencia.
+      </p>
+
+      <!-- Lista de tipos -->
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center">
+          <span class="mr-2">📋</span> Tipos de Feedback
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-semibold text-white mb-2">Loading States</h4>
+            <ul class="space-y-1 text-neutral-300 text-sm">
+              <li>• Spinners animados</li>
+              <li>• Skeleton loaders</li>
+              <li>• Progress bars</li>
+              <li>• Shimmer effects</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-2">Success/Error States</h4>
+            <ul class="space-y-1 text-neutral-300 text-sm">
+              <li>• Checkmark animado</li>
+              <li>• Shake de erro</li>
+              <li>• Color flash</li>
+              <li>• Icon transitions</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-2">Form Validation</h4>
+            <ul class="space-y-1 text-neutral-300 text-sm">
+              <li>• Border color change</li>
+              <li>• Icon de validacao</li>
+              <li>• Mensagem animada</li>
+              <li>• Real-time feedback</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-2">Button States</h4>
+            <ul class="space-y-1 text-neutral-300 text-sm">
+              <li>• Pressed (scale down)</li>
+              <li>• Disabled (opacity)</li>
+              <li>• Loading (spinner)</li>
+              <li>• Success (checkmark)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid Fazer vs Evitar -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+          <h4 class="font-bold text-emerald-400 mb-4">✓ Fazer</h4>
+          <ul class="space-y-3 text-neutral-300">
+            <li class="flex items-start space-x-2">
+              <span class="text-emerald-400">✓</span>
+              <span>Feedback imediato (< 100ms)</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-emerald-400">✓</span>
+              <span>Indicar progresso em acoes longas</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-emerald-400">✓</span>
+              <span>Confirmar sucesso claramente</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-emerald-400">✓</span>
+              <span>Explicar erros de forma amigavel</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+          <h4 class="font-bold text-red-400 mb-4">✗ Evitar</h4>
+          <ul class="space-y-3 text-neutral-300">
+            <li class="flex items-start space-x-2">
+              <span class="text-red-400">✗</span>
+              <span>Nenhum feedback apos click</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-red-400">✗</span>
+              <span>Loading infinito sem indicacao</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-red-400">✗</span>
+              <span>Erro silencioso</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-red-400">✗</span>
+              <span>Animacoes muito longas (> 500ms)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 5 -->
+    <section id="topico-5" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
+        <h2 class="text-2xl font-bold">📱 Microinteracoes Mobile</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        No mobile, as microinteracoes precisam compensar a falta de hover e fornecer <strong class="text-blue-400">feedback tactil claro</strong> para toques.
+      </p>
+
+      <!-- Grid de Exemplos Mobile -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">💧</div>
+          <h4 class="font-semibold text-white mb-2">Touch Feedback</h4>
+          <p class="text-neutral-400 text-sm">Ripple effect (Material Design) - onda que se expande do ponto de toque, confirmando a interacao.</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">🔄</div>
+          <h4 class="font-semibold text-white mb-2">Pull to Refresh</h4>
+          <p class="text-neutral-400 text-sm">Arrastar para baixo ativa atualizacao - feedback visual com spinner e elastic bounce.</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">👆</div>
+          <h4 class="font-semibold text-white mb-2">Swipe Actions</h4>
+          <p class="text-neutral-400 text-sm">Deslizar itens revela acoes (delete, archive) - feedback visual das opcoes disponiveis.</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">📄</div>
+          <h4 class="font-semibold text-white mb-2">Bottom Sheet</h4>
+          <p class="text-neutral-400 text-sm">Paineis que deslizam de baixo com animacao suave e backdrop dimming.</p>
+        </div>
+      </div>
+
+      <!-- Box Importante -->
+      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+          <span class="mr-2">⚠️</span> Importante para Mobile
+        </h3>
+        <p class="text-neutral-300">
+          <strong>Mobile precisa de feedback tactil mais enfatico.</strong> Sem hover, o usuario depende inteiramente do feedback visual e tactil (vibracao) para confirmar suas acoes. Garanta que todo elemento interativo tenha um estado :active claro e considere usar haptic feedback quando disponivel.
+        </p>
+      </div>
+    </section>
+
+    <!-- TOPICO 6 -->
+    <section id="topico-6" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
+        <h2 class="text-2xl font-bold">🎯 Checklist de Implementacao</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Use este checklist para garantir que suas <strong class="text-blue-400">microinteracoes</strong> estejam completas e funcionando corretamente.
+      </p>
+
+      <!-- Checklist com Exemplos -->
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center">
+          <span class="mr-2">📋</span> Implementacoes Essenciais
+        </h3>
+        <div class="space-y-4">
+          <div class="bg-dark-800/50 rounded-lg p-4">
+            <h4 class="font-semibold text-white mb-2 flex items-center">
+              <span class="text-blue-400 mr-2">1.</span> Botao com hover + active states
+            </h4>
+            <code class="text-sm text-neutral-400 block bg-dark-900 p-2 rounded">
+              .btn:hover { transform: translateY(-2px); }<br>
+              .btn:active { transform: translateY(0) scale(0.98); }
+            </code>
+          </div>
+          <div class="bg-dark-800/50 rounded-lg p-4">
+            <h4 class="font-semibold text-white mb-2 flex items-center">
+              <span class="text-blue-400 mr-2">2.</span> Input com focus ring animado
+            </h4>
+            <code class="text-sm text-neutral-400 block bg-dark-900 p-2 rounded">
+              .input:focus { box-shadow: 0 0 0 3px rgba(59,130,246,0.3); }<br>
+              transition: box-shadow 0.2s ease;
+            </code>
+          </div>
+          <div class="bg-dark-800/50 rounded-lg p-4">
+            <h4 class="font-semibold text-white mb-2 flex items-center">
+              <span class="text-blue-400 mr-2">3.</span> Toggle switch suave
+            </h4>
+            <code class="text-sm text-neutral-400 block bg-dark-900 p-2 rounded">
+              .toggle-thumb { transition: transform 0.2s ease; }<br>
+              .toggle.active .toggle-thumb { transform: translateX(20px); }
+            </code>
+          </div>
+          <div class="bg-dark-800/50 rounded-lg p-4">
+            <h4 class="font-semibold text-white mb-2 flex items-center">
+              <span class="text-blue-400 mr-2">4.</span> Notification toast animado
+            </h4>
+            <code class="text-sm text-neutral-400 block bg-dark-900 p-2 rounded">
+              .toast { animation: slideIn 0.3s ease-out; }<br>
+              @keyframes slideIn { from { transform: translateY(-100%); } }
+            </code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center">
+          <span class="mr-3">📋</span> Resumo do Modulo
+        </h2>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Microinteracoes</strong>
+              <span class="text-neutral-400"> - Pequenas animacoes funcionais (100-300ms)</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">4 Momentos</strong>
+              <span class="text-neutral-400"> - Trigger, Rules, Feedback, Loops</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Hover States</strong>
+              <span class="text-neutral-400"> - Botoes, cards, links, icons</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Feedback de Acao</strong>
+              <span class="text-neutral-400"> - Loading, success, error, validation</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Mobile</strong>
+              <span class="text-neutral-400"> - Touch feedback, swipe, pull to refresh</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+          <h3 class="font-semibold text-blue-400 mb-2">Proximo Modulo:</h3>
+          <p class="text-neutral-300">2.5 - Scroll Animations</p>
+        </div>
+
+        <div class="flex justify-start space-x-4 flex-wrap gap-y-3">
+          <a href="modulo-2-3.html" class="px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
+            ← Modulo Anterior
+          </a>
+          <a href="slides/slides-2-4.html" class="px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">
+            📊 Ver Slides
+          </a>
+          <a href="modulo-2-5.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">
+            Proximo Modulo →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>AI WCF - Vibe Coding | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> - 2026</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden');
+      html.classList.remove('dark');
+    } else {
+      themeToggleLightIcon.classList.remove('hidden');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+
+</body>
+</html>

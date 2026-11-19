@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilha 1 - Fundamentos | AI WCF</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+
+    /* Light mode overrides - OBRIGATORIO */
+    html:not(.dark) body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(4px);
+    }
+    .modal-content {
+      width: 95%;
+      max-width: 1200px;
+      height: 90vh;
+      border-radius: 1rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-content iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <!-- Logo + INEMA.CLUB -->
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🎨</span>
+            <span class="font-bold text-lg hidden sm:inline">AI WCF</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+
+        <!-- Trilhas + Theme Toggle -->
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
+            <span class="sm:hidden">T1</span>
+            <span class="hidden sm:inline">Fundamentos</span>
+          </a>
+          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
+            <span class="sm:hidden">T2</span>
+            <span class="hidden sm:inline">Animacao</span>
+          </a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span>
+            <span class="hidden sm:inline">Infra</span>
+          </a>
+          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors hidden md:block">
+            <span>SEO</span>
+          </a>
+          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors hidden md:block">
+            <span>Seguranca</span>
+          </a>
+          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors hidden lg:block">
+            <span>Conversao</span>
+          </a>
+
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">
+        TRILHA 1
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🌱 Fundamentos do Vibe Coding</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">
+        Domine o metodo completo de criacao de sites com IA. Da teoria a pratica, aprenda a descrever o "clima" do site e deixe a IA gerar o codigo.
+      </p>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">8</div>
+          <div class="text-xs text-neutral-400">Modulos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">48</div>
+          <div class="text-xs text-neutral-400">Topicos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">~4h</div>
+          <div class="text-xs text-neutral-400">Duracao</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">Iniciante</div>
+          <div class="text-xs text-neutral-400">Nivel</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEUDO -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- SECAO 1: CARTOES SIMPLES (Visao Geral) -->
+    <div class="flex items-center mb-8">
+      <div class="flex-1 border-t border-dark-600"></div>
+      <span class="px-4 text-neutral-500 text-sm">Visao Geral dos Modulos</span>
+      <div class="flex-1 border-t border-dark-600"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+      <!-- Card 1.1 -->
+      <a href="modulo-1-1.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-emerald-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-emerald-400 font-bold">1.1</span>
+          <span class="text-xs text-neutral-500">~30 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-emerald-400 transition-colors">💡 O que e Vibe Coding</h3>
+        <p class="text-neutral-400 text-sm">Entenda o conceito revolucionario de descrever sites em vez de programar</p>
+      </a>
+
+      <!-- Card 1.2 -->
+      <a href="modulo-1-2.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-emerald-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-emerald-400 font-bold">1.2</span>
+          <span class="text-xs text-neutral-500">~35 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-emerald-400 transition-colors">📝 A Formula One Prompt Website</h3>
+        <p class="text-neutral-400 text-sm">Aprenda a estruturar o prompt perfeito para criar um site completo</p>
+      </a>
+
+      <!-- Card 1.3 -->
+      <a href="modulo-1-3.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-emerald-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-emerald-400 font-bold">1.3</span>
+          <span class="text-xs text-neutral-500">~40 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-emerald-400 transition-colors">🔥 Executando no Firebase Studio</h3>
+        <p class="text-neutral-400 text-sm">Coloque seu prompt em acao e gere seu primeiro site completo</p>
+      </a>
+
+      <!-- Card 1.4 -->
+      <a href="modulo-1-4.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-emerald-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-emerald-400 font-bold">1.4</span>
+          <span class="text-xs text-neutral-500">~35 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-emerald-400 transition-colors">🏗️ Arquitetura de Sites</h3>
+        <p class="text-neutral-400 text-sm">Domine os 5 modelos de estrutura (S1-S5) para diferentes objetivos</p>
+      </a>
+
+      <!-- Card 1.5 -->
+      <a href="modulo-1-5.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-emerald-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-emerald-400 font-bold">1.5</span>
+          <span class="text-xs text-neutral-500">~40 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-emerald-400 transition-colors">🎨 Diretrizes de Marca</h3>
+        <p class="text-neutral-400 text-sm">Defina tipografia, cores, formas e materiais para identidade premium</p>
+      </a>
+
+      <!-- Card 1.6 -->
+      <a href="modulo-1-6.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-emerald-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-emerald-400 font-bold">1.6</span>
+          <span class="text-xs text-neutral-500">~30 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-emerald-400 transition-colors">✨ Sistema de Presets Visuais</h3>
+        <p class="text-neutral-400 text-sm">Aprenda os 8 presets de experiencia: Calm, Energy, Momentum e mais</p>
+      </a>
+
+      <!-- Card 1.7 -->
+      <a href="modulo-1-7.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-emerald-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-emerald-400 font-bold">1.7</span>
+          <span class="text-xs text-neutral-500">~35 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-emerald-400 transition-colors">🎬 Motion & Interacao</h3>
+        <p class="text-neutral-400 text-sm">Entenda como definir animacoes, entradas, scroll e hover no prompt</p>
+      </a>
+
+      <!-- Card 1.8 -->
+      <a href="modulo-1-8.html" class="bg-dark-800 rounded-xl border border-dark-600 p-5 hover:border-emerald-500/50 hover:bg-dark-700/50 transition-all cursor-pointer block group">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-emerald-400 font-bold">1.8</span>
+          <span class="text-xs text-neutral-500">~30 min</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-emerald-400 transition-colors">🚀 Prompt Parametrico Final</h3>
+        <p class="text-neutral-400 text-sm">O template completo com todos os parametros para qualquer projeto</p>
+      </a>
+    </div>
+
+    <!-- SECAO 2: CONTEUDO DETALHADO (com topicos expandiveis) -->
+    <div class="flex items-center mb-8">
+      <div class="flex-1 border-t border-dark-600"></div>
+      <span class="px-4 text-neutral-500 text-sm">Conteudo Detalhado</span>
+      <div class="flex-1 border-t border-dark-600"></div>
+    </div>
+
+    <!-- MODULO 1.1 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-emerald-400 font-bold">1.1</span>
+          <span class="text-xs text-neutral-500">~30 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">💡 O que e Vibe Coding</h3>
+        <p class="text-neutral-400 text-sm">Entenda o conceito revolucionario de descrever sites em vez de programar</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <!-- Topico 1 -->
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">💭</span>
+            <div>
+              <span class="font-medium">O Conceito</span>
+              <span class="text-neutral-500 text-sm ml-2">- Descrever em vez de programar</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Vibe Coding e o processo de descrever o "clima" do site — layout, hierarquia, tipografia e movimento — em vez de programar linha por linha.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Permite criar sites profissionais sem conhecimento tecnico, focando em criatividade e intencao em vez de codigo.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Linguagem natural, descricao de vibe, IA como executor, humano como diretor criativo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topico 2 -->
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🧠</span>
+            <div>
+              <span class="font-medium">Mentalidade</span>
+              <span class="text-neutral-500 text-sm ml-2">- Pensar como diretor criativo</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">A mudanca de mindset de programador para diretor criativo, onde voce define a visao e a IA executa.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Libera voce para focar no resultado desejado, nao nos detalhes tecnicos da implementacao.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Visao criativa, delegacao inteligente, iteracao rapida, foco no usuario final.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topico 3 -->
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🎬</span>
+            <div>
+              <span class="font-medium">Diretor Criativo</span>
+              <span class="text-neutral-500 text-sm ml-2">- Seu novo papel</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">O papel de quem define a estrategia visual, tom e experiencia do site enquanto a IA cuida do codigo.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Dominar esse papel garante resultados consistentes e profissionais em cada projeto.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Briefing claro, referencias visuais, feedback estruturado, refinamento iterativo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topico 4 -->
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🤖</span>
+            <div>
+              <span class="font-medium">IA como Executor</span>
+              <span class="text-neutral-500 text-sm ml-2">- Como a IA transforma texto em codigo</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">O processo pelo qual a IA converte suas descricoes em codigo HTML, CSS e JavaScript funcional.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Entender como a IA interpreta instrucoes ajuda a escrever prompts mais eficazes.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Interpretacao de linguagem natural, geracao de codigo, contexto e especificidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topico 5 -->
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">✨</span>
+            <div>
+              <span class="font-medium">Beneficios</span>
+              <span class="text-neutral-500 text-sm ml-2">- Vantagens do metodo</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">As vantagens praticas de usar Vibe Coding: velocidade, acessibilidade e qualidade profissional.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Saber os beneficios ajuda a vender o metodo para clientes e equipes.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Velocidade de producao, sem barreiras tecnicas, foco em criatividade, resultados premium.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topico 6 -->
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🎯</span>
+            <div>
+              <span class="font-medium">Resultado Final</span>
+              <span class="text-neutral-500 text-sm ml-2">- O que voce vai criar</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Sites modernos, responsivos e visualmente premium criados em menos de uma hora.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Ter clareza do resultado motiva e orienta todo o processo de aprendizado.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Site profissional, visual premium, responsivo, pronto para producao, consistencia visual.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botoes (ESQUERDA!) -->
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-1-1')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">
+          Ver em Modal
+        </button>
+        <a href="slides/slides-1-1.html" class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors">
+          📊 Slides
+        </a>
+        <a href="modulo-1-1.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">
+          Ver Completo
+        </a>
+      </div>
+    </div>
+
+    <!-- MODULO 1.2 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-emerald-400 font-bold">1.2</span>
+          <span class="text-xs text-neutral-500">~35 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">📝 A Formula One Prompt Website</h3>
+        <p class="text-neutral-400 text-sm">Aprenda a estruturar o prompt perfeito para criar um site completo</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🏛️</span>
+            <div>
+              <span class="font-medium">Os 3 Pilares</span>
+              <span class="text-neutral-500 text-sm ml-2">- Estrutura, Branding, Conteudo</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Os tres elementos fundamentais de todo prompt: estrutura da pagina, branding e conteudo detalhado.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Dominar os pilares garante prompts completos que geram sites profissionais na primeira tentativa.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Estrutura como esqueleto, branding como visual, conteudo como carne do site.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🗂️</span>
+            <div>
+              <span class="font-medium">Estrutura da Pagina</span>
+              <span class="text-neutral-500 text-sm ml-2">- O esqueleto do site</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Header, Hero, Sobre, Servicos, CTA, Footer - o mapa claro do site que a IA precisa.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">A estrutura cria o fluxo natural: apresentacao, credibilidade, oferta, conversao.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Secoes padrao, fluxo narrativo, hierarquia, ordem logica.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🎨</span>
+            <div>
+              <span class="font-medium">Branding</span>
+              <span class="text-neutral-500 text-sm ml-2">- Identidade visual completa</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Tipografia, cores, formas, materiais, motion e experiencia mobile.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Esses detalhes evitam resultados genericos e garantem visual premium.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Fontes, paleta de cores, glassmorphism, animacoes, sensacao de app nativo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">📄</span>
+            <div>
+              <span class="font-medium">Conteudo</span>
+              <span class="text-neutral-500 text-sm ml-2">- Textos e elementos por secao</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Content Inputs (textos), Content Elements (layout) e Styling (visual) para cada secao.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Isso evita que a IA invente conteudo - voce define tudo que aparece no site.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Headlines, subtitulos, CTAs, grids, cards, fundos, efeitos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🔗</span>
+            <div>
+              <span class="font-medium">Referencias Visuais</span>
+              <span class="text-neutral-500 text-sm ml-2">- Ancorar a IA em estilos reais</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Citar referencias como Apple TV screensavers, macOS Sonoma, iOS glass effects.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Referencias reais reduzem aleatoriedade e ancoram a IA em um estilo especifico.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Inspiracao especifica, benchmarks visuais, padroes de mercado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">✅</span>
+            <div>
+              <span class="font-medium">Prompt Final</span>
+              <span class="text-neutral-500 text-sm ml-2">- Template pronto para usar</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">O modelo completo de prompt com todos os elementos organizados e prontos para copiar.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Ter um template acelera drasticamente a criacao de novos sites.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Template reutilizavel, checklist, padrao de qualidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-1-2')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">
+          Ver em Modal
+        </button>
+        <a href="slides/slides-1-2.html" class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors">
+          📊 Slides
+        </a>
+        <a href="modulo-1-2.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">
+          Ver Completo
+        </a>
+      </div>
+    </div>
+
+    <!-- MODULO 1.3 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-emerald-400 font-bold">1.3</span>
+          <span class="text-xs text-neutral-500">~40 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">🔥 Executando no Firebase Studio</h3>
+        <p class="text-neutral-400 text-sm">Coloque seu prompt em acao e gere seu primeiro site completo</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🔑</span>
+            <div>
+              <span class="font-medium">Acesso ao Firebase Studio</span>
+              <span class="text-neutral-500 text-sm ml-2">- Primeiros passos</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">A plataforma do Google para criar sites com IA: studio.firebase.google.com</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">E a ferramenta central do metodo - sem ela, nao ha como executar os prompts.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Login Google, projetos salvos, interface de prototipagem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🖥️</span>
+            <div>
+              <span class="font-medium">Interface</span>
+              <span class="text-neutral-500 text-sm ml-2">- Conhecendo a ferramenta</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">O layout do Firebase Studio com areas de prompt, preview e codigo.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Conhecer a interface acelera o workflow e evita confusao.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Campo de prompt, visualizacao, editor de codigo, painel lateral.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">⚡</span>
+            <div>
+              <span class="font-medium">Prototype with AI</span>
+              <span class="text-neutral-500 text-sm ml-2">- Executando o prompt</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">O botao que transforma seu prompt em codigo e gera o blueprint do site.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">E o momento magico onde texto vira site - o core do Vibe Coding.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Geracao automatica, responsividade nativa, consistencia visual.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">👀</span>
+            <div>
+              <span class="font-medium">Visualizacao</span>
+              <span class="text-neutral-500 text-sm ml-2">- Preview em tempo real</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">A area de preview que mostra o site gerado em diferentes tamanhos de tela.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Permite validar rapidamente se o resultado atende as expectativas.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Preview mobile, desktop, tablet, modo responsivo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🔧</span>
+            <div>
+              <span class="font-medium">Ajustes</span>
+              <span class="text-neutral-500 text-sm ml-2">- Refinando o resultado</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">As formas de refinar o site: selecionar elementos, anotacoes, novos prompts.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Ajustes pos-geracao sao essenciais para atingir perfeicao.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Selecao de elementos, instrucoes pontuais, iteracao rapida.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">📤</span>
+            <div>
+              <span class="font-medium">Exportacao</span>
+              <span class="text-neutral-500 text-sm ml-2">- Codigo e arquivos</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Como acessar e exportar o codigo gerado (HTML, CSS, JS).</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Necessario para hospedar o site em outras plataformas ou fazer ajustes manuais.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Download de arquivos, integracao GitHub, deploy direto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-1-3')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">
+          Ver em Modal
+        </button>
+        <a href="slides/slides-1-3.html" class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors">
+          📊 Slides
+        </a>
+        <a href="modulo-1-3.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">
+          Ver Completo
+        </a>
+      </div>
+    </div>
+
+    <!-- MODULO 1.4 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-emerald-400 font-bold">1.4</span>
+          <span class="text-xs text-neutral-500">~35 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">🏗️ Arquitetura de Sites</h3>
+        <p class="text-neutral-400 text-sm">Domine os 5 modelos de estrutura (S1-S5) para diferentes objetivos</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">📐</span>
+            <div>
+              <span class="font-medium">S1 - One Page</span>
+              <span class="text-neutral-500 text-sm ml-2">- Tudo em uma pagina</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Site de pagina unica com scroll vertical fluido entre secoes.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Ideal para portfolios, landing pages e apresentacoes diretas.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Scroll suave, ancoras, navegacao fixa, fluxo narrativo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🏛️</span>
+            <div>
+              <span class="font-medium">S2 - Authority</span>
+              <span class="text-neutral-500 text-sm ml-2">- Multiplas paginas estruturadas</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Site com home, sobre, servicos e contato em paginas separadas.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Perfeito para empresas, consultorias e profissionais liberais.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Navegacao clara, hierarquia, consistencia visual, SEO.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">💻</span>
+            <div>
+              <span class="font-medium">S3 - Product/SaaS</span>
+              <span class="text-neutral-500 text-sm ml-2">- Foco em conversao</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Estrutura otimizada para vender produtos ou servicos digitais.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Essencial para startups, SaaS e e-commerce de infoprodutos.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Hero com CTA, features, pricing, testimonials, FAQ.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🎨</span>
+            <div>
+              <span class="font-medium">S4 - Creative</span>
+              <span class="text-neutral-500 text-sm ml-2">- Portfolio visual</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Layout focado em apresentar trabalhos visuais e projetos criativos.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Ideal para designers, fotografos, artistas e agencias criativas.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Galeria, grid masonry, fullscreen, transicoes suaves.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🎯</span>
+            <div>
+              <span class="font-medium">S5 - Conversion</span>
+              <span class="text-neutral-500 text-sm ml-2">- Landing page de alta conversao</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Pagina unica otimizada para captura de leads ou vendas diretas.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Fundamental para campanhas de marketing e lancamentos.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Headline matadora, prova social, escassez, CTA unico.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🧭</span>
+            <div>
+              <span class="font-medium">Escolhendo o Modelo</span>
+              <span class="text-neutral-500 text-sm ml-2">- Qual usar em cada caso</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Criterios para escolher entre S1-S5 baseado no objetivo do projeto.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">A escolha certa do modelo e 50% do sucesso do site.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Objetivo do cliente, publico-alvo, tipo de conversao, escala.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-1-4')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">
+          Ver em Modal
+        </button>
+        <a href="modulo-1-4.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">
+          Ver Completo
+        </a>
+      </div>
+    </div>
+
+    <!-- MODULO 1.5 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-emerald-400 font-bold">1.5</span>
+          <span class="text-xs text-neutral-500">~40 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">🎨 Diretrizes de Marca</h3>
+        <p class="text-neutral-400 text-sm">Defina tipografia, cores, formas e materiais para identidade premium</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🔤</span>
+            <div>
+              <span class="font-medium">Tipografia</span>
+              <span class="text-neutral-500 text-sm ml-2">- Fontes e hierarquia</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Escolha de fontes para titulos e corpo, pesos e tamanhos.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Tipografia correta transmite profissionalismo e legibilidade.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Sans-serif moderno, hierarquia clara, contraste de pesos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🎨</span>
+            <div>
+              <span class="font-medium">Paleta de Cores</span>
+              <span class="text-neutral-500 text-sm ml-2">- Cores primarias e secundarias</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Sistema de cores com primaria, secundaria, acentos e neutros.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Cores consistentes criam identidade visual reconhecivel.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Dark mode, contraste, cores de acao, gradientes sutis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🔲</span>
+            <div>
+              <span class="font-medium">Formas e Espacamento</span>
+              <span class="text-neutral-500 text-sm ml-2">- Bordas e grids</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Raios de borda, espacamentos padronizados e sistema de grid.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Consistencia de formas cria harmonia visual em todo o site.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Border-radius, padding, margins, 8px grid system.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">✨</span>
+            <div>
+              <span class="font-medium">Materiais e Efeitos</span>
+              <span class="text-neutral-500 text-sm ml-2">- Glass, blur, shadows</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Efeitos visuais como glassmorphism, blur, sombras e gradientes.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Materiais modernos elevam o visual para nivel premium.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Backdrop-blur, transparencias, glow effects, depth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">📱</span>
+            <div>
+              <span class="font-medium">Mobile Experience</span>
+              <span class="text-neutral-500 text-sm ml-2">- Sensacao de app nativo</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Diretrizes para fazer o site parecer um app no mobile.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Usuarios mobile esperam experiencias fluidas e nativas.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Touch targets, gestures, bottom nav, safe areas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">📋</span>
+            <div>
+              <span class="font-medium">Brand Guidelines</span>
+              <span class="text-neutral-500 text-sm ml-2">- Documento completo</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Compilacao de todas as diretrizes em formato de prompt.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">O documento completo garante consistencia em todos os projetos.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Template de marca, checklist visual, padrao de qualidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-1-5')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">
+          Ver em Modal
+        </button>
+        <a href="modulo-1-5.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">
+          Ver Completo
+        </a>
+      </div>
+    </div>
+
+    <!-- MODULO 1.6 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-emerald-400 font-bold">1.6</span>
+          <span class="text-xs text-neutral-500">~30 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">✨ Sistema de Presets Visuais</h3>
+        <p class="text-neutral-400 text-sm">Aprenda os 8 presets de experiencia: Calm, Energy, Momentum e mais</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🌿</span>
+            <div>
+              <span class="font-medium">Preset 0 - Premium Calm</span>
+              <span class="text-neutral-500 text-sm ml-2">- Sofisticacao silenciosa</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Visual minimalista, premium, com animacoes sutis e elegantes.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Ideal para marcas de luxo, consultorias e servicos premium.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Espacos brancos, tipografia refinada, cores neutras, motion discreto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">⚡</span>
+            <div>
+              <span class="font-medium">Preset 1-2 - Energy/Momentum</span>
+              <span class="text-neutral-500 text-sm ml-2">- Dinamismo controlado</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Presets com mais movimento e energia, mantendo elegancia.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Perfeito para startups, tech companies e marcas inovadoras.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Transicoes rapidas, cores vibrantes, scroll effects, parallax.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🎭</span>
+            <div>
+              <span class="font-medium">Preset 3-4 - Creative/Bold</span>
+              <span class="text-neutral-500 text-sm ml-2">- Expressao artistica</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Presets ousados para projetos criativos e portfolios artisticos.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Ideal para designers, agencias criativas e artistas.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Tipografia experimental, layouts assimetricos, cores saturadas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🎯</span>
+            <div>
+              <span class="font-medium">Preset 5-6 - Conversion Focus</span>
+              <span class="text-neutral-500 text-sm ml-2">- Otimizado para vendas</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Presets focados em conversao com CTAs destacados e urgencia.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Essencial para landing pages, e-commerce e campanhas.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Hierarquia de CTA, cores de acao, escassez visual, trust signals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">🔥</span>
+            <div>
+              <span class="font-medium">Preset 7 - Sales Aggressive</span>
+              <span class="text-neutral-500 text-sm ml-2">- Maximo impacto</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Preset mais agressivo para vendas diretas e lancamentos.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Para campanhas de alta pressao, black friday, promocoes.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Contadores, badges, animacoes de atencao, cores de urgencia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">🧭</span>
+            <div>
+              <span class="font-medium">Escolhendo o Preset</span>
+              <span class="text-neutral-500 text-sm ml-2">- Matriz de decisao</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Framework para escolher o preset ideal baseado no projeto.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">O preset certo alinha visual com objetivo de negocios.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Tipo de marca, objetivo, publico, contexto de uso.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-1-6')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">
+          Ver em Modal
+        </button>
+        <a href="modulo-1-6.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">
+          Ver Completo
+        </a>
+      </div>
+    </div>
+
+    <!-- MODULO 1.7 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-emerald-400 font-bold">1.7</span>
+          <span class="text-xs text-neutral-500">~35 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">🎬 Motion & Interacao</h3>
+        <p class="text-neutral-400 text-sm">Entenda como definir animacoes, entradas, scroll e hover no prompt</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">🚀</span>
+            <div>
+              <span class="font-medium">Entrance Animations</span>
+              <span class="text-neutral-500 text-sm ml-2">- Animacoes de entrada</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Animacoes que ocorrem quando elementos aparecem na tela.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Entradas suaves criam primeira impressao profissional.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Fade in, slide up, scale, stagger, timing functions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">📜</span>
+            <div>
+              <span class="font-medium">Scroll Animations</span>
+              <span class="text-neutral-500 text-sm ml-2">- Efeitos de rolagem</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Animacoes ativadas pelo scroll do usuario na pagina.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Scroll animations guiam o usuario pela narrativa do site.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Parallax, reveal on scroll, sticky elements, progress bars.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🎨</span>
+            <div>
+              <span class="font-medium">Background Motion</span>
+              <span class="text-neutral-500 text-sm ml-2">- Fundos animados</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Animacoes sutis em fundos: gradientes, particulas, ondas.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Fundos animados adicionam vida sem distrair do conteudo.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Gradient animation, mesh gradients, ambient motion, particles.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">👆</span>
+            <div>
+              <span class="font-medium">Interaction Feedback</span>
+              <span class="text-neutral-500 text-sm ml-2">- Hover, click, focus</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Feedback visual para acoes do usuario: hover, clique, foco.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Feedback imediato melhora UX e sensacao de responsividade.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Hover states, active states, focus rings, micro-interactions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">⏱️</span>
+            <div>
+              <span class="font-medium">Timing & Easing</span>
+              <span class="text-neutral-500 text-sm ml-2">- Duracao e curvas</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Controle de velocidade e curvas de aceleracao das animacoes.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">O timing correto faz a diferenca entre amateur e profissional.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Ease-out, ease-in-out, cubic-bezier, duration standards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">📝</span>
+            <div>
+              <span class="font-medium">Motion no Prompt</span>
+              <span class="text-neutral-500 text-sm ml-2">- Como descrever animacoes</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Sintaxe e vocabulario para especificar motion no prompt.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">A descricao correta garante que a IA implemente o motion desejado.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Vocabulario de motion, referencias visuais, niveis de intensidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-1-7')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">
+          Ver em Modal
+        </button>
+        <a href="modulo-1-7.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">
+          Ver Completo
+        </a>
+      </div>
+    </div>
+
+    <!-- MODULO 1.8 -->
+    <div class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+      <div class="p-6 border-b border-dark-600">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-emerald-400 font-bold">1.8</span>
+          <span class="text-xs text-neutral-500">~30 min</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">🚀 Prompt Parametrico Final</h3>
+        <p class="text-neutral-400 text-sm">O template completo com todos os parametros para qualquer projeto</p>
+      </div>
+
+      <div class="divide-y divide-dark-600">
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+            <span class="text-lg">📋</span>
+            <div>
+              <span class="font-medium">Estrutura do Template</span>
+              <span class="text-neutral-500 text-sm ml-2">- Organizacao do prompt</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">A estrutura padrao do prompt parametrico com todas as secoes.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Seguir a estrutura garante prompts completos e eficazes.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Secoes obrigatorias, ordem logica, formato consistente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+            <span class="text-lg">🔧</span>
+            <div>
+              <span class="font-medium">Parametros Tecnicos</span>
+              <span class="text-neutral-500 text-sm ml-2">- Configuracoes de codigo</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Especificacoes tecnicas: Tailwind, responsividade, dark mode.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Parametros corretos evitam retrabalho e garantem compatibilidade.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">HTML5, Tailwind CDN, sem dependencias, responsivo nativo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+            <span class="text-lg">🏛️</span>
+            <div>
+              <span class="font-medium">Secao de Estrutura</span>
+              <span class="text-neutral-500 text-sm ml-2">- Definindo layout</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Como especificar arquitetura (S1-S5) e secoes do site.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">A estrutura e a fundacao - define o fluxo do usuario.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Modelo de arquitetura, lista de secoes, ordem de navegacao.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+            <span class="text-lg">🎨</span>
+            <div>
+              <span class="font-medium">Secao de Branding</span>
+              <span class="text-neutral-500 text-sm ml-2">- Visual e identidade</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Especificacao de tipografia, cores, materiais, motion e preset.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Branding detalhado evita visual generico e cria identidade.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Preset (0-7), fontes, paleta, efeitos visuais, motion level.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+            <span class="text-lg">📄</span>
+            <div>
+              <span class="font-medium">Secao de Conteudo</span>
+              <span class="text-neutral-500 text-sm ml-2">- Textos e elementos</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">Inputs de conteudo, elements de layout e styling por secao.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Conteudo especifico garante que a IA nao invente textos.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Content inputs, content elements, styling por secao.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-item">
+          <button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+            <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+            <span class="text-lg">✅</span>
+            <div>
+              <span class="font-medium">Template Completo</span>
+              <span class="text-neutral-500 text-sm ml-2">- Pronto para copiar</span>
+            </div>
+          </button>
+          <div class="topic-explanation px-6 pb-4">
+            <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+              <div>
+                <span class="text-emerald-400 font-semibold">O que e:</span>
+                <p class="text-neutral-300 text-sm">O template final com todos os parametros organizados.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Por que aprender:</span>
+                <p class="text-neutral-300 text-sm">Ter o template pronto acelera criacao de qualquer site.</p>
+              </div>
+              <div>
+                <span class="text-emerald-400 font-semibold">Conceitos-chave:</span>
+                <p class="text-neutral-300 text-sm">Template reutilizavel, checklist de qualidade, padrao premium.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+        <button onclick="openModal('modal-1-8')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">
+          Ver em Modal
+        </button>
+        <a href="modulo-1-8.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">
+          Ver Completo
+        </a>
+      </div>
+    </div>
+
+    <!-- NAVEGACAO -->
+    <div class="flex justify-between items-center mt-12 pt-8 border-t border-dark-600">
+      <a href="../../index.html" class="flex items-center space-x-2 text-neutral-400 hover:text-white transition-colors">
+        <span>←</span>
+        <span>Voltar ao Inicio</span>
+      </a>
+      <a href="../trilha2/index.html" class="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors">
+        <span>Proxima Trilha: Animacao</span>
+        <span>→</span>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- MODAL CONTAINER (unico, com iframe dinamico) -->
+  <div id="modal-container" class="modal hidden" onclick="if(event.target === this) closeModal()">
+    <div class="modal-content bg-dark-900 border border-dark-600">
+      <div class="p-3 bg-dark-800 border-b border-dark-600 flex justify-between items-center">
+        <span id="modal-title" class="text-emerald-400 font-bold text-sm"></span>
+        <button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button>
+      </div>
+      <iframe id="modal-iframe" src="" class="bg-dark-900"></iframe>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>AI WCF - Vibe Coding | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> - 2026</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Modal Functions
+    const moduleNames = {
+      'modal-1-1': '1.1 - O que e Vibe Coding',
+      'modal-1-2': '1.2 - A Formula One Prompt Website',
+      'modal-1-3': '1.3 - Executando no Firebase Studio',
+      'modal-1-4': '1.4 - Arquitetura de Sites',
+      'modal-1-5': '1.5 - Diretrizes de Marca',
+      'modal-1-6': '1.6 - Sistema de Presets Visuais',
+      'modal-1-7': '1.7 - Motion & Interacao',
+      'modal-1-8': '1.8 - Prompt Parametrico Final'
+    };
+
+    function openModal(modalId) {
+      const container = document.getElementById('modal-container');
+      const iframe = document.getElementById('modal-iframe');
+      const title = document.getElementById('modal-title');
+      const moduleNum = modalId.replace('modal-', '');
+
+      title.textContent = moduleNames[modalId] || modalId;
+      iframe.src = 'modulo-' + moduleNum + '.html';
+      container.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const container = document.getElementById('modal-container');
+      const iframe = document.getElementById('modal-iframe');
+
+      container.classList.add('hidden');
+      iframe.src = '';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Fechar com ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Toggle de Topicos
+    function toggleTopic(button) {
+      const topicItem = button.closest('.topic-item');
+      const explanation = topicItem.querySelector('.topic-explanation');
+      const moduleCard = button.closest('.bg-dark-800');
+
+      // Fecha outros topicos do mesmo modulo
+      moduleCard.querySelectorAll('.topic-explanation.active').forEach(exp => {
+        if (exp !== explanation) {
+          exp.classList.remove('active');
+        }
+      });
+
+      // Toggle do topico atual
+      explanation.classList.toggle('active');
+    }
+
+    // Theme Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden');
+      html.classList.remove('dark');
+    } else {
+      themeToggleLightIcon.classList.remove('hidden');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+
+</body>
+</html>

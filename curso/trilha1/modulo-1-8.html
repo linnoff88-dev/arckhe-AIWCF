@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulo 1.8 - Prompt Parametrico Final | AI WCF</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+
+    /* Light mode overrides - OBRIGATORIO */
+    html:not(.dark) body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🎨</span>
+            <span class="font-bold text-lg hidden sm:inline">AI WCF</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
+            <span class="sm:hidden">T1</span>
+            <span class="hidden sm:inline">Fundamentos</span>
+          </a>
+          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
+            <span class="sm:hidden">T2</span>
+            <span class="hidden sm:inline">Animacao</span>
+          </a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span>
+            <span class="hidden sm:inline">Infra</span>
+          </a>
+
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../index.html" class="hover:text-emerald-400">Inicio</a>
+      <span>/</span>
+      <a href="index.html" class="hover:text-emerald-400">Trilha 1</a>
+      <span>/</span>
+      <span class="text-emerald-400">Modulo 1.8</span>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">
+        MODULO 1.8 - FINAL
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">📝 Prompt Parametrico Final</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Junte todos os conceitos e construa seu prompt estruturado, reutilizavel e profissional.</p>
+
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">6</div>
+          <div class="text-xs text-neutral-400">Topicos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">60</div>
+          <div class="text-xs text-neutral-400">Minutos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">Intermediario</div>
+          <div class="text-xs text-neutral-400">Nivel</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">Pratico</div>
+          <div class="text-xs text-neutral-400">Tipo</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEUDO -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- TOPICO 1 -->
+    <section id="topico-1" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
+        <h2 class="text-2xl font-bold">🎯 O que e um Prompt Parametrico</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Um <strong class="text-emerald-400">prompt parametrico</strong> e um modelo estruturado onde voce pode trocar valores especificos (parametros) sem reescrever todo o prompt. E a base de um framework reutilizavel.
+      </p>
+
+      <!-- Conceito -->
+      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+          <span class="mr-2">🧩</span> Estrutura Parametrica
+        </h3>
+        <div class="bg-dark-800/50 rounded-lg p-4 font-mono text-sm mb-4">
+          <p class="text-neutral-400"># PARAMETROS</p>
+          <p class="text-neutral-300">ESTRUTURA: <span class="text-emerald-400">[S1-S5]</span></p>
+          <p class="text-neutral-300">PRESET: <span class="text-blue-400">[0-7]</span></p>
+          <p class="text-neutral-300">DENSIDADE: <span class="text-purple-400">[minimal/equilibrado/informativo]</span></p>
+          <p class="text-neutral-300">DISPOSITIVO: <span class="text-amber-400">[mobile/desktop/touch]</span></p>
+          <p class="text-neutral-300">TOM: <span class="text-pink-400">[tecnico/premium/criativo/humano]</span></p>
+        </div>
+        <p class="text-neutral-400 text-sm">Troque os valores entre colchetes para gerar sites completamente diferentes com a mesma base.</p>
+      </div>
+
+      <!-- Beneficios -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 text-center">
+          <span class="text-2xl mb-3 block">⚡</span>
+          <h4 class="font-semibold text-white mb-2">Velocidade</h4>
+          <p class="text-neutral-400 text-sm">Crie sites em minutos, nao horas</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 text-center">
+          <span class="text-2xl mb-3 block">🔄</span>
+          <h4 class="font-semibold text-white mb-2">Reutilizavel</h4>
+          <p class="text-neutral-400 text-sm">Use o mesmo template para projetos diferentes</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 text-center">
+          <span class="text-2xl mb-3 block">📊</span>
+          <h4 class="font-semibold text-white mb-2">Previsivel</h4>
+          <p class="text-neutral-400 text-sm">Resultados consistentes e de qualidade</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 2 -->
+    <section id="topico-2" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
+        <h2 class="text-2xl font-bold">🏗️ Os 3 Pilares do Prompt</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Todo prompt do framework AI WCF e dividido em <strong class="text-emerald-400">3 blocos principais</strong>. Cada bloco tem uma funcao especifica.
+      </p>
+
+      <!-- 3 Pilares -->
+      <div class="space-y-6 mb-6">
+        <div class="bg-gradient-to-r from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6">
+          <div class="flex items-center space-x-4 mb-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 font-bold">1</span>
+            <div>
+              <h3 class="text-lg font-semibold text-emerald-400">ESTRUTURA</h3>
+              <p class="text-neutral-500 text-sm">O esqueleto do site</p>
+            </div>
+          </div>
+          <p class="text-neutral-300">Define a ordem e o fluxo das secoes. Qual modelo arquitetural sera usado (S1-S5).</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6">
+          <div class="flex items-center space-x-4 mb-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 font-bold">2</span>
+            <div>
+              <h3 class="text-lg font-semibold text-blue-400">DIRETRIZES DE MARCA</h3>
+              <p class="text-neutral-500 text-sm">A personalidade visual</p>
+            </div>
+          </div>
+          <p class="text-neutral-300">Define como o site parece, sente e se move. Preset, cores, motion, densidade, tom.</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6">
+          <div class="flex items-center space-x-4 mb-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 font-bold">3</span>
+            <div>
+              <h3 class="text-lg font-semibold text-purple-400">CONTEUDO</h3>
+              <p class="text-neutral-500 text-sm">O que sera comunicado</p>
+            </div>
+          </div>
+          <p class="text-neutral-300">Define textos, imagens e informacoes de cada secao. Separado e organizado.</p>
+        </div>
+      </div>
+
+      <!-- Citacao -->
+      <div class="bg-dark-800 rounded-xl border-l-4 border-emerald-500 p-6">
+        <p class="text-lg text-neutral-300 italic">
+          "Um prompt bem estruturado e como uma planta arquitetonica: qualquer construtor (IA) consegue entender e executar."
+        </p>
+      </div>
+    </section>
+
+    <!-- TOPICO 3 -->
+    <section id="topico-3" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
+        <h2 class="text-2xl font-bold">📐 Bloco 1: Estrutura</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        O bloco de estrutura define <strong class="text-emerald-400">quais secoes</strong> o site tera e em que <strong class="text-emerald-400">ordem</strong>.
+      </p>
+
+      <!-- Template Estrutura -->
+      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+          <span class="mr-2">📝</span> Template de Estrutura
+        </h3>
+        <div class="bg-dark-700 rounded-lg p-4 font-mono text-sm overflow-x-auto">
+          <p class="text-emerald-400"># ESTRUTURA DO SITE</p>
+          <p class="text-neutral-400 mt-2">## Modelo: [S1/S2/S3/S4/S5]</p>
+          <p class="text-neutral-400 mt-2">## Secoes:</p>
+          <p class="text-neutral-300 ml-4">1. HEADER</p>
+          <p class="text-neutral-300 ml-4">2. HERO</p>
+          <p class="text-neutral-300 ml-4">3. [SECAO_ESPECIFICA_DO_MODELO]</p>
+          <p class="text-neutral-300 ml-4">4. SERVICES / FEATURES</p>
+          <p class="text-neutral-300 ml-4">5. CTA</p>
+          <p class="text-neutral-300 ml-4">6. FOOTER</p>
+        </div>
+      </div>
+
+      <!-- Exemplo -->
+      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6">
+        <h3 class="text-lg font-semibold text-emerald-400 mb-4">Exemplo: S2 (Authority)</h3>
+        <div class="bg-dark-800/50 rounded-lg p-4 font-mono text-sm">
+          <p class="text-neutral-300">1. HEADER - Logo + Navegacao</p>
+          <p class="text-neutral-300">2. HERO - Headline + Subheadline + CTA</p>
+          <p class="text-emerald-400">3. AUTHORITY PROOF - Stats, logos, social proof</p>
+          <p class="text-neutral-300">4. ABOUT - Historia + Visao</p>
+          <p class="text-neutral-300">5. SERVICES - Lista de servicos</p>
+          <p class="text-neutral-300">6. CTA - Chamada final</p>
+          <p class="text-neutral-300">7. FOOTER - Links + Contato</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 4 -->
+    <section id="topico-4" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
+        <h2 class="text-2xl font-bold">🎨 Bloco 2: Diretrizes de Marca</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        O bloco de diretrizes define toda a <strong class="text-emerald-400">experiencia sensorial</strong> do site.
+      </p>
+
+      <!-- Template Diretrizes -->
+      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+          <span class="mr-2">📝</span> Template de Diretrizes
+        </h3>
+        <div class="bg-dark-700 rounded-lg p-4 font-mono text-sm overflow-x-auto">
+          <p class="text-blue-400"># DIRETRIZES DE MARCA</p>
+          <p class="text-neutral-400 mt-2">## Preset Visual: [0-7]</p>
+          <p class="text-neutral-400 mt-2">## Identidade:</p>
+          <p class="text-neutral-300 ml-4">- Estilo: [glassmorphism/brutalismo/minimal/neo-futurista/editorial]</p>
+          <p class="text-neutral-300 ml-4">- Cores: [paleta principal + acentos]</p>
+          <p class="text-neutral-300 ml-4">- Tipografia: [fonte principal + secundaria]</p>
+          <p class="text-neutral-400 mt-2">## Motion:</p>
+          <p class="text-neutral-300 ml-4">- Intensidade: [muito baixa/media/alta/muito alta]</p>
+          <p class="text-neutral-300 ml-4">- Entrada: [fade/slide/scale/morph]</p>
+          <p class="text-neutral-300 ml-4">- Scroll: [neutro/parallax/snap/reveal]</p>
+          <p class="text-neutral-400 mt-2">## Experiencia:</p>
+          <p class="text-neutral-300 ml-4">- Densidade: [minimal/equilibrado/informativo]</p>
+          <p class="text-neutral-300 ml-4">- Dispositivo-primeiro: [mobile/desktop/touch]</p>
+          <p class="text-neutral-300 ml-4">- Tom: [tecnico/premium/criativo/humano]</p>
+        </div>
+      </div>
+
+      <!-- Exemplo -->
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4">Exemplo: Preset 1 (Youth Energy)</h3>
+        <div class="bg-dark-800/50 rounded-lg p-4 font-mono text-sm">
+          <p class="text-neutral-300">Preset Visual: 1 - Youth Energy</p>
+          <p class="text-neutral-300">Estilo: Gradientes vivos, moderno</p>
+          <p class="text-neutral-300">Cores: Azul, roxo, ciano + accents vibrantes</p>
+          <p class="text-neutral-300">Motion: Media intensidade, entrada scale+fade</p>
+          <p class="text-neutral-300">Background: Gradientes animados, blobs lentos</p>
+          <p class="text-neutral-300">Densidade: Equilibrado</p>
+          <p class="text-neutral-300">Tom: Inspirador e proximo</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 5 -->
+    <section id="topico-5" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
+        <h2 class="text-2xl font-bold">📄 Bloco 3: Conteudo</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        O bloco de conteudo define <strong class="text-emerald-400">o que vai em cada secao</strong>. Cada secao recebe 3 tipos de instrucoes.
+      </p>
+
+      <!-- 3 Tipos de Instrucao -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-2xl mb-3">📝</div>
+          <h4 class="font-semibold text-white mb-2">O que entra</h4>
+          <p class="text-neutral-400 text-sm">Textos, imagens, dados reais que vao na secao</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-2xl mb-3">📐</div>
+          <h4 class="font-semibold text-white mb-2">Como se organiza</h4>
+          <p class="text-neutral-400 text-sm">Layout, grid, disposicao dos elementos</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-2xl mb-3">🎨</div>
+          <h4 class="font-semibold text-white mb-2">Como deve parecer</h4>
+          <p class="text-neutral-400 text-sm">Estilo visual especifico da secao</p>
+        </div>
+      </div>
+
+      <!-- Template Conteudo -->
+      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+          <span class="mr-2">📝</span> Template de Secao
+        </h3>
+        <div class="bg-dark-700 rounded-lg p-4 font-mono text-sm overflow-x-auto">
+          <p class="text-purple-400">## HERO SECTION</p>
+          <p class="text-neutral-400 mt-2">### Conteudo:</p>
+          <p class="text-neutral-300 ml-4">- Headline: "Transforme ideias em sites com IA"</p>
+          <p class="text-neutral-300 ml-4">- Subheadline: "Framework profissional para Vibe Coding"</p>
+          <p class="text-neutral-300 ml-4">- CTA primario: "Comecar Agora"</p>
+          <p class="text-neutral-300 ml-4">- CTA secundario: "Ver Demo"</p>
+          <p class="text-neutral-400 mt-2">### Layout:</p>
+          <p class="text-neutral-300 ml-4">- Texto a esquerda, visual a direita</p>
+          <p class="text-neutral-300 ml-4">- Botoes alinhados a esquerda, stacked em mobile</p>
+          <p class="text-neutral-400 mt-2">### Visual:</p>
+          <p class="text-neutral-300 ml-4">- Background com gradiente animado</p>
+          <p class="text-neutral-300 ml-4">- Headline com destaque em cor accent</p>
+          <p class="text-neutral-300 ml-4">- CTA primario com glow hover</p>
+        </div>
+      </div>
+
+      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+          <span class="mr-2">💡</span> Dica Importante
+        </h3>
+        <p class="text-neutral-300">
+          Quanto mais detalhado o bloco de conteudo, mais preciso sera o resultado. A IA funciona melhor com instrucoes claras e especificas.
+        </p>
+      </div>
+    </section>
+
+    <!-- TOPICO 6 -->
+    <section id="topico-6" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
+        <h2 class="text-2xl font-bold">🚀 Template Completo</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Aqui esta o <strong class="text-emerald-400">template completo</strong> do prompt parametrico, pronto para voce usar e adaptar.
+      </p>
+
+      <!-- Template Final -->
+      <div class="bg-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-semibold text-emerald-400 flex items-center">
+            <span class="mr-2">📋</span> Prompt Parametrico Completo
+          </h3>
+          <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs">TEMPLATE</span>
+        </div>
+        <div class="bg-dark-700 rounded-lg p-4 font-mono text-xs sm:text-sm overflow-x-auto max-h-96 overflow-y-auto">
+          <p class="text-emerald-400 font-bold"># PROMPT AI WCF - ONE PROMPT WEBSITE</p>
+          <p class="text-neutral-500 mt-4">---</p>
+
+          <p class="text-emerald-400 mt-4 font-bold"># 1. ESTRUTURA</p>
+          <p class="text-neutral-300 mt-2">Modelo: S1 - One Page Classico</p>
+          <p class="text-neutral-300">Secoes: HEADER → HERO → ABOUT → SERVICES → CTA → FOOTER</p>
+
+          <p class="text-neutral-500 mt-4">---</p>
+
+          <p class="text-blue-400 mt-4 font-bold"># 2. DIRETRIZES DE MARCA</p>
+          <p class="text-neutral-300 mt-2">Preset: 0 - Premium Calm</p>
+          <p class="text-neutral-300">Estilo: Dark base, glassmorphism sutil</p>
+          <p class="text-neutral-300">Cores: #111827 (dark), #10B981 (accent emerald)</p>
+          <p class="text-neutral-300">Tipografia: Inter (principal)</p>
+          <p class="text-neutral-300">Motion: Intensidade baixa, fade suave</p>
+          <p class="text-neutral-300">Densidade: Equilibrado</p>
+          <p class="text-neutral-300">Dispositivo: Mobile-first</p>
+          <p class="text-neutral-300">Tom: Profissional e confiante</p>
+
+          <p class="text-neutral-500 mt-4">---</p>
+
+          <p class="text-purple-400 mt-4 font-bold"># 3. CONTEUDO</p>
+
+          <p class="text-neutral-400 mt-3">## HERO</p>
+          <p class="text-neutral-300">Headline: [Sua headline aqui]</p>
+          <p class="text-neutral-300">Subheadline: [Sua subheadline aqui]</p>
+          <p class="text-neutral-300">CTA: [Texto do botao]</p>
+
+          <p class="text-neutral-400 mt-3">## ABOUT</p>
+          <p class="text-neutral-300">Titulo: [Titulo da secao]</p>
+          <p class="text-neutral-300">Texto: [Descricao]</p>
+
+          <p class="text-neutral-400 mt-3">## SERVICES</p>
+          <p class="text-neutral-300">Servico 1: [Nome] - [Descricao]</p>
+          <p class="text-neutral-300">Servico 2: [Nome] - [Descricao]</p>
+          <p class="text-neutral-300">Servico 3: [Nome] - [Descricao]</p>
+
+          <p class="text-neutral-400 mt-3">## CTA FINAL</p>
+          <p class="text-neutral-300">Headline: [Chamada final]</p>
+          <p class="text-neutral-300">Botao: [Texto do CTA]</p>
+
+          <p class="text-neutral-500 mt-4">---</p>
+
+          <p class="text-amber-400 mt-4 font-bold"># INSTRUCOES TECNICAS</p>
+          <p class="text-neutral-300 mt-2">- Responsivo (mobile-first)</p>
+          <p class="text-neutral-300">- HTML semantico</p>
+          <p class="text-neutral-300">- CSS moderno (Tailwind ou vanilla)</p>
+          <p class="text-neutral-300">- Acessibilidade basica</p>
+        </div>
+      </div>
+
+      <!-- Conclusao Trilha -->
+      <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
+        <h3 class="text-2xl font-bold mb-4 flex items-center">
+          <span class="mr-3">🎉</span> Parabens! Trilha 1 Completa!
+        </h3>
+        <p class="text-neutral-300 mb-6">
+          Voce completou todos os modulos de Fundamentos do Vibe Coding. Agora voce sabe:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400">✓</span>
+            <span class="text-neutral-300">O que e Vibe Coding e como funciona</span>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400">✓</span>
+            <span class="text-neutral-300">A formula One Prompt Website</span>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400">✓</span>
+            <span class="text-neutral-300">Como usar o Firebase Studio</span>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400">✓</span>
+            <span class="text-neutral-300">Os 5 modelos de arquitetura</span>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400">✓</span>
+            <span class="text-neutral-300">Diretrizes de marca completas</span>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400">✓</span>
+            <span class="text-neutral-300">Os 8 presets visuais</span>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400">✓</span>
+            <span class="text-neutral-300">Motion e interacao avancados</span>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400">✓</span>
+            <span class="text-neutral-300">Construir prompts parametricos</span>
+          </div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-4">
+          <p class="text-emerald-400 font-semibold mb-2">Proxima Trilha:</p>
+          <p class="text-neutral-300">Trilha 2 - Animacao & Motion (Em breve)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center">
+          <span class="mr-3">📋</span> Resumo do Modulo
+        </h2>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Prompt Parametrico</strong>
+              <span class="text-neutral-400"> - Modelo reutilizavel com valores trocaveis</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">3 Pilares</strong>
+              <span class="text-neutral-400"> - Estrutura, Diretrizes e Conteudo</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Bloco Estrutura</strong>
+              <span class="text-neutral-400"> - Modelo S1-S5 e ordem das secoes</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Bloco Diretrizes</strong>
+              <span class="text-neutral-400"> - Preset, cores, motion, densidade, tom</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Bloco Conteudo</strong>
+              <span class="text-neutral-400"> - O que entra, como organiza, como parece</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-start space-x-4">
+          <a href="modulo-1-7.html" class="px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
+            ← Modulo Anterior
+          </a>
+          <a href="index.html" class="px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors">
+            Voltar para Trilha 1
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>AI WCF - Vibe Coding | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> - 2026</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden');
+      html.classList.remove('dark');
+    } else {
+      themeToggleLightIcon.classList.remove('hidden');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulo 2.8 - Otimizacao de Performance | AI WCF</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+
+    /* Light mode overrides - OBRIGATORIO */
+    html:not(.dark) body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🎨</span>
+            <span class="font-bold text-lg hidden sm:inline">AI WCF</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
+            <span class="sm:hidden">T1</span>
+            <span class="hidden sm:inline">Fundamentos</span>
+          </a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10">
+            <span class="sm:hidden">T2</span>
+            <span class="hidden sm:inline">Animacao</span>
+          </a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span>
+            <span class="hidden sm:inline">Infra</span>
+          </a>
+
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../index.html" class="hover:text-blue-400">Inicio</a>
+      <span>/</span>
+      <a href="index.html" class="hover:text-blue-400">Trilha 2</a>
+      <span>/</span>
+      <span class="text-blue-400">Modulo 2.8</span>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">
+        MODULO 2.8
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">⚡ Otimizacao de Performance</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Aprenda a criar animacoes fluidas e performaticas que rodam a 60fps em qualquer dispositivo.</p>
+
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-blue-400">6</div>
+          <div class="text-xs text-neutral-400">Topicos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-blue-400">45</div>
+          <div class="text-xs text-neutral-400">Minutos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-blue-400">Avancado</div>
+          <div class="text-xs text-neutral-400">Nivel</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-blue-400">Pratico</div>
+          <div class="text-xs text-neutral-400">Tipo</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEUDO -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- TOPICO 1 -->
+    <section id="topico-1" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
+        <h2 class="text-2xl font-bold">⚡ Por que Performance Importa</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        <strong class="text-blue-400">Performance e experiencia</strong> estao diretamente conectadas. Animacoes lentas, travamentos e stuttering destroem completamente a imersao do usuario. O objetivo e sempre atingir <strong class="text-white">60fps</strong> - isso significa que cada frame deve ser renderizado em no maximo 16.67ms.
+      </p>
+
+      <!-- Box Conceito Principal -->
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center">
+          <span class="mr-2">🎯</span> Conceitos Fundamentais
+        </h3>
+        <ul class="space-y-3 text-neutral-300">
+          <li class="flex items-start space-x-2">
+            <span class="text-blue-400 mt-1">•</span>
+            <span><strong>Animacoes lentas:</strong> Criam uma experiencia ruim e frustrante</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-blue-400 mt-1">•</span>
+            <span><strong>60fps e o objetivo:</strong> Cada frame deve renderizar em 16.67ms</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-blue-400 mt-1">•</span>
+            <span><strong>Jank e stuttering:</strong> Travamentos que destroem a imersao</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-blue-400 mt-1">•</span>
+            <span><strong>Frame budget:</strong> Voce tem apenas 16ms para calcular, renderizar e pintar</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Box Dados -->
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center">
+          <span class="mr-2">📊</span> Dados Importantes
+        </h3>
+        <p class="text-neutral-300 text-lg">
+          <strong class="text-white text-2xl">53%</strong> dos usuarios abandonam sites que demoram mais de 3 segundos para carregar ou que apresentam animacoes travadas.
+        </p>
+      </div>
+    </section>
+
+    <!-- TOPICO 2 -->
+    <section id="topico-2" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
+        <h2 class="text-2xl font-bold">🎯 Propriedades Performaticas</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Nem todas as propriedades CSS sao iguais quando se trata de performance. Algumas sao <strong class="text-blue-400">aceleradas por GPU</strong> e extremamente rapidas, enquanto outras causam <strong class="text-white">reflow</strong> e repaint custosos.
+      </p>
+
+      <!-- Grid Fazer vs Evitar -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+          <h4 class="font-bold text-emerald-400 mb-4">✓ USAR (GPU-Accelerated)</h4>
+          <ul class="space-y-3 text-neutral-300">
+            <li class="flex items-start space-x-2">
+              <span class="text-emerald-400">✓</span>
+              <span><code class="bg-dark-700 px-2 py-0.5 rounded text-sm">transform</code> - translate, scale, rotate</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-emerald-400">✓</span>
+              <span><code class="bg-dark-700 px-2 py-0.5 rounded text-sm">opacity</code> - fade in/out</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-emerald-400">✓</span>
+              <span><code class="bg-dark-700 px-2 py-0.5 rounded text-sm">will-change</code> - preparar GPU</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-emerald-400">✓</span>
+              <span><code class="bg-dark-700 px-2 py-0.5 rounded text-sm">contain</code> - isolamento de layout</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+          <h4 class="font-bold text-red-400 mb-4">✗ EVITAR (Causam Reflow)</h4>
+          <ul class="space-y-3 text-neutral-300">
+            <li class="flex items-start space-x-2">
+              <span class="text-red-400">✗</span>
+              <span><code class="bg-dark-700 px-2 py-0.5 rounded text-sm">width</code> / <code class="bg-dark-700 px-2 py-0.5 rounded text-sm">height</code></span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-red-400">✗</span>
+              <span><code class="bg-dark-700 px-2 py-0.5 rounded text-sm">margin</code> / <code class="bg-dark-700 px-2 py-0.5 rounded text-sm">padding</code></span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-red-400">✗</span>
+              <span><code class="bg-dark-700 px-2 py-0.5 rounded text-sm">top</code> / <code class="bg-dark-700 px-2 py-0.5 rounded text-sm">left</code> / <code class="bg-dark-700 px-2 py-0.5 rounded text-sm">right</code> / <code class="bg-dark-700 px-2 py-0.5 rounded text-sm">bottom</code></span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-red-400">✗</span>
+              <span><code class="bg-dark-700 px-2 py-0.5 rounded text-sm">font-size</code> - recalcula layout</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Box Exemplo -->
+      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+        <h4 class="font-semibold text-white mb-4">Exemplo Pratico:</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-red-900/20 rounded-lg p-4 border border-red-500/30">
+            <p class="text-red-400 text-sm font-semibold mb-2">Lento:</p>
+            <code class="text-neutral-300 text-sm">left: 0 → left: 100px</code>
+          </div>
+          <div class="bg-emerald-900/20 rounded-lg p-4 border border-emerald-500/30">
+            <p class="text-emerald-400 text-sm font-semibold mb-2">Rapido:</p>
+            <code class="text-neutral-300 text-sm">transform: translateX(100px)</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 3 -->
+    <section id="topico-3" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
+        <h2 class="text-2xl font-bold">🔍 DevTools para Performance</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        O <strong class="text-blue-400">Chrome DevTools</strong> oferece ferramentas poderosas para analisar e otimizar a performance das suas animacoes. Aprenda a usar cada uma delas.
+      </p>
+
+      <!-- Timeline -->
+      <div class="space-y-6 mb-6">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">1</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Performance Tab</h4>
+            <p class="text-neutral-400 text-sm mb-2">Gravar e analisar</p>
+            <p class="text-neutral-300 text-sm">Grave uma sessao de uso e analise o frame rate, tempo de CPU e gargalos de renderizacao.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">2</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Layers Panel</h4>
+            <p class="text-neutral-400 text-sm mb-2">Ver compositing</p>
+            <p class="text-neutral-300 text-sm">Visualize quais elementos estao em camadas separadas da GPU e identifique problemas de composicao.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">3</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Rendering Tab</h4>
+            <p class="text-neutral-400 text-sm mb-2">Paint flashing</p>
+            <p class="text-neutral-300 text-sm">Ative "Paint flashing" para ver em tempo real quais areas estao sendo repintadas durante animacoes.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span class="text-blue-400 font-bold">4</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Lighthouse</h4>
+            <p class="text-neutral-400 text-sm mb-2">Score geral</p>
+            <p class="text-neutral-300 text-sm">Rode auditorias completas para obter um score de performance e sugestoes de melhoria.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 4 -->
+    <section id="topico-4" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
+        <h2 class="text-2xl font-bold">📱 Otimizacao Mobile</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Dispositivos moveis tem menos poder de processamento e bateria limitada. <strong class="text-blue-400">Otimizar para mobile</strong> e essencial para garantir uma experiencia fluida em todos os dispositivos.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">📉</div>
+          <h4 class="font-semibold text-white mb-2">Reduzir Complexidade</h4>
+          <p class="text-neutral-400 text-sm">Simplifique animacoes em mobile - menos particulas, menos sombras, menos blur.</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">🎛️</div>
+          <h4 class="font-semibold text-white mb-2">prefers-reduced-motion</h4>
+          <p class="text-neutral-400 text-sm">Respeite a preferencia do usuario por menos animacoes usando esta media query.</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">📜</div>
+          <h4 class="font-semibold text-white mb-2">Desativar Parallax</h4>
+          <p class="text-neutral-400 text-sm">Efeitos parallax sao pesados em mobile - desative ou simplifique drasticamente.</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-3xl mb-3">👆</div>
+          <h4 class="font-semibold text-white mb-2">Touch vs Mouse</h4>
+          <p class="text-neutral-400 text-sm">Touch events funcionam diferente de mouse events - otimize para ambos.</p>
+        </div>
+      </div>
+
+      <!-- Box Importante -->
+      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+          <span class="mr-2">⚠️</span> Mobile e a Prioridade
+        </h3>
+        <p class="text-neutral-300">
+          Mais de <strong class="text-white">60% do trafego web</strong> vem de dispositivos moveis. Sempre desenvolva com a mentalidade <strong class="text-primary">mobile-first</strong> - se funciona bem no mobile, vai funcionar em qualquer lugar.
+        </p>
+      </div>
+    </section>
+
+    <!-- TOPICO 5 -->
+    <section id="topico-5" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
+        <h2 class="text-2xl font-bold">🎬 Otimizacao de Video</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Videos sao elementos pesados que podem destruir a performance se nao forem otimizados corretamente. Aprenda as <strong class="text-blue-400">melhores praticas</strong> para usar video de forma eficiente.
+      </p>
+
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center">
+          <span class="mr-2">🎥</span> Estrategias de Otimizacao
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-semibold text-white mb-2">Compressao:</h4>
+            <ul class="space-y-1 text-neutral-300 text-sm">
+              <li>• Handbrake para compressao manual</li>
+              <li>• FFmpeg para automacao</li>
+              <li>• H.264/H.265 para compatibilidade</li>
+              <li>• WebM/VP9 para web moderna</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-2">Carregamento:</h4>
+            <ul class="space-y-1 text-neutral-300 text-sm">
+              <li>• Lazy loading inteligente</li>
+              <li>• Poster images como placeholder</li>
+              <li>• Streaming vs download completo</li>
+              <li>• Preload apenas quando necessario</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checklist -->
+      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+        <h4 class="font-semibold text-white mb-4 flex items-center">
+          <span class="mr-2">✅</span> Checklist de Otimizacao de Video
+        </h4>
+        <ul class="space-y-2 text-neutral-300">
+          <li class="flex items-center space-x-2">
+            <span class="text-blue-400">☐</span>
+            <span>Comprimir video para web (max 2-5MB para backgrounds)</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span class="text-blue-400">☐</span>
+            <span>Adicionar poster image de alta qualidade</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span class="text-blue-400">☐</span>
+            <span>Implementar lazy loading com Intersection Observer</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span class="text-blue-400">☐</span>
+            <span>Oferecer multiplos formatos (MP4 + WebM)</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span class="text-blue-400">☐</span>
+            <span>Desativar autoplay em conexoes lentas</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span class="text-blue-400">☐</span>
+            <span>Usar CDN para entrega de video</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TOPICO 6 -->
+    <section id="topico-6" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
+        <h2 class="text-2xl font-bold">🏆 Checklist Final da Trilha 2</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Parabens! Voce completou toda a <strong class="text-blue-400">Trilha 2 - Animacao e Interatividade</strong>. Aqui esta um resumo de tudo que voce aprendeu.
+      </p>
+
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center">
+          <span class="mr-2">📋</span> Resumo Completo da Trilha 2
+        </h3>
+        <ul class="space-y-3 text-neutral-300">
+          <li class="flex items-start space-x-2">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <span><strong>Fundamentos de Motion:</strong> Principios de animacao e timing functions</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <span><strong>CSS Animations:</strong> Keyframes, transitions e animacoes complexas</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <span><strong>Scroll-based Motion:</strong> Animacoes ativadas por scroll e parallax</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <span><strong>Microinteracoes:</strong> Feedbacks sutis e hover states</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <span><strong>Transicoes Cinematograficas:</strong> Efeitos de cinema para web</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <span><strong>GSAP e Bibliotecas:</strong> Ferramentas profissionais de animacao</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <span><strong>AI Video:</strong> Geracao e integracao de video com IA</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <span><strong>Performance:</strong> Otimizacao para 60fps e mobile</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Citacao Final -->
+      <div class="bg-dark-800 rounded-xl border-l-4 border-blue-500 p-6">
+        <p class="text-lg text-neutral-300 italic mb-4">
+          "Seu site agora e interativo, cinematografico, fluido, responsivo e profissional. O usuario nao rola mais a pagina - ele vivencia uma narrativa visual continua."
+        </p>
+        <p class="text-blue-400 text-sm">— Conclusao da Trilha 2</p>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center">
+          <span class="mr-3">🎉</span> Trilha 2 Concluida!
+        </h2>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Performance</strong>
+              <span class="text-neutral-400"> - Animacoes fluidas a 60fps</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Propriedades GPU</strong>
+              <span class="text-neutral-400"> - Transform e opacity para velocidade</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">DevTools</strong>
+              <span class="text-neutral-400"> - Ferramentas para analise de performance</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Mobile</strong>
+              <span class="text-neutral-400"> - Otimizacao para dispositivos moveis</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-blue-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Video</strong>
+              <span class="text-neutral-400"> - Compressao e lazy loading inteligente</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-start space-x-4 flex-wrap gap-y-3">
+          <a href="modulo-2-7.html" class="px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
+            ← Modulo Anterior
+          </a>
+          <a href="index.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">
+            Concluir Trilha 2
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>AI WCF - Vibe Coding | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> - 2026</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden');
+      html.classList.remove('dark');
+    } else {
+      themeToggleLightIcon.classList.remove('hidden');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulo 1.3 - Executando no Firebase Studio | AI WCF</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+
+    /* Light mode overrides - OBRIGATORIO */
+    html:not(.dark) body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">🎨</span>
+            <span class="font-bold text-lg hidden sm:inline">AI WCF</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
+            <span class="sm:hidden">T1</span>
+            <span class="hidden sm:inline">Fundamentos</span>
+          </a>
+          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
+            <span class="sm:hidden">T2</span>
+            <span class="hidden sm:inline">Animacao</span>
+          </a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span>
+            <span class="hidden sm:inline">Infra</span>
+          </a>
+
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../index.html" class="hover:text-emerald-400">Inicio</a>
+      <span>/</span>
+      <a href="index.html" class="hover:text-emerald-400">Trilha 1</a>
+      <span>/</span>
+      <span class="text-emerald-400">Modulo 1.3</span>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">
+        MODULO 1.3
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔥 Executando no Firebase Studio</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Coloque seu prompt em acao e gere seu primeiro site completo na plataforma.</p>
+
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">6</div>
+          <div class="text-xs text-neutral-400">Topicos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">40</div>
+          <div class="text-xs text-neutral-400">Minutos</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">Iniciante</div>
+          <div class="text-xs text-neutral-400">Nivel</div>
+        </div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+          <div class="text-xl font-bold text-emerald-400">Pratico</div>
+          <div class="text-xs text-neutral-400">Tipo</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEUDO -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- TOPICO 1 -->
+    <section id="topico-1" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
+        <h2 class="text-2xl font-bold">🔑 Acesso ao Firebase Studio</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        O <strong class="text-emerald-400">Firebase Studio</strong> e a plataforma do Google para criar sites com IA. E a ferramenta central do metodo Vibe Coding - sem ela, nao ha como executar os prompts.
+      </p>
+
+      <!-- Box Principal -->
+      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+          <span class="mr-2">🌐</span> Como Acessar
+        </h3>
+        <div class="space-y-4">
+          <div class="flex items-center space-x-4 p-4 bg-dark-800/50 rounded-lg border border-dark-600">
+            <span class="text-2xl">1️⃣</span>
+            <div>
+              <p class="font-semibold text-white">Acesse a URL</p>
+              <p class="text-neutral-400 text-sm">studio.firebase.google.com</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4 p-4 bg-dark-800/50 rounded-lg border border-dark-600">
+            <span class="text-2xl">2️⃣</span>
+            <div>
+              <p class="font-semibold text-white">Faca login com Google</p>
+              <p class="text-neutral-400 text-sm">Recomendado para salvar projetos e manter organizados</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4 p-4 bg-dark-800/50 rounded-lg border border-dark-600">
+            <span class="text-2xl">3️⃣</span>
+            <div>
+              <p class="font-semibold text-white">Crie um novo projeto</p>
+              <p class="text-neutral-400 text-sm">Ou abra um projeto existente para continuar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+          <span class="mr-2">💡</span> Dica Importante
+        </h3>
+        <p class="text-neutral-300">
+          Fazer login garante que todos os seus prompts e prototipos fiquem salvos, organizados e rastreaveis dentro da sua conta.
+        </p>
+      </div>
+    </section>
+
+    <!-- TOPICO 2 -->
+    <section id="topico-2" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
+        <h2 class="text-2xl font-bold">🖥️ Interface da Plataforma</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Conhecer a interface do Firebase Studio acelera o workflow e evita confusao. A plataforma e dividida em areas bem definidas.
+      </p>
+
+      <!-- Areas da Interface -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-2xl mb-3">📝</div>
+          <h4 class="font-semibold text-white mb-2">Campo de Prompt</h4>
+          <p class="text-neutral-400 text-sm">Area principal onde voce cola seu prompt completo. Aceita texto longo e estruturado.</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-2xl mb-3">👁️</div>
+          <h4 class="font-semibold text-white mb-2">Area de Preview</h4>
+          <p class="text-neutral-400 text-sm">Visualizacao em tempo real do site gerado em diferentes tamanhos de tela.</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-2xl mb-3">💻</div>
+          <h4 class="font-semibold text-white mb-2">Editor de Codigo</h4>
+          <p class="text-neutral-400 text-sm">Acesso ao codigo HTML, CSS e JavaScript gerado para ajustes manuais.</p>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-2xl mb-3">⚙️</div>
+          <h4 class="font-semibold text-white mb-2">Painel Lateral</h4>
+          <p class="text-neutral-400 text-sm">Configuracoes, historico de versoes e opcoes de exportacao.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 3 -->
+    <section id="topico-3" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
+        <h2 class="text-2xl font-bold">⚡ Prototype with AI</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        O botao <strong class="text-emerald-400">"Prototype with AI"</strong> e o momento magico onde texto vira site. E o core do Vibe Coding.
+      </p>
+
+      <!-- Timeline de Execucao -->
+      <div class="space-y-6 mb-6">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center">
+            <span class="text-emerald-400 font-bold">1</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Cole o prompt completo</h4>
+            <p class="text-neutral-400 text-sm">Todo o prompt estruturado vai no campo principal de texto</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center">
+            <span class="text-emerald-400 font-bold">2</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Clique em "Prototype with AI"</h4>
+            <p class="text-neutral-400 text-sm">A IA processa o prompt e converte em codigo</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center">
+            <span class="text-emerald-400 font-bold">3</span>
+          </div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+            <h4 class="font-semibold text-white mb-2">Blueprint gerado automaticamente</h4>
+            <p class="text-neutral-400 text-sm">O site ja nasce responsivo, estruturado e visualmente consistente</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+        <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center">
+          <span class="mr-2">✨</span> O que a IA gera automaticamente
+        </h3>
+        <ul class="space-y-2 text-neutral-300">
+          <li>• Codigo HTML semantico e limpo</li>
+          <li>• CSS responsivo para todos os dispositivos</li>
+          <li>• Estrutura visual consistente</li>
+          <li>• Animacoes e transicoes basicas</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TOPICO 4 -->
+    <section id="topico-4" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
+        <h2 class="text-2xl font-bold">👀 Visualizacao e Preview</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        A area de preview permite <strong class="text-emerald-400">validar rapidamente</strong> se o resultado atende as expectativas em diferentes tamanhos de tela.
+      </p>
+
+      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-white mb-4">Modos de Visualizacao</h3>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="text-center p-4 bg-dark-700/50 rounded-lg">
+            <div class="text-3xl mb-2">📱</div>
+            <p class="font-semibold text-white">Mobile</p>
+            <p class="text-neutral-500 text-xs">375px</p>
+          </div>
+          <div class="text-center p-4 bg-dark-700/50 rounded-lg">
+            <div class="text-3xl mb-2">📱</div>
+            <p class="font-semibold text-white">Tablet</p>
+            <p class="text-neutral-500 text-xs">768px</p>
+          </div>
+          <div class="text-center p-4 bg-dark-700/50 rounded-lg">
+            <div class="text-3xl mb-2">🖥️</div>
+            <p class="font-semibold text-white">Desktop</p>
+            <p class="text-neutral-500 text-xs">1280px+</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6">
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+          <span class="mr-2">💡</span> Dica
+        </h3>
+        <p class="text-neutral-300">
+          Sempre teste em mobile primeiro! A maioria dos usuarios acessa sites pelo celular.
+        </p>
+      </div>
+    </section>
+
+    <!-- TOPICO 5 -->
+    <section id="topico-5" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
+        <h2 class="text-2xl font-bold">🔧 Ajustes e Refinamento</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Apos a geracao, e possivel <strong class="text-emerald-400">ajustar e refinar</strong> o site de varias formas. Ajustes pos-geracao sao essenciais para atingir perfeicao.
+      </p>
+
+      <!-- Formas de Ajuste -->
+      <div class="space-y-4 mb-6">
+        <div class="bg-gradient-to-r from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6">
+          <h4 class="font-semibold text-emerald-400 mb-3 flex items-center">
+            <span class="mr-2">🎯</span> Selecao de Elementos
+          </h4>
+          <p class="text-neutral-300">Selecione qualquer elemento da pagina e adicione instrucoes para que a IA modifique aquele item especifico.</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6">
+          <h4 class="font-semibold text-blue-400 mb-3 flex items-center">
+            <span class="mr-2">📝</span> Anotacoes na Pagina
+          </h4>
+          <p class="text-neutral-300">Escreva comentarios diretamente sobre o site (annotation tool). A IA interpreta e aplica as mudancas automaticamente.</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6">
+          <h4 class="font-semibold text-purple-400 mb-3 flex items-center">
+            <span class="mr-2">💬</span> Novos Prompts
+          </h4>
+          <p class="text-neutral-300">Peca ajustes via prompt adicional: "Mude a cor do botao para verde" ou "Aumente o tamanho do titulo".</p>
+        </div>
+      </div>
+
+      <!-- Grid O que ajustar -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="bg-dark-800 rounded-lg p-4 border border-dark-600 text-center">
+          <span class="text-2xl">✏️</span>
+          <p class="text-sm text-neutral-300 mt-2">Textos</p>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-4 border border-dark-600 text-center">
+          <span class="text-2xl">🎨</span>
+          <p class="text-sm text-neutral-300 mt-2">Cores</p>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-4 border border-dark-600 text-center">
+          <span class="text-2xl">🔤</span>
+          <p class="text-sm text-neutral-300 mt-2">Tipografia</p>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-4 border border-dark-600 text-center">
+          <span class="text-2xl">📐</span>
+          <p class="text-sm text-neutral-300 mt-2">Layout</p>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-4 border border-dark-600 text-center">
+          <span class="text-2xl">🎭</span>
+          <p class="text-sm text-neutral-300 mt-2">Animacoes</p>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-4 border border-dark-600 text-center">
+          <span class="text-2xl">🖼️</span>
+          <p class="text-sm text-neutral-300 mt-2">Imagens</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICO 6 -->
+    <section id="topico-6" class="mb-16">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
+        <h2 class="text-2xl font-bold">📤 Exportacao e Publicacao</h2>
+      </div>
+
+      <p class="text-neutral-300 mb-6 leading-relaxed">
+        Apos finalizar, voce pode <strong class="text-emerald-400">exportar o codigo</strong> ou publicar diretamente. O site permanece totalmente editavel.
+      </p>
+
+      <!-- Opcoes de Exportacao -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-2xl mb-3">📥</div>
+          <h4 class="font-semibold text-white mb-2">Download de Arquivos</h4>
+          <p class="text-neutral-400 text-sm mb-3">Baixe HTML, CSS e JS para hospedar em qualquer lugar.</p>
+          <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs">Recomendado</span>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-2xl mb-3">🔗</div>
+          <h4 class="font-semibold text-white mb-2">Integracao GitHub</h4>
+          <p class="text-neutral-400 text-sm mb-3">Conecte a um repositorio para versionamento profissional.</p>
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">Avancado</span>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-2xl mb-3">🚀</div>
+          <h4 class="font-semibold text-white mb-2">Deploy Direto</h4>
+          <p class="text-neutral-400 text-sm mb-3">Publique diretamente pelo Firebase Hosting.</p>
+          <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs">Rapido</span>
+        </div>
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <div class="text-2xl mb-3">💻</div>
+          <h4 class="font-semibold text-white mb-2">Editar Codigo</h4>
+          <p class="text-neutral-400 text-sm mb-3">Acesse e edite o codigo manualmente se necessario.</p>
+          <span class="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-xs">Tecnico</span>
+        </div>
+      </div>
+
+      <!-- Citacao -->
+      <div class="bg-dark-800 rounded-xl border-l-4 border-emerald-500 p-6">
+        <p class="text-lg text-neutral-300 italic">
+          "Mesmo sendo gerado por IA, o site permanece totalmente editavel, tanto via prompts quanto via codigo, garantindo liberdade criativa e tecnica."
+        </p>
+        <p class="text-emerald-400 text-sm mt-2">— Controle total com IA</p>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center">
+          <span class="mr-3">📋</span> Resumo do Modulo
+        </h2>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Firebase Studio</strong>
+              <span class="text-neutral-400"> - A plataforma central do metodo</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Prototype with AI</strong>
+              <span class="text-neutral-400"> - O botao que transforma texto em site</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Visualizacao</strong>
+              <span class="text-neutral-400"> - Preview em mobile, tablet e desktop</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Refinamento</strong>
+              <span class="text-neutral-400"> - Selecao, anotacoes e novos prompts</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <span class="text-emerald-400 mt-1">✓</span>
+            <div>
+              <strong class="text-white">Exportacao</strong>
+              <span class="text-neutral-400"> - Download, GitHub ou deploy direto</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+          <h3 class="font-semibold text-emerald-400 mb-2">Proximo Modulo:</h3>
+          <p class="text-neutral-300">1.4 - Arquitetura de Sites</p>
+        </div>
+
+        <div class="flex justify-start space-x-4 flex-wrap gap-y-3">
+          <a href="modulo-1-2.html" class="px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
+            ← Modulo Anterior
+          </a>
+          <a href="slides/slides-1-3.html" class="px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">
+            📊 Ver Slides
+          </a>
+          <a href="modulo-1-4.html" class="px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors">
+            Proximo Modulo →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-dark-600 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>AI WCF - Vibe Coding | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> - 2026</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden');
+      html.classList.remove('dark');
+    } else {
+      themeToggleLightIcon.classList.remove('hidden');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+
+</body>
+</html>

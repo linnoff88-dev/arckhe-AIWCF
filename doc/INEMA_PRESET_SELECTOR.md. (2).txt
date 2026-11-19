@@ -1,0 +1,201 @@
+# INEMA.CLUB — Experience Preset System
+
+## Overview
+
+INEMA.CLUB uses a **single structural and content framework** with **multiple experiential presets**.
+
+The structure and message remain constant.  
+What changes is **how the experience feels, moves, and expresses energy**.
+
+To enable this, the system introduces an **Experience Preset Selector**, allowing users to switch visual and motion styles in real time.
+
+---
+
+## Experience Preset Selector
+
+**Location:** Top-right corner of the interface  
+**Type:** UI toggle / dropdown / segmented control  
+
+**Label:**  
+> Experience Mode
+
+**Behavior:**
+- Changes **visual accents**, **motion rules**, and **interaction intensity**
+- Does **not** change structure or content
+- Presets apply globally to the site
+
+---
+
+## Baseline Preset (Reference)
+
+### Preset 0 — Premium Calm (Default)
+
+**Purpose:**  
+Institutional, timeless, premium baseline.
+
+**Visual**
+- Dark base
+- Minimal color accents
+- Subtle glass
+- Wide spacing
+
+**Motion**
+- Fade + translateY (8–12px)
+- Duration: 0.6–0.8s
+- Almost no background motion
+- Simple hover states
+
+> Luxury through restraint.
+
+---
+
+# Active Presets
+
+Each preset defines **visual style + motion behavior**.
+
+---
+
+## Preset 1 — Youth Energy
+
+**Personality:**  
+Youthful · Curious · Alive
+
+### Visual
+- Animated gradients (blue → purple → cyan)
+- Bright accent highlights
+- Gradient headlines
+- More contrast between sections
+
+### Motion
+- Entrance: scale (0.95 → 1) + fade
+- Duration: 0.4–0.5s
+- Strong stagger between elements
+- Background blobs or waves (slow loop)
+- Hover: glow + scale (1.02)
+
+> The interface feels alive and playful.
+
+---
+
+## Preset 2 — Momentum
+
+**Personality:**  
+Action · Progress · Execution
+
+### Visual
+- Strong directional lines
+- Section dividers
+- Minimal decorative background
+
+### Motion
+- Entrance: slide from X-axis
+- Duration: 0.3–0.4s
+- Aggressive stagger
+- Scroll-driven progression
+- Click feedback: compress + bounce
+
+> Motion communicates forward movement.
+
+---
+
+## Preset 3 — Flow Learning
+
+**Personality:**  
+Continuity · Focus · Deep learning
+
+### Visual
+- Soft gradients
+- Connected sections
+- Fewer visual breaks
+
+### Motion
+- Entrance: fade + morph
+- Duration: 0.8–1s
+- True parallax layers
+- Continuous background flow
+- Minimal hover effects
+
+> Scrolling becomes part of the learning narrative.
+
+---
+
+## Preset 4 — Future Impact
+
+**Personality:**  
+Visionary · Provocative · Futuristic
+
+### Visual
+- Neon accents
+- High contrast typography
+- 3D grids, particles, light beams
+
+### Motion
+- Entrance: mask reveals / clip-path
+- Duration: 0.5–0.6s
+- Section state changes on scroll
+- Active particle backgrounds
+- Dramatic hover effects
+
+> Motion is spectacle and statement.
+
+---
+
+## Preset 5 — Human Pulse
+
+**Personality:**  
+Empathy · Connection · Warmth
+
+### Visual
+- Warmer accents (coral, lilac, soft blue)
+- Organic shapes
+- Softer contrast
+
+### Motion
+- Entrance: organic fade + scale
+- Irregular timing (less mechanical)
+- Slow, natural background motion
+- Hover: gentle lateral movement
+
+> Motion feels human, not mechanical.
+
+---
+
+## Motion Intensity Matrix
+
+| Preset         | Intensity | Motion Style     |
+|---------------|-----------|------------------|
+| Premium Calm  | Very Low  | Invisible        |
+| Youth Energy  | Medium    | Playful          |
+| Momentum      | High      | Directional      |
+| Flow Learning | Medium    | Continuous       |
+| Future Impact | Very High | Dramatic         |
+| Human Pulse   | Medium    | Organic          |
+
+---
+
+## System Rule
+
+**What NEVER changes:**
+- Site structure
+- Educational message
+- Core pillars of INEMA.CLUB
+
+**What ALWAYS changes with presets:**
+- Color accents
+- Motion rules
+- Interaction feedback
+- Visual rhythm
+
+---
+
+## Final Statement
+
+> INEMA.CLUB has one structure, one message, and multiple experiential modes.
+
+This system allows:
+- Personalization without fragmentation
+- Energy without chaos
+- Motion without losing clarity
+
+**Structure stays fixed.  
+Experience adapts.**
