@@ -1,47 +1,47 @@
 AI Website Design Course
 
 1. One-Page Demo Website
-1.1 — Understanding Vibecoding
-1.2 — The “One Prompt Website” Formula
-1.3 — Building the Site in Firebase Studio
+1.1 â€” Understanding Vibecoding
+1.2 â€” The â€œOne Prompt Websiteâ€ Formula
+1.3 â€” Building the Site in Firebase Studio
 1.4 - Arquitetura do Site
 1.5 - Diretrizes de Marca
 2. Animation + Micro-Interactions
-2.1 — Introduction to Motion Design for the Web
-2.2 — Scroll-Based Motion
-2.3 — Micro-Interactions
-2.4 — Cinematic Transitions
-2.5 — AI Video Integration (Flow / Veo / Runway)
-2.6 — Optimization for Smooth Playback
-2.7 — Final Check
+2.1 â€” Introduction to Motion Design for the Web
+2.2 â€” Scroll-Based Motion
+2.3 â€” Micro-Interactions
+2.4 â€” CARCKHÉtic Transitions
+2.5 â€” AI Video Integration (Flow / Veo / Runway)
+2.6 â€” Optimization for Smooth Playback
+2.7 â€” Final Check
 3. Deployment, Domain & Infrastructure
-3.1 — Choosing Your Hosting Platform
-3.2 — Setting Up Firebase
-3.3 — Connecting a Custom Domain
-3.4 — Infrastructure Foundations
-3.5 — Adding Contact Forms
-3.6 — Adding a Simple CMS for Text Updates
+3.1 â€” Choosing Your Hosting Platform
+3.2 â€” Setting Up Firebase
+3.3 â€” Connecting a Custom Domain
+3.4 â€” Infrastructure Foundations
+3.5 â€” Adding Contact Forms
+3.6 â€” Adding a Simple CMS for Text Updates
 4. SEO Foundations for AI-Designed Websites
-4.1 — SEO Basics for Motion Websites
-4.2 — On-Page SEO Setup
-4.3 — Speed Optimization
-4.4 — Technical SEO
-4.5 — AI-Optimized Content Writing
-4.6 — Indexing & Search Console
+4.1 â€” SEO Basics for Motion Websites
+4.2 â€” On-Page SEO Setup
+4.3 â€” Speed Optimization
+4.4 â€” Technical SEO
+4.5 â€” AI-Optimized Content Writing
+4.6 â€” Indexing & Search Console
 5. Security Fundamentals for AI-Generated Websites
-5.1 — Web Security Basics (Beginner-Friendly)
-5.2 — Firebase Security Rules
-5.3 — HTTPS, SSL & Domain Security
-5.4 — Form & API Protection
-5.5 — Access Controls, Backup & Version Control
-5.6 — Backup & Version Control
-5.6 — Backup & Version Control
+5.1 â€” Web Security Basics (Beginner-Friendly)
+5.2 â€” Firebase Security Rules
+5.3 â€” HTTPS, SSL & Domain Security
+5.4 â€” Form & API Protection
+5.5 â€” Access Controls, Backup & Version Control
+5.6 â€” Backup & Version Control
+5.6 â€” Backup & Version Control
 
 
 1.1/5 - AI Website Design Course
 https://t.me/c/3650752323/964
 
-1.2/5 - A Fórmula do Site de Um Único Ponto de Interesse
+1.2/5 - A FÃ³rmula do Site de Um Ãšnico Ponto de Interesse
 https://t.me/c/3650752323/991
 
 1.3/5 - Construindo o site no Firebase Studio
@@ -54,46 +54,46 @@ https://t.me/c/3650752323/1263
 https://t.me/c/3650752323/1274
 
 
-2.0/5 -  Animação + Microinterações
-2.0/5 -  Introdução ao Motion Design para a Web  
+2.0/5 -  AnimaÃ§Ã£o + MicrointeraÃ§Ãµes
+2.0/5 -  IntroduÃ§Ã£o ao Motion Design para a Web  
 https://t.me/c/3650752323/1047
 
 2.2/5 - Movimento baseado em rolagem
 https://t.me/c/3650752323/1064
 
-2.3/5 - Microinterações
+2.3/5 - MicrointeraÃ§Ãµes
 https://t.me/c/3650752323/1082
 
-2.4/5 - Transições Cinematográficas
+2.4/5 - TransiÃ§Ãµes CARCKHÉtogrÃ¡ficas
 https://t.me/c/3650752323/1109
 
-2.5/5 - Integração de vídeo com IA (Flow / Veo / Runway)
+2.5/5 - IntegraÃ§Ã£o de vÃ­deo com IA (Flow / Veo / Runway)
 https://t.me/c/3650752323/1123
 
-2.6/5 - Otimização para reprodução fluida
+2.6/5 - OtimizaÃ§Ã£o para reproduÃ§Ã£o fluida
 https://t.me/c/3650752323/1140
 
-2.7/5 - Verificação Final
-https://t.me/c/3650752323/11552.0/5 -  Animação + Microinterações
-2.0/5 -  Introdução ao Motion Design para a Web  
+2.7/5 - VerificaÃ§Ã£o Final
+https://t.me/c/3650752323/11552.0/5 -  AnimaÃ§Ã£o + MicrointeraÃ§Ãµes
+2.0/5 -  IntroduÃ§Ã£o ao Motion Design para a Web  
 https://t.me/c/3650752323/1047
 
 2.2/5 - Movimento baseado em rolagem
 https://t.me/c/3650752323/1064
 
-2.3/5 - Microinterações
+2.3/5 - MicrointeraÃ§Ãµes
 https://t.me/c/3650752323/1082
 
-2.4/5 - Transições Cinematográficas
+2.4/5 - TransiÃ§Ãµes CARCKHÉtogrÃ¡ficas
 https://t.me/c/3650752323/1109
 
-2.5/5 - Integração de vídeo com IA (Flow / Veo / Runway)
+2.5/5 - IntegraÃ§Ã£o de vÃ­deo com IA (Flow / Veo / Runway)
 https://t.me/c/3650752323/1123
 
-2.6/5 - Otimização para reprodução fluida
+2.6/5 - OtimizaÃ§Ã£o para reproduÃ§Ã£o fluida
 https://t.me/c/3650752323/1140
 
-2.7/5 - Verificação Final
+2.7/5 - VerificaÃ§Ã£o Final
 https://t.me/c/3650752323/1155
 
 
@@ -105,16 +105,16 @@ https://t.me/c/3650752323/1155
 
 ---
 
-## 🔹 1. Variação de ESTRUTURA **
+## ðŸ”¹ 1. VariaÃ§Ã£o de ESTRUTURA **
 
 Ex.: One-page, SaaS, Authority, Creative, Conversion
-→ Define a ordem e o fluxo do site.
+â†’ Define a ordem e o fluxo do site.
 
 ---
 
-## 🔹 2. Variação de IDENTIDADE VISUAL
+## ðŸ”¹ 2. VariaÃ§Ã£o de IDENTIDADE VISUAL
 
-Mesmo conteúdo, sensação completamente diferente.
+Mesmo conteÃºdo, sensaÃ§Ã£o completamente diferente.
 
 Exemplos:
 
@@ -124,27 +124,27 @@ Exemplos:
 * Neo-futurista / cyber
 * Editorial / luxury
 
-👉 IA muda cores, tipografia, materiais e contraste.
+ðŸ‘‰ IA muda cores, tipografia, materiais e contraste.
 
 ---
 
-## 🔹 3. Variação de MOTION & INTERAÇÃO
+## ðŸ”¹ 3. VariaÃ§Ã£o de MOTION & INTERAÃ‡ÃƒO
 
 Define *como o site se move*.
 
 Exemplos:
 
-* Zero motion (estático, editorial)
-* Microinterações sutis
+* Zero motion (estÃ¡tico, editorial)
+* MicrointeraÃ§Ãµes sutis
 * Parallax suave
 * Scrollytelling pesado
-* Motion cinematográfico
+* Motion cARCKHÉtogrÃ¡fico
 
-👉 Impacta percepção de qualidade e modernidade.
+ðŸ‘‰ Impacta percepÃ§Ã£o de qualidade e modernidade.
 
 ---
 
-## 🔹 4. Variação de DENSIDADE DE CONTEÚDO
+## ðŸ”¹ 4. VariaÃ§Ã£o de DENSIDADE DE CONTEÃšDO
 
 Quanto o site fala.
 
@@ -153,66 +153,66 @@ Exemplos:
 * Ultra minimal (poucas palavras)
 * Equilibrado (copy + visual)
 * Informativo (text-heavy)
-* Visual-first (texto mínimo)
+* Visual-first (texto mÃ­nimo)
 
-👉 IA ajusta espaçamento, ritmo e hierarquia.
+ðŸ‘‰ IA ajusta espaÃ§amento, ritmo e hierarquia.
 
 ---
 
-## 🔹 5. Variação de TIPO DE CTA
+## ðŸ”¹ 5. VariaÃ§Ã£o de TIPO DE CTA
 
 Define o objetivo principal.
 
 Exemplos:
 
-* Conversão direta (Buy / Book / Sign up)
-* Exploração (View work / Learn more)
+* ConversÃ£o direta (Buy / Book / Sign up)
+* ExploraÃ§Ã£o (View work / Learn more)
 * Relacionamento (Join / Subscribe)
 * Autoridade (Read insights)
 
 ---
 
-## 🔹 6. Variação de DISPOSITIVO-PRIMEIRO
+## ðŸ”¹ 6. VariaÃ§Ã£o de DISPOSITIVO-PRIMEIRO
 
 Onde o design nasce.
 
 Exemplos:
 
 * Mobile-first (app-like)
-* Desktop-first (cinematográfico)
-* Touch-first (quiosque / exposição)
+* Desktop-first (cARCKHÉtogrÃ¡fico)
+* Touch-first (quiosque / exposiÃ§Ã£o)
 
 ---
 
-## 🔹 7. Variação de TOM DA MARCA
+## ðŸ”¹ 7. VariaÃ§Ã£o de TOM DA MARCA
 
 Como a marca fala.
 
 Exemplos:
 
-* Técnica / corporativa
+* TÃ©cnica / corporativa
 * Confiante / premium
 * Criativa / ousada
-* Humana / próxima
+* Humana / prÃ³xima
 
 ---
 
-## 🧠 O MODELO FINAL (direto)
+## ðŸ§  O MODELO FINAL (direto)
 
-Vocês não têm um modelo de site.
-Vocês têm um framework com múltiplos eixos de variação:
+VocÃªs nÃ£o tÃªm um modelo de site.
+VocÃªs tÃªm um framework com mÃºltiplos eixos de variaÃ§Ã£o:
 
 SITE = Estrutura
      + Identidade Visual
      + Motion
-     + Densidade de Conteúdo
+     + Densidade de ConteÃºdo
      + Tipo de CTA
      + Dispositivo-primeiro
      + Tom de Voz
 
-👉 Isso permite dezenas de combinações, mantendo:
+ðŸ‘‰ Isso permite dezenas de combinaÃ§Ãµes, mantendo:
 
-* Consistência
+* ConsistÃªncia
 * Qualidade
 * Previsibilidade com IA
 
@@ -220,42 +220,42 @@ SITE = Estrutura
 
 Criei um documento completo, estruturado e profissional no canvas com:
 
-* Explicação clara do Vibecoding
-* Definição do One Prompt Website
+* ExplicaÃ§Ã£o clara do Vibecoding
+* DefiniÃ§Ã£o do One Prompt Website
 * 5 modelos de estrutura de sites
-* Todos os eixos de variação (visual, motion, conteúdo, CTA, etc.)
-* A matriz de decisão
-* Finalização com o prompt paramétrico automático, pronto para uso
+* Todos os eixos de variaÃ§Ã£o (visual, motion, conteÃºdo, CTA, etc.)
+* A matriz de decisÃ£o
+* FinalizaÃ§Ã£o com o prompt paramÃ©trico automÃ¡tico, pronto para uso
 
-👉 Esse documento já está no nível de:
+ðŸ‘‰ Esse documento jÃ¡ estÃ¡ no nÃ­vel de:
 
-* Material didático
-* Base de metodologia própria
-* Framework apresentável para clientes, alunos ou produto
+* Material didÃ¡tico
+* Base de metodologia prÃ³pria
+* Framework apresentÃ¡vel para clientes, alunos ou produto
 
 
 
-## 🧠 Como usar essa tabela
+## ðŸ§  Como usar essa tabela
 
-* Linha = experiência
-* Coluna = decisão de design
-* Você escolhe um preset e sabe exatamente:
+* Linha = experiÃªncia
+* Coluna = decisÃ£o de design
+* VocÃª escolhe um preset e sabe exatamente:
 
   * Como entra
   * Como se move
   * Como reage
-  * Quão intenso é
+  * QuÃ£o intenso Ã©
 
 ---
 
-## 📌 Leitura rápida (atalhos)
+## ðŸ“Œ Leitura rÃ¡pida (atalhos)
 
-* Quer luxo silencioso → Premium Calm
-* Quer energia jovem → Youth Energy
-* Quer ação e execução → Momentum
-* Quer aprendizado profundo → Flow Learning
-* Quer impacto e visão → Future Impact
-* Quer empatia e conexão → Human Pulse
+* Quer luxo silencioso â†’ Premium Calm
+* Quer energia jovem â†’ Youth Energy
+* Quer aÃ§Ã£o e execuÃ§Ã£o â†’ Momentum
+* Quer aprendizado profundo â†’ Flow Learning
+* Quer impacto e visÃ£o â†’ Future Impact
+* Quer empatia e conexÃ£o â†’ Human Pulse
 
 
-por q entender de WEB novamente é Importante,  estamos em uma mudanca onde o ecommerce comeca incorporar a IA, entao nao é mais link e sim conteudo e contexto.  entao qual sera o papel da web. como ser relevante nas pesquisas da iapor q entender de WEB novamente é Importante,  estamos em uma mudanca onde o ecommerce comeca incorporar a IA, entao nao é mais link e sim conteudo e contexto.  entao qual sera o papel da web. como ser relevante nas pesquisas da ia
+por q entender de WEB novamente Ã© Importante,  estamos em uma mudanca onde o ecommerce comeca incorporar a IA, entao nao Ã© mais link e sim conteudo e contexto.  entao qual sera o papel da web. como ser relevante nas pesquisas da iapor q entender de WEB novamente Ã© Importante,  estamos em uma mudanca onde o ecommerce comeca incorporar a IA, entao nao Ã© mais link e sim conteudo e contexto.  entao qual sera o papel da web. como ser relevante nas pesquisas da ia

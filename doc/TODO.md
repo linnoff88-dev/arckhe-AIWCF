@@ -32,7 +32,7 @@
 - [ ] Grid de 6 trilhas com cores
 - [ ] Stats gerais do curso
 - [ ] Navigation com theme toggle
-- [ ] INEMA.CLUB link (sky-400)
+- [ ] ARCKHÉ AI link (sky-400)
 - [ ] Light mode CSS
 
 ### Validacao Index
@@ -138,7 +138,7 @@ Copiar de /ref/CHECKLIST_REVISAO.md:
 - [ ] Botoes ESQUERDA (justify-start)
 - [ ] Numeros em circulo (NAO setas)
 - [ ] 3 secoes por topico
-- [ ] INEMA.CLUB presente (sky-400)
+- [ ] ARCKHÉ AI presente (sky-400)
 - [ ] Light mode CSS completo
 - [ ] Titulo modulo text-2xl
 
@@ -173,7 +173,7 @@ Copiar de /ref/CHECKLIST_REVISAO.md:
 - framework_parametrico_de_criacao_de_sites_com_ia (1).md
 - 1.4 - Arquitetura do Site.txt
 - 1.5 - Diretrizes de Marca.txt
-- INEMA_PRESET_SELECTOR.md. (2).txt
+- ARCKHÉ_PRESET_SELECTOR.md. (2).txt
 
 ---
 

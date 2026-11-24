@@ -1,8 +1,8 @@
-# INEMA.CLUB — Experience Preset System
+# ARCKHÉ AI â€” Experience Preset System
 
 ## Overview
 
-INEMA.CLUB uses a **single structural and content framework** with **multiple experiential presets**.
+ARCKHÉ AI uses a **single structural and content framework** with **multiple experiential presets**.
 
 The structure and message remain constant.  
 What changes is **how the experience feels, moves, and expresses energy**.
@@ -28,7 +28,7 @@ To enable this, the system introduces an **Experience Preset Selector**, allowin
 
 ## Baseline Preset (Reference)
 
-### Preset 0 — Premium Calm (Default)
+### Preset 0 â€” Premium Calm (Default)
 
 **Purpose:**  
 Institutional, timeless, premium baseline.
@@ -40,8 +40,8 @@ Institutional, timeless, premium baseline.
 - Wide spacing
 
 **Motion**
-- Fade + translateY (8–12px)
-- Duration: 0.6–0.8s
+- Fade + translateY (8â€“12px)
+- Duration: 0.6â€“0.8s
 - Almost no background motion
 - Simple hover states
 
@@ -55,20 +55,20 @@ Each preset defines **visual style + motion behavior**.
 
 ---
 
-## Preset 1 — Youth Energy
+## Preset 1 â€” Youth Energy
 
 **Personality:**  
-Youthful · Curious · Alive
+Youthful Â· Curious Â· Alive
 
 ### Visual
-- Animated gradients (blue → purple → cyan)
+- Animated gradients (blue â†’ purple â†’ cyan)
 - Bright accent highlights
 - Gradient headlines
 - More contrast between sections
 
 ### Motion
-- Entrance: scale (0.95 → 1) + fade
-- Duration: 0.4–0.5s
+- Entrance: scale (0.95 â†’ 1) + fade
+- Duration: 0.4â€“0.5s
 - Strong stagger between elements
 - Background blobs or waves (slow loop)
 - Hover: glow + scale (1.02)
@@ -77,10 +77,10 @@ Youthful · Curious · Alive
 
 ---
 
-## Preset 2 — Momentum
+## Preset 2 â€” Momentum
 
 **Personality:**  
-Action · Progress · Execution
+Action Â· Progress Â· Execution
 
 ### Visual
 - Strong directional lines
@@ -89,7 +89,7 @@ Action · Progress · Execution
 
 ### Motion
 - Entrance: slide from X-axis
-- Duration: 0.3–0.4s
+- Duration: 0.3â€“0.4s
 - Aggressive stagger
 - Scroll-driven progression
 - Click feedback: compress + bounce
@@ -98,10 +98,10 @@ Action · Progress · Execution
 
 ---
 
-## Preset 3 — Flow Learning
+## Preset 3 â€” Flow Learning
 
 **Personality:**  
-Continuity · Focus · Deep learning
+Continuity Â· Focus Â· Deep learning
 
 ### Visual
 - Soft gradients
@@ -110,7 +110,7 @@ Continuity · Focus · Deep learning
 
 ### Motion
 - Entrance: fade + morph
-- Duration: 0.8–1s
+- Duration: 0.8â€“1s
 - True parallax layers
 - Continuous background flow
 - Minimal hover effects
@@ -119,10 +119,10 @@ Continuity · Focus · Deep learning
 
 ---
 
-## Preset 4 — Future Impact
+## Preset 4 â€” Future Impact
 
 **Personality:**  
-Visionary · Provocative · Futuristic
+Visionary Â· Provocative Â· Futuristic
 
 ### Visual
 - Neon accents
@@ -131,7 +131,7 @@ Visionary · Provocative · Futuristic
 
 ### Motion
 - Entrance: mask reveals / clip-path
-- Duration: 0.5–0.6s
+- Duration: 0.5â€“0.6s
 - Section state changes on scroll
 - Active particle backgrounds
 - Dramatic hover effects
@@ -140,10 +140,10 @@ Visionary · Provocative · Futuristic
 
 ---
 
-## Preset 5 — Human Pulse
+## Preset 5 â€” Human Pulse
 
 **Personality:**  
-Empathy · Connection · Warmth
+Empathy Â· Connection Â· Warmth
 
 ### Visual
 - Warmer accents (coral, lilac, soft blue)
@@ -178,7 +178,7 @@ Empathy · Connection · Warmth
 **What NEVER changes:**
 - Site structure
 - Educational message
-- Core pillars of INEMA.CLUB
+- Core pillars of ARCKHÉ AI
 
 **What ALWAYS changes with presets:**
 - Color accents
@@ -190,7 +190,7 @@ Empathy · Connection · Warmth
 
 ## Final Statement
 
-> INEMA.CLUB has one structure, one message, and multiple experiential modes.
+> ARCKHÉ AI has one structure, one message, and multiple experiential modes.
 
 This system allows:
 - Personalization without fragmentation

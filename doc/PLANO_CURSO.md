@@ -2,14 +2,14 @@
 
 > **Versao:** 1.0 | **Data:** 2026-01-21
 > **Idioma:** Portugues
-> **Organizacao:** INEMA.CLUB
+> **Organizacao:** ARCKHÉ AI
 
 ---
 
 ## VISAO GERAL
 
 **Nome do Curso:** AI Website Creation Framework (Vibe Coding)
-**Emoji:** 🎨
+**Emoji:** ðŸŽ¨
 **Descricao:** Aprenda a criar sites profissionais usando IA com a metodologia Vibe Coding
 **Publico:** Criadores, empreendedores, designers que querem criar sites sem programar
 
@@ -18,11 +18,11 @@
 ## ESTRUTURA GERAL
 
 ```
-🎨 AI WCF - Vibe Coding
-├── 6 Trilhas
-├── ~48 Modulos (8 por trilha)
-├── ~288 Topicos (6 por modulo)
-└── Assets em /doc/11, /doc/12, /doc/13
+ðŸŽ¨ AI WCF - Vibe Coding
+â”œâ”€â”€ 6 Trilhas
+â”œâ”€â”€ ~48 Modulos (8 por trilha)
+â”œâ”€â”€ ~288 Topicos (6 por modulo)
+â””â”€â”€ Assets em /doc/11, /doc/12, /doc/13
 ```
 
 ---
@@ -54,7 +54,7 @@
 | 2.2 | CSS Animations Nativo | @keyframes, Transition, Transform, Animation Properties, Exemplos, Boas Praticas |
 | 2.3 | Scroll-Based Motion | Scroll Events, Intersection Observer, Scroll-driven CSS, Parallax, Reveal, Performance |
 | 2.4 | Microinteracoes | Feedback Visual, Estados, Hover Effects, Click Response, Loading, Transicoes |
-| 2.5 | Transicoes Cinematograficas | Page Transitions, Hero Animations, Sequencias, Narrativa, Impacto, Sutileza |
+| 2.5 | Transicoes CARCKHÉtograficas | Page Transitions, Hero Animations, Sequencias, Narrativa, Impacto, Sutileza |
 | 2.6 | GSAP & Bibliotecas Pro | Setup, Timeline, ScrollTrigger, Stagger, Plugins, Casos de Uso |
 | 2.7 | AI Video Integration | Veo, Runway, Flow, Integracao, Formato, Otimizacao |
 | 2.8 | Otimizacao de Performance | FPS, Layout Thrashing, GPU, Lazy Loading, Debugging, Metricas |

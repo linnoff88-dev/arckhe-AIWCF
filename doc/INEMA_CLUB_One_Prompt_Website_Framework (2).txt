@@ -1,15 +1,15 @@
 
-INEMA.CLUB — The One Prompt Website Formula
+ARCKHÉ AI â€” The One Prompt Website Formula
 Education for Transformation in the AI Era
 
 --------------------------------------------
 OVERVIEW
 --------------------------------------------
 
-This document defines the official INEMA.CLUB website creation model using a single structured prompt.
+This document defines the official ARCKHÉ AI website creation model using a single structured prompt.
 The focus is education, digital transformation, and AI literacy, guiding users from knowledge to action and empathy.
 
-INEMA.CLUB is built on three core pillars:
+ARCKHÉ AI is built on three core pillars:
 1. Communication with Machines
 2. Entrepreneurial Automation
 3. Human Behavior
@@ -20,39 +20,39 @@ Transformation only happens when these three pillars work together.
 1. PAGE STRUCTURE
 --------------------------------------------
 
-INEMA.CLUB
-├── HEADER
-├── HERO
-├── PILLARS
-├── EDUCATION PROGRAMS
-├── CTA
-└── FOOTER
+ARCKHÉ AI
+â”œâ”€â”€ HEADER
+â”œâ”€â”€ HERO
+â”œâ”€â”€ PILLARS
+â”œâ”€â”€ EDUCATION PROGRAMS
+â”œâ”€â”€ CTA
+â””â”€â”€ FOOTER
 
 --------------------------------------------
 2. BRANDING GUIDELINES
 --------------------------------------------
 
-1. Visual Identity — "Knowledge, Clarity & Glass"
+1. Visual Identity â€” "Knowledge, Clarity & Glass"
 
 - Typography:
   Use Inter or SF Pro Display.
-  Headlines should be large (56–72px), clear, and authoritative.
+  Headlines should be large (56â€“72px), clear, and authoritative.
   Body text should be readable, calm, and high-contrast.
 
 - Color Palette:
   Deep Space Gray background (#0d0d0d)
-  Off‑White primary text (#f5f5f7)
+  Offâ€‘White primary text (#f5f5f7)
   Subtle blue and violet gradients representing intelligence and learning.
 
 - Shapes:
-  Soft Squircle corners (24–30px radius).
+  Soft Squircle corners (24â€“30px radius).
   Friendly but precise geometry.
 
 - Materials:
-  Light glassmorphism using backdrop-filter: blur(16–20px)
+  Light glassmorphism using backdrop-filter: blur(16â€“20px)
   Thin borders (1px, low opacity)
 
-2. Motion — "Clarity in Motion"
+2. Motion â€” "Clarity in Motion"
 
 - No aggressive animations
 - Smooth ease-out curves
@@ -73,7 +73,7 @@ INEMA.CLUB
 1. HEADER (Navigation)
 
 Content Inputs:
-- Logo Text: INEMA.CLUB
+- Logo Text: ARCKHÉ AI
 - Navigation: Home, Pillars, Programs, Community, Contact
 - Mobile Menu: Hamburger (auto)
 
@@ -149,16 +149,16 @@ Content Inputs:
   Education that creates real-world impact.
 
 - CTA Button:
-  "Join INEMA.CLUB"
+  "Join ARCKHÉ AI"
 
 --------------------------------------------
 6. FOOTER
 
 Content Inputs:
-- INEMA.CLUB
+- ARCKHÉ AI
 - Contact email
 - Social links
-- © 2026 INEMA.CLUB
+- Â© 2026 ARCKHÉ AI
 
 Style:
 Minimal, calm, educational tone.
@@ -167,7 +167,7 @@ Minimal, calm, educational tone.
 CONCLUSION
 --------------------------------------------
 
-INEMA.CLUB is not a platform.
+ARCKHÉ AI is not a platform.
 It is a movement.
 
 A modern form of digital transformation evangelism,
@@ -175,4 +175,4 @@ teaching people how to speak with machines,
 automate with intention,
 and understand human behavior.
 
-From knowledge → to action → to empathy.
+From knowledge â†’ to action â†’ to empathy.
