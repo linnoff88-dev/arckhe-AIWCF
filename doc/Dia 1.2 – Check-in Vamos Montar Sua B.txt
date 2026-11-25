@@ -1,97 +1,97 @@
-Dia 1 â€“ Check-in: Vamos Montar Sua Base! ðŸŽ¯
+Dia 1 ê¢â¬â Check-in: Vamos Montar Sua Base! ê°Å¸Å½Â¯
 
 Bem-vindos ao Dia 1 do nosso Sprint de 7 Dias!
-Hoje Ã© totalmente focado em preparar sua base para que vocÃª esteja pronto para construir. Este Ã© o dia mais importante, pois define o tom de toda a semana.
+Hoje êÂ© totalmente focado em preparar sua base para que vocêÂª esteja pronto para construir. Este êÂ© o dia mais importante, pois define o tom de toda a semana.
 
-### Sua MissÃ£o do Dia 1:
+### Sua MissêÂ£o do Dia 1:
 
-1. Assista ao MÃ³dulo 1: Site Demo de Uma PÃ¡gina
+1. Assista ao MêÂ³dulo 1: Site Demo de Uma PêÂ¡gina
 
-* Mergulhe nos conceitos principais com estas seÃ§Ãµes objetivas:
+* Mergulhe nos conceitos principais com estas seêÂ§êÂµes objetivas:
 
-> 1.1 â€” Entendendo o Vibecoding
-> 1.2 â€” A fÃ³rmula do â€œSite com Um Promptâ€
-> 1.3 â€” Construindo o site no Firebase Studio
+> 1.1 ê¢â¬â Entendendo o Vibecoding
+> 1.2 ê¢â¬â A fêÂ³rmula do ê¢â¬ÅSite com Um Promptê¢â¬Â
+> 1.3 ê¢â¬â Construindo o site no Firebase Studio
 
 2. Configure suas contas:
-Garanta que vocÃª tenha acesso a todas as ferramentas de IA que usaremos ao longo do sprint.
+Garanta que vocêÂª tenha acesso a todas as ferramentas de IA que usaremos ao longo do sprint.
 
 3. Escolha seu projeto:
-Decida qual site vocÃª vai construir â€” pode ser uma vitrine de produto, portfÃ³lio ou site de marca.
+Decida qual site vocêÂª vai construir ê¢â¬â pode ser uma vitrine de produto, portfêÂ³lio ou site de marca.
 
 ### Check-in:
 
 Responda a este post com:
-â€¢ âœ… â€œMÃ³dulo 1 concluÃ­do!â€
-â€¢ Uma frase descrevendo o site que vocÃª pretende construir
+ê¢â¬Â¢ ê¢Åâ¦ ê¢â¬ÅMêÂ³dulo 1 concluêÂ­do!ê¢â¬Â
+ê¢â¬Â¢ Uma frase descrevendo o site que vocêÂª pretende construir
 
 
-Na primeira semana do curso, vocÃª aprende um novo mÃ©todo de criaÃ§Ã£o de sites chamado vibe coding, em que, em vez de programar, vocÃª descreve o clima, o estilo e a intenÃ§Ã£o do site, e a IA faz o trabalho tÃ©cnico. O objetivo do Dia 1 Ã© criar um site profissional de uma pÃ¡gina a partir de um Ãºnico prompt, sem necessidade de experiÃªncia tÃ©cnica.
+Na primeira semana do curso, vocêÂª aprende um novo mêÂ©todo de criaêÂ§êÂ£o de sites chamado vibe coding, em que, em vez de programar, vocêÂª descreve o clima, o estilo e a intenêÂ§êÂ£o do site, e a IA faz o trabalho têÂ©cnico. O objetivo do Dia 1 êÂ© criar um site profissional de uma pêÂ¡gina a partir de um êÂºnico prompt, sem necessidade de experiêÂªncia têÂ©cnica.
 
-O foco estÃ¡ em aprender a formular um prompt bem estruturado que descreva layout, espaÃ§amento, hierarquia, tipografia e atmosfera visual. Esse prompt Ã© usado no Firebase Studio, que gera automaticamente a estrutura em HTML e CSS. A partir disso, o site Ã© refinado com ajustes de UX, identidade visual, cores, tipografia, textos e imagens gerados por IA.
+O foco estêÂ¡ em aprender a formular um prompt bem estruturado que descreva layout, espaêÂ§amento, hierarquia, tipografia e atmosfera visual. Esse prompt êÂ© usado no Firebase Studio, que gera automaticamente a estrutura em HTML e CSS. A partir disso, o site êÂ© refinado com ajustes de UX, identidade visual, cores, tipografia, textos e imagens gerados por IA.
 
-O processo segue trÃªs passos principais: definir as vibes â†’ escrever um prompt claro â†’ deixar a IA construir e depois refinar e aplicar a marca. Esse Ã© apresentado como o novo paradigma da criaÃ§Ã£o de sites, mais criativo, rÃ¡pido e acessÃ­vel.
+O processo segue trêÂªs passos principais: definir as vibes ê¢â â escrever um prompt claro ê¢â â deixar a IA construir e depois refinar e aplicar a marca. Esse êÂ© apresentado como o novo paradigma da criaêÂ§êÂ£o de sites, mais criativo, rêÂ¡pido e acessêÂ­vel.
 
 ========
 
-### 1. IntroduÃ§Ã£o ao curso e Ã  nova forma de criar sites
+### 1. IntroduêÂ§êÂ£o ao curso e êÂ  nova forma de criar sites
 
-Apresenta a proposta do curso e a ideia de que estamos entrando em uma nova era da criaÃ§Ã£o web, onde a IA assume o trabalho tÃ©cnico e o criador foca na visÃ£o criativa.
+Apresenta a proposta do curso e a ideia de que estamos entrando em uma nova era da criaêÂ§êÂ£o web, onde a IA assume o trabalho têÂ©cnico e o criador foca na visêÂ£o criativa.
 
 ---
 
-### 2. Vibe Coding (ProgramaÃ§Ã£o por â€œvibesâ€)
+### 2. Vibe Coding (ProgramaêÂ§êÂ£o por ê¢â¬Åvibesê¢â¬Â)
 
-Ã‰ um mÃ©todo em que vocÃª nÃ£o escreve cÃ³digo, mas descreve em linguagem natural o clima do site: estilo, energia, estÃ©tica, organizaÃ§Ã£o e sensaÃ§Ã£o desejada. A IA interpreta essas descriÃ§Ãµes e constrÃ³i o site.
+êâ° um mêÂ©todo em que vocêÂª nêÂ£o escreve cêÂ³digo, mas descreve em linguagem natural o clima do site: estilo, energia, estêÂ©tica, organizaêÂ§êÂ£o e sensaêÂ§êÂ£o desejada. A IA interpreta essas descriêÂ§êÂµes e constrêÂ³i o site.
 
 ---
 
 ### 3. Objetivo da Semana 1
 
-Criar, ainda no primeiro dia, um site profissional de uma pÃ¡gina, totalmente funcional, gerado a partir de um Ãºnico prompt. O foco Ã© velocidade, clareza e qualidade visual.
+Criar, ainda no primeiro dia, um site profissional de uma pêÂ¡gina, totalmente funcional, gerado a partir de um êÂºnico prompt. O foco êÂ© velocidade, clareza e qualidade visual.
 
 ---
 
-### 4. MudanÃ§a de mentalidade: de programar para direcionar
+### 4. MudanêÂ§a de mentalidade: de programar para direcionar
 
-Em vez de construir o site linha por linha, vocÃª atua como um diretor criativo, dizendo Ã  IA o que fazer. A IA cuida de HTML, CSS e estrutura tÃ©cnica, enquanto vocÃª define a intenÃ§Ã£o do design.
+Em vez de construir o site linha por linha, vocêÂª atua como um diretor criativo, dizendo êÂ  IA o que fazer. A IA cuida de HTML, CSS e estrutura têÂ©cnica, enquanto vocêÂª define a intenêÂ§êÂ£o do design.
 
 ---
 
-### 5. DescriÃ§Ã£o de design em linguagem natural
+### 5. DescriêÂ§êÂ£o de design em linguagem natural
 
 Ensina como explicar para a IA elementos como:
 
-* EspaÃ§amento
+* EspaêÂ§amento
 * Hierarquia visual
 * Tipografia
 * Mood/atmosfera
 * Estrutura do layout
 
-Quanto mais claro e especÃ­fico o comando, melhor o resultado.
+Quanto mais claro e especêÂ­fico o comando, melhor o resultado.
 
 ---
 
-### 6. FÃ³rmula do â€œOne Prompt Websiteâ€
+### 6. FêÂ³rmula do ê¢â¬ÅOne Prompt Websiteê¢â¬Â
 
-Ã‰ a tÃ©cnica de criar um prompt Ãºnico e bem estruturado que serve como o blueprint completo do site. A qualidade do site final depende diretamente da qualidade desse prompt.
+êâ° a têÂ©cnica de criar um prompt êÂºnico e bem estruturado que serve como o blueprint completo do site. A qualidade do site final depende diretamente da qualidade desse prompt.
 
 ---
 
 ### 7. Uso do Firebase Studio
 
-O prompt Ã© inserido no Firebase Studio, que gera automaticamente a estrutura base do site (HTML e CSS) em segundos, jÃ¡ com layout responsivo.
+O prompt êÂ© inserido no Firebase Studio, que gera automaticamente a estrutura base do site (HTML e CSS) em segundos, jêÂ¡ com layout responsivo.
 
 ---
 
-### 8. Refinamento do layout e da experiÃªncia do usuÃ¡rio
+### 8. Refinamento do layout e da experiêÂªncia do usuêÂ¡rio
 
-ApÃ³s a geraÃ§Ã£o inicial, o site Ã© ajustado para melhorar:
+ApêÂ³s a geraêÂ§êÂ£o inicial, o site êÂ© ajustado para melhorar:
 
-* EspaÃ§amento
+* EspaêÂ§amento
 * Hierarquia visual
-* Clareza das informaÃ§Ãµes
-* SensaÃ§Ã£o de profissionalismo e intenÃ§Ã£o no design
+* Clareza das informaêÂ§êÂµes
+* SensaêÂ§êÂ£o de profissionalismo e intenêÂ§êÂ£o no design
 
 ---
 
@@ -105,62 +105,62 @@ Nesta etapa, o site recebe:
 * Hero section
 * Mensagem principal
 
-A IA tambÃ©m auxilia na geraÃ§Ã£o de textos e imagens.
+A IA tambêÂ©m auxilia na geraêÂ§êÂ£o de textos e imagens.
 
 ---
 
-### 10. ImportÃ¢ncia da especificidade no prompt
+### 10. ImportêÂ¢ncia da especificidade no prompt
 
-Quanto mais detalhadas forem as instruÃ§Ãµes (ex.: estilo â€œneon glassmorphismâ€, layout moderno, informaÃ§Ãµes bem posicionadas), menor a chance de inconsistÃªncias e melhor o resultado final.
+Quanto mais detalhadas forem as instruêÂ§êÂµes (ex.: estilo ê¢â¬Åneon glassmorphismê¢â¬Â, layout moderno, informaêÂ§êÂµes bem posicionadas), menor a chance de inconsistêÂªncias e melhor o resultado final.
 
 ---
 
-### 11. Processo final da criaÃ§Ã£o web com IA
+### 11. Processo final da criaêÂ§êÂ£o web com IA
 
-O mÃ©todo completo segue esta sequÃªncia:
-Definir as vibes â†’ escrever um prompt claro â†’ deixar a IA construir â†’ refinar â†’ aplicar branding
+O mêÂ©todo completo segue esta sequêÂªncia:
+Definir as vibes ê¢â â escrever um prompt claro ê¢â â deixar a IA construir ê¢â â refinar ê¢â â aplicar branding
 
-Esse processo representa a nova geraÃ§Ã£o da criaÃ§Ã£o de sites, mais rÃ¡pida, acessÃ­vel e criativa.
+Esse processo representa a nova geraêÂ§êÂ£o da criaêÂ§êÂ£o de sites, mais rêÂ¡pida, acessêÂ­vel e criativa.
 
 ======
 
 ## Resumo das 3 Etapas do Vibe Coding
 
-### Etapa 1 â€” Conceito e mentalidade (Vibe Coding)
+### Etapa 1 ê¢â¬â Conceito e mentalidade (Vibe Coding)
 
-Nesta fase, o foco Ã© mudar a forma tradicional de criar sites. Em vez de escrever cÃ³digo, vocÃª passa a descrever a intenÃ§Ã£o do design: clima, estilo, hierarquia, espaÃ§amento e experiÃªncia. O objetivo Ã© criar um site profissional de uma pÃ¡gina a partir de um Ãºnico prompt, atuando como diretor criativo enquanto a IA cuida da parte tÃ©cnica.
-
----
-
-### Etapa 2 â€” EstruturaÃ§Ã£o do Prompt Ãšnico
-
-Aqui entra a fÃ³rmula do â€œOne Prompt Websiteâ€, onde todo o site Ã© definido em um Ãºnico prompt bem organizado. Essa etapa tem trÃªs pilares:
-
-* Estrutura da pÃ¡gina (header, hero, sobre, serviÃ§os, CTA e footer)
-* Branding e identidade visual (tipografia, cores, materiais, animaÃ§Ãµes e comportamento mobile)
-* ConteÃºdo detalhado por seÃ§Ã£o (textos exatos, layout dos elementos e estilo visual)
-
-Quanto mais clara e especÃ­fica for essa estrutura, mais consistente, premium e intencional serÃ¡ o site gerado pela IA.
+Nesta fase, o foco êÂ© mudar a forma tradicional de criar sites. Em vez de escrever cêÂ³digo, vocêÂª passa a descrever a intenêÂ§êÂ£o do design: clima, estilo, hierarquia, espaêÂ§amento e experiêÂªncia. O objetivo êÂ© criar um site profissional de uma pêÂ¡gina a partir de um êÂºnico prompt, atuando como diretor criativo enquanto a IA cuida da parte têÂ©cnica.
 
 ---
 
-### Etapa 3 â€” ExecuÃ§Ã£o, refinamento e publicaÃ§Ã£o no Firebase Studio
+### Etapa 2 ê¢â¬â EstruturaêÂ§êÂ£o do Prompt êÅ¡nico
 
-Na Ãºltima etapa, o prompt Ã© executado no Firebase Studio, que converte as instruÃ§Ãµes em cÃ³digo real (HTML e CSS). O site jÃ¡ nasce funcional e pode ser facilmente refinado com ajustes visuais, alteraÃ§Ãµes de texto, animaÃ§Ãµes e layout usando prompts, seleÃ§Ã£o direta de elementos ou anotaÃ§Ãµes na pÃ¡gina.
-AlÃ©m disso, Ã© possÃ­vel editar o cÃ³digo, integrar com GitHub e publicar o site diretamente ou em outra plataforma.
+Aqui entra a fêÂ³rmula do ê¢â¬ÅOne Prompt Websiteê¢â¬Â, onde todo o site êÂ© definido em um êÂºnico prompt bem organizado. Essa etapa tem trêÂªs pilares:
+
+* Estrutura da pêÂ¡gina (header, hero, sobre, serviêÂ§os, CTA e footer)
+* Branding e identidade visual (tipografia, cores, materiais, animaêÂ§êÂµes e comportamento mobile)
+* ConteêÂºdo detalhado por seêÂ§êÂ£o (textos exatos, layout dos elementos e estilo visual)
+
+Quanto mais clara e especêÂ­fica for essa estrutura, mais consistente, premium e intencional serêÂ¡ o site gerado pela IA.
 
 ---
 
-### VisÃ£o geral
+### Etapa 3 ê¢â¬â ExecuêÂ§êÂ£o, refinamento e publicaêÂ§êÂ£o no Firebase Studio
+
+Na êÂºltima etapa, o prompt êÂ© executado no Firebase Studio, que converte as instruêÂ§êÂµes em cêÂ³digo real (HTML e CSS). O site jêÂ¡ nasce funcional e pode ser facilmente refinado com ajustes visuais, alteraêÂ§êÂµes de texto, animaêÂ§êÂµes e layout usando prompts, seleêÂ§êÂ£o direta de elementos ou anotaêÂ§êÂµes na pêÂ¡gina.
+AlêÂ©m disso, êÂ© possêÂ­vel editar o cêÂ³digo, integrar com GitHub e publicar o site diretamente ou em outra plataforma.
+
+---
+
+### VisêÂ£o geral
 
 O processo completo segue este fluxo:
-definir as vibes â†’ estruturar um prompt claro â†’ gerar, refinar e publicar o site
+definir as vibes ê¢â â estruturar um prompt claro ê¢â â gerar, refinar e publicar o site
 
-Esse mÃ©todo permite criar sites modernos, profissionais e prontos para produÃ§Ã£o de forma rÃ¡pida, criativa e acessÃ­vel, representando a essÃªncia do vibe coding.
+Esse mêÂ©todo permite criar sites modernos, profissionais e prontos para produêÂ§êÂ£o de forma rêÂ¡pida, criativa e acessêÂ­vel, representando a essêÂªncia do vibe coding.
 
 =============
 
-1.2/5 - A FÃ³rmula do Site de Um Ãšnico Ponto de Interesse
+1.2/5 - A FêÂ³rmula do Site de Um êÅ¡nico Ponto de Interesse
 
 - Structure of a successful one-prompt website 
 - How to describe layout, spacing, typography, and visuals 
@@ -169,229 +169,229 @@ Esse mÃ©todo permite criar sites modernos, profissionais e prontos para produ�
 
 Full prompt example
 
-O conteÃºdo apresenta a fÃ³rmula do site com um Ãºnico prompt, um mÃ©todo para criar um site completo e premium sem escrever cÃ³digo, apenas descrevendo estrutura, identidade visual e conteÃºdo de forma clara para a IA. A qualidade do site depende diretamente da clareza e organizaÃ§Ã£o desse prompt.
+O conteêÂºdo apresenta a fêÂ³rmula do site com um êÂºnico prompt, um mêÂ©todo para criar um site completo e premium sem escrever cêÂ³digo, apenas descrevendo estrutura, identidade visual e conteêÂºdo de forma clara para a IA. A qualidade do site depende diretamente da clareza e organizaêÂ§êÂ£o desse prompt.
 
-A fÃ³rmula Ã© dividida em trÃªs etapas principais:
+A fêÂ³rmula êÂ© dividida em trêÂªs etapas principais:
 
-1. Estrutura da pÃ¡gina
-   Define um esqueleto claro para o site, geralmente com seis seÃ§Ãµes: header, hero, sobre, serviÃ§os, chamada para aÃ§Ã£o e rodapÃ©. Essa estrutura funciona como um mapa, orientando a IA sobre o que criar, em que ordem e com qual objetivo, garantindo fluidez e conversÃ£o.
+1. Estrutura da pêÂ¡gina
+   Define um esqueleto claro para o site, geralmente com seis seêÂ§êÂµes: header, hero, sobre, serviêÂ§os, chamada para aêÂ§êÂ£o e rodapêÂ©. Essa estrutura funciona como um mapa, orientando a IA sobre o que criar, em que ordem e com qual objetivo, garantindo fluidez e conversêÂ£o.
 
 2. Branding e identidade visual
-   Aqui sÃ£o descritos tipografia, cores, formas, materiais, animaÃ§Ãµes, comportamento em mobile e padrÃµes de qualidade. Esses detalhes evitam resultados genÃ©ricos e garantem um design consistente, premium e alinhado Ã  marca em todo o site.
+   Aqui sêÂ£o descritos tipografia, cores, formas, materiais, animaêÂ§êÂµes, comportamento em mobile e padrêÂµes de qualidade. Esses detalhes evitam resultados genêÂ©ricos e garantem um design consistente, premium e alinhado êÂ  marca em todo o site.
 
-3. ConteÃºdo detalhado por seÃ§Ã£o
-   Cada seÃ§Ã£o deve ser claramente rotulada e conter trÃªs tipos de instruÃ§Ãµes:
+3. ConteêÂºdo detalhado por seêÂ§êÂ£o
+   Cada seêÂ§êÂ£o deve ser claramente rotulada e conter trêÂªs tipos de instruêÂ§êÂµes:
 
-   * ConteÃºdo textual (tÃ­tulos, subtÃ­tulos, CTAs, textos exatos)
-   * Elementos de interface (layout, botÃµes, grids, cards)
-   * Estilo visual e motion (efeitos, fundos, animaÃ§Ãµes, estÃ©tica)
+   * ConteêÂºdo textual (têÂ­tulos, subtêÂ­tulos, CTAs, textos exatos)
+   * Elementos de interface (layout, botêÂµes, grids, cards)
+   * Estilo visual e motion (efeitos, fundos, animaêÂ§êÂµes, estêÂ©tica)
 
-O uso de referÃªncias visuais reais (como estilos da Apple ou macOS) ajuda a IA a compreender melhor o resultado desejado, reduzindo aleatoriedade e aumentando a precisÃ£o.
+O uso de referêÂªncias visuais reais (como estilos da Apple ou macOS) ajuda a IA a compreender melhor o resultado desejado, reduzindo aleatoriedade e aumentando a precisêÂ£o.
 
-Ao aplicar esse mÃ©todo de forma consistente em todas as seÃ§Ãµes, a IA consegue gerar um site coeso, profissional, visualmente refinado e fiel Ã  identidade da marca. Esse processo Ã© a base do vibe coding, que depois Ã© executado no Firebase Studio para gerar o site automaticamente.
+Ao aplicar esse mêÂ©todo de forma consistente em todas as seêÂ§êÂµes, a IA consegue gerar um site coeso, profissional, visualmente refinado e fiel êÂ  identidade da marca. Esse processo êÂ© a base do vibe coding, que depois êÂ© executado no Firebase Studio para gerar o site automaticamente.
 
-### 1. FÃ³rmula do site com um Ãºnico prompt
+### 1. FêÂ³rmula do site com um êÂºnico prompt
 
-Ã‰ um framework que permite gerar um site completo e premium usando apenas um prompt bem estruturado. Em vez de programar ou montar um design system manualmente, vocÃª descreve tudo de forma clara para a IA.
-
----
-
-### 2. MudanÃ§a de abordagem: de cÃ³digo para descriÃ§Ã£o
-
-O foco deixa de ser escrever cÃ³digo e passa a ser comunicar intenÃ§Ã£o. VocÃª descreve estrutura, branding e conteÃºdo em linguagem natural, e a IA transforma isso em um site funcional e profissional.
+êâ° um framework que permite gerar um site completo e premium usando apenas um prompt bem estruturado. Em vez de programar ou montar um design system manualmente, vocêÂª descreve tudo de forma clara para a IA.
 
 ---
 
-### 3. ImportÃ¢ncia da clareza e da estrutura no prompt
+### 2. MudanêÂ§a de abordagem: de cêÂ³digo para descriêÂ§êÂ£o
 
-Todo o sistema funciona com base em clareza, organizaÃ§Ã£o e linguagem visual. Quanto mais bem estruturado o prompt, mais intencional, coeso e sofisticado serÃ¡ o resultado final.
+O foco deixa de ser escrever cêÂ³digo e passa a ser comunicar intenêÂ§êÂ£o. VocêÂª descreve estrutura, branding e conteêÂºdo em linguagem natural, e a IA transforma isso em um site funcional e profissional.
 
 ---
 
-### 4. TrÃªs partes essenciais do prompt
+### 3. ImportêÂ¢ncia da clareza e da estrutura no prompt
 
-O prompt Ãºnico Ã© composto por trÃªs blocos principais:
+Todo o sistema funciona com base em clareza, organizaêÂ§êÂ£o e linguagem visual. Quanto mais bem estruturado o prompt, mais intencional, coeso e sofisticado serêÂ¡ o resultado final.
 
-* Estrutura da pÃ¡gina
+---
+
+### 4. TrêÂªs partes essenciais do prompt
+
+O prompt êÂºnico êÂ© composto por trêÂªs blocos principais:
+
+* Estrutura da pêÂ¡gina
 * Diretrizes de branding
-* Detalhes de conteÃºdo
+* Detalhes de conteêÂºdo
 
 Esses blocos, combinados, servem como o blueprint completo do site.
 
 ---
 
-### 5. Estrutura da pÃ¡gina (esqueleto do site)
+### 5. Estrutura da pêÂ¡gina (esqueleto do site)
 
-Define as seÃ§Ãµes que o site terÃ¡ e a ordem em que aparecem. Um modelo universal inclui:
+Define as seêÂ§êÂµes que o site terêÂ¡ e a ordem em que aparecem. Um modelo universal inclui:
 
 * Header
 * Hero
 * Sobre
-* ServiÃ§os
+* ServiêÂ§os
 * Call to Action (CTA)
 * Footer
 
-Essa estrutura cria um fluxo natural: apresentaÃ§Ã£o â†’ credibilidade â†’ oferta â†’ conversÃ£o.
+Essa estrutura cria um fluxo natural: apresentaêÂ§êÂ£o ê¢â â credibilidade ê¢â â oferta ê¢â â conversêÂ£o.
 
 ---
 
-### 6. FunÃ§Ã£o da estrutura para a IA
+### 6. FunêÂ§êÂ£o da estrutura para a IA
 
-A estrutura funciona como um mapa. Ela diz Ã  IA quantas seÃ§Ãµes criar, qual o objetivo de cada uma e como guiar a atenÃ§Ã£o do usuÃ¡rio ao rolar a pÃ¡gina.
+A estrutura funciona como um mapa. Ela diz êÂ  IA quantas seêÂ§êÂµes criar, qual o objetivo de cada uma e como guiar a atenêÂ§êÂ£o do usuêÂ¡rio ao rolar a pêÂ¡gina.
 
 ---
 
 ### 7. Branding e identidade visual
 
-Nesta etapa, vocÃª descreve como o site deve parecer e â€œsentirâ€. Inclui:
+Nesta etapa, vocêÂª descreve como o site deve parecer e ê¢â¬Åsentirê¢â¬Â. Inclui:
 
 * Tipografia
 * Paleta de cores
 * Formas e cantos
 * Materiais (ex.: glassmorphism, blur)
 
-Sem isso, os sites gerados tendem a parecer genÃ©ricos.
+Sem isso, os sites gerados tendem a parecer genêÂ©ricos.
 
 ---
 
-### 8. Movimento e animaÃ§Ãµes (motion design)
+### 8. Movimento e animaêÂ§êÂµes (motion design)
 
-VocÃª define a â€œpersonalidadeâ€ do movimento do site, como:
+VocêÂª define a ê¢â¬Åpersonalidadeê¢â¬Â do movimento do site, como:
 
-* AnimaÃ§Ãµes suaves
+* AnimaêÂ§êÂµes suaves
 * Curvas ease-out
 * Parallax sutil
 * Elementos surgindo de forma elegante
 
-Isso traz sofisticaÃ§Ã£o e sensaÃ§Ã£o premium.
+Isso traz sofisticaêÂ§êÂ£o e sensaêÂ§êÂ£o premium.
 
 ---
 
-### 9. ExperiÃªncia mobile e padrÃ£o de qualidade
+### 9. ExperiêÂªncia mobile e padrêÂ£o de qualidade
 
-O prompt tambÃ©m deve indicar que o site precisa se comportar como um app mobile moderno, com imagens em largura total, Ã¡reas de toque grandes e alta qualidade visual.
-
----
-
-### 10. ConteÃºdo detalhado por seÃ§Ã£o
-
-Cada seÃ§Ã£o do site deve ser claramente separada e descrita, evitando que a IA misture partes ou omita informaÃ§Ãµes importantes.
+O prompt tambêÂ©m deve indicar que o site precisa se comportar como um app mobile moderno, com imagens em largura total, êÂ¡reas de toque grandes e alta qualidade visual.
 
 ---
 
-### 11. TrÃªs tipos de instruÃ§Ãµes por seÃ§Ã£o
+### 10. ConteêÂºdo detalhado por seêÂ§êÂ£o
 
-Para cada seÃ§Ã£o, vocÃª fornece:
+Cada seêÂ§êÂ£o do site deve ser claramente separada e descrita, evitando que a IA misture partes ou omita informaêÂ§êÂµes importantes.
 
-a) ConteÃºdo textual (content inputs)
-Textos exatos: tÃ­tulos, subtÃ­tulos, CTAs, bios, links, etc.
+---
+
+### 11. TrêÂªs tipos de instruêÂ§êÂµes por seêÂ§êÂ£o
+
+Para cada seêÂ§êÂ£o, vocêÂª fornece:
+
+a) ConteêÂºdo textual (content inputs)
+Textos exatos: têÂ­tulos, subtêÂ­tulos, CTAs, bios, links, etc.
 Evita que a IA invente mensagens.
 
 b) Elementos de interface (content elements)
-Define o layout e a organizaÃ§Ã£o visual, como grids, cards, botÃµes e navegaÃ§Ã£o.
+Define o layout e a organizaêÂ§êÂ£o visual, como grids, cards, botêÂµes e navegaêÂ§êÂ£o.
 
 c) Estilo visual e motion
-Define estÃ©tica, efeitos, fundos, tipografia, animaÃ§Ãµes e clima visual.
+Define estêÂ©tica, efeitos, fundos, tipografia, animaêÂ§êÂµes e clima visual.
 
 ---
 
-### 12. Uso de referÃªncias visuais reais
+### 12. Uso de referêÂªncias visuais reais
 
-Citar referÃªncias como Apple TV, macOS Sonoma ou iOS ajuda a IA a entender exatamente o estilo desejado, reduzindo aleatoriedade e aumentando a precisÃ£o do design.
+Citar referêÂªncias como Apple TV, macOS Sonoma ou iOS ajuda a IA a entender exatamente o estilo desejado, reduzindo aleatoriedade e aumentando a precisêÂ£o do design.
 
 ---
 
-### 13. Exemplo prÃ¡tico: Hero section
+### 13. Exemplo prêÂ¡tico: Hero section
 
-Mostra como aplicar o mÃ©todo na prÃ¡tica, definindo:
+Mostra como aplicar o mêÂ©todo na prêÂ¡tica, definindo:
 
 * Texto exato do hero
 * Comportamento do CTA
-* AnimaÃ§Ãµes
+* AnimaêÂ§êÂµes
 * Fundo visual
-* ReferÃªncias estÃ©ticas
+* ReferêÂªncias estêÂ©ticas
 
-O resultado Ã© uma seÃ§Ã£o cARCKHÉtogrÃ¡fica, coerente e profissional.
+O resultado êÂ© uma seêÂ§êÂ£o cARCKHêtogrêÂ¡fica, coerente e profissional.
 
 ---
 
-### 14. ConsistÃªncia entre todas as seÃ§Ãµes
+### 14. ConsistêÂªncia entre todas as seêÂ§êÂµes
 
-Quando todas as seÃ§Ãµes seguem o mesmo mÃ©todo, o site final apresenta:
+Quando todas as seêÂ§êÂµes seguem o mesmo mêÂ©todo, o site final apresenta:
 
 * Layouts precisos
 * Linguagem visual unificada
-* ConteÃºdo correto
-* Identidade de marca sÃ³lida
+* ConteêÂºdo correto
+* Identidade de marca sêÂ³lida
 
 ---
 
 ### 15. Base do Vibe Coding
 
-Esse processo completo â€” estrutura + branding + conteÃºdo detalhado â€” Ã© a fundaÃ§Ã£o do vibe coding, que depois Ã© executado no Firebase Studio para gerar o site automaticamente.
+Esse processo completo ê¢â¬â estrutura + branding + conteêÂºdo detalhado ê¢â¬â êÂ© a fundaêÂ§êÂ£o do vibe coding, que depois êÂ© executado no Firebase Studio para gerar o site automaticamente.
 
-* Estrutura de um site bem-sucedido criado com um Ãºnico prompt
-* Como descrever layout, espaÃ§amento, tipografia e elementos visuais
-* Como fazer a IA gerar layouts limpos, modernos e com aparÃªncia premium
-* Como evitar interfaces geradas por IA poluÃ­das e inconsistentes
+* Estrutura de um site bem-sucedido criado com um êÂºnico prompt
+* Como descrever layout, espaêÂ§amento, tipografia e elementos visuais
+* Como fazer a IA gerar layouts limpos, modernos e com aparêÂªncia premium
+* Como evitar interfaces geradas por IA poluêÂ­das e inconsistentes
 
-## ðŸ”¹ Etapa realizada ontem 1.1  â€” *Fundamentos do Vibecoding & Estrutura*
+## ê°Å¸âÂ¹ Etapa realizada ontem 1.1  ê¢â¬â *Fundamentos do Vibecoding & Estrutura*
 
-Ontem o foco foi entender o conceito e a lÃ³gica do Vibecoding, estabelecendo a base correta para trabalhar com IA na criaÃ§Ã£o de sites.
+Ontem o foco foi entender o conceito e a lêÂ³gica do Vibecoding, estabelecendo a base correta para trabalhar com IA na criaêÂ§êÂ£o de sites.
 
 O que foi feito:
 
-* CompreensÃ£o do Vibecoding como uma metodologia baseada em descrever intenÃ§Ãµes, sensaÃ§Ãµes e estrutura, e nÃ£o em escrever cÃ³digo linha por linha.
-* AnÃ¡lise da diferenÃ§a entre construÃ§Ã£o manual vs. direÃ§Ã£o por IA.
-* DefiniÃ§Ã£o da estrutura universal de um site one-page, servindo como base para qualquer prompt:
+* CompreensêÂ£o do Vibecoding como uma metodologia baseada em descrever intenêÂ§êÂµes, sensaêÂ§êÂµes e estrutura, e nêÂ£o em escrever cêÂ³digo linha por linha.
+* AnêÂ¡lise da diferenêÂ§a entre construêÂ§êÂ£o manual vs. direêÂ§êÂ£o por IA.
+* DefiniêÂ§êÂ£o da estrutura universal de um site one-page, servindo como base para qualquer prompt:
 
   * Header
   * Hero
   * Sobre
-  * ServiÃ§os
+  * ServiêÂ§os
   * CTA
   * Footer
-* IntroduÃ§Ã£o Ã  â€œOne Prompt Website Formulaâ€, entendendo que um bom site nasce de:
+* IntroduêÂ§êÂ£o êÂ  ê¢â¬ÅOne Prompt Website Formulaê¢â¬Â, entendendo que um bom site nasce de:
 
   * Estrutura clara
   * Diretrizes de marca
-  * ConteÃºdo bem separado
-* Entendimento de boas prÃ¡ticas para evitar layouts poluÃ­dos, inconsistentes ou genÃ©ricos gerados por IA.
+  * ConteêÂºdo bem separado
+* Entendimento de boas prêÂ¡ticas para evitar layouts poluêÂ­dos, inconsistentes ou genêÂ©ricos gerados por IA.
 
-ðŸ‘‰ Resultado da etapa de ontem:
-Uma base conceitual sÃ³lida + estrutura padrÃ£o clara para que a IA entenda *o que gerar* e *em que ordem*.
+ê°Å¸ââ° Resultado da etapa de ontem:
+Uma base conceitual sêÂ³lida + estrutura padrêÂ£o clara para que a IA entenda *o que gerar* e *em que ordem*.
 
 ---
 
-## ðŸ”¹ Etapa realizada hoje 1.2 â€” *Diretrizes de Marca & ConteÃºdo do Prompt*
+## ê°Å¸âÂ¹ Etapa realizada hoje 1.2 ê¢â¬â *Diretrizes de Marca & ConteêÂºdo do Prompt*
 
-Hoje o foco foi aprofundar o nÃ­vel de detalhe do prompt, ensinando a IA como o site deve parecer, se comportar e se sentir.
+Hoje o foco foi aprofundar o nêÂ­vel de detalhe do prompt, ensinando a IA como o site deve parecer, se comportar e se sentir.
 
 O que foi feito:
 
-* Detalhamento da Etapa 2 â€“ Diretrizes da Marca, incluindo:
+* Detalhamento da Etapa 2 ê¢â¬â Diretrizes da Marca, incluindo:
 
   * Identidade visual (tipografia, cores, formas, materiais)
-  * Motion & animaÃ§Ãµes (fÃ­sica de fluidos, parallax, scrolltelling)
-  * ExperiÃªncia mobile com qualidade premium
-* Aprendizado de como traduzir estÃ©tica e sensaÃ§Ã£o em linguagem clara para IA.
-* EstruturaÃ§Ã£o da Etapa 3 â€“ ConteÃºdo, com:
+  * Motion & animaêÂ§êÂµes (fêÂ­sica de fluidos, parallax, scrolltelling)
+  * ExperiêÂªncia mobile com qualidade premium
+* Aprendizado de como traduzir estêÂ©tica e sensaêÂ§êÂ£o em linguagem clara para IA.
+* EstruturaêÂ§êÂ£o da Etapa 3 ê¢â¬â ConteêÂºdo, com:
 
-  * SeparaÃ§Ã£o clara de cada seÃ§Ã£o do site no prompt
-  * DefiniÃ§Ã£o de 3 tipos de instruÃ§Ãµes:
+  * SeparaêÂ§êÂ£o clara de cada seêÂ§êÂ£o do site no prompt
+  * DefiniêÂ§êÂ£o de 3 tipos de instruêÂ§êÂµes:
 
-    1. O que entra (conteÃºdo)
+    1. O que entra (conteêÂºdo)
     2. Como se organiza (UI / layout)
     3. Como deve parecer e se mover (estilo e visual)
-* CriaÃ§Ã£o de um modelo final de estrutura de prompt, pronto para ser reutilizado.
-* Exemplo prÃ¡tico de detalhamento profundo de seÃ§Ãµes (como a **Hero Section**).
+* CriaêÂ§êÂ£o de um modelo final de estrutura de prompt, pronto para ser reutilizado.
+* Exemplo prêÂ¡tico de detalhamento profundo de seêÂ§êÂµes (como a **Hero Section**).
 
-ðŸ‘‰ Resultado da etapa de hoje:
-Capacidade de escrever prompts precisos, visuais e profissionais, capazes de gerar sites com identidade consistente e estÃ©tica premium.
+ê°Å¸ââ° Resultado da etapa de hoje:
+Capacidade de escrever prompts precisos, visuais e profissionais, capazes de gerar sites com identidade consistente e estêÂ©tica premium.
 
 ---
 
-## ðŸ§  Resumo geral em uma frase
+## ê°Å¸Â§Â  Resumo geral em uma frase
 
-* Ontem: aprendemos *o que Ã© Vibecoding e como estruturar um site corretamente*.
-* Hoje: aprendemos *como guiar a IA com precisÃ£o estÃ©tica, visual e de conteÃºdo para gerar sites de alto nÃ­vel*.
+* Ontem: aprendemos *o que êÂ© Vibecoding e como estruturar um site corretamente*.
+* Hoje: aprendemos *como guiar a IA com precisêÂ£o estêÂ©tica, visual e de conteêÂºdo para gerar sites de alto nêÂ­vel*.

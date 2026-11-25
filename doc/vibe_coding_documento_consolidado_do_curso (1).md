@@ -1,10 +1,10 @@
-# TranscriÃ§Ã£o Original â€” ConteÃºdo Integral do Curso (Texto Original)
+# TranscriêÂ§êÂ£o Original ê¢â¬â ConteêÂºdo Integral do Curso (Texto Original)
 
-> **ObservaÃ§Ã£o**: Abaixo estÃ¡ o **texto original** conforme as transcriÃ§Ãµes fornecidas, **sem resumo, adaptaÃ§Ã£o ou reescrita**, apenas organizado em um Ãºnico documento Markdown.
+> **ObservaêÂ§êÂ£o**: Abaixo estêÂ¡ o **texto original** conforme as transcriêÂ§êÂµes fornecidas, **sem resumo, adaptaêÂ§êÂ£o ou reescrita**, apenas organizado em um êÂºnico documento Markdown.
 
 ---
 
-## TranscriÃ§Ã£o 1 â€” IntroduÃ§Ã£o ao Vibe Coding
+## TranscriêÂ§êÂ£o 1 ê¢â¬â IntroduêÂ§êÂ£o ao Vibe Coding
 
 [0:00] Welcome to week one of the course, and welcome to the future of web creation.
 [0:04] Today, you're going to learn a completely new way of building websites, a
@@ -63,7 +63,7 @@
 
 ---
 
-## TranscriÃ§Ã£o 2 â€” One Prompt Website Formula
+## TranscriêÂ§êÂ£o 2 ê¢â¬â One Prompt Website Formula
 
 [0:00] First of all, we're going to go through the one prompt website formula, which
 [0:03] is a simple framework that allows you to generate a complete premium looking
@@ -166,7 +166,7 @@
 [6:08] These instructions control the interface and the micro interaction behavior.
 [6:12] Then we define the background. We describe a slow moving abstract 3D mesh or
 [6:17] fluid light ribbons on a dark void based color with very subtle motion.
-[6:21] This creates a cARCKHÉtic Apple style atmosphere. We also include extra elements
+[6:21] This creates a cARCKHêtic Apple style atmosphere. We also include extra elements
 [6:31] . The hero gets a soft vignette around the edges and a very large headline,
 [6:31] These small details elevate the overall design. Finally, we add style
 [6:31] somewhere between 60 and 80 pixels.
@@ -175,7 +175,7 @@
 [6:43] By referencing real visuals, the AI knows the exact feeling we're aiming for.
 [6:53] So when you combine all of this together, the content, the layout, the visuals,
 [6:54] the motion, and the references, the AI is able to generate a hero section that
-[6:57] looks professional, cARCKHÉtic, and consistent with the brand.
+[6:57] looks professional, cARCKHêtic, and consistent with the brand.
 [7:00] And the big idea is this. When you describe every section using the same method
 [7:05] , you get pixel perfect layouts, a consistent visual language, accurate content,
 [7:11] and a unified brand identity from top to bottom.
@@ -185,7 +185,7 @@
 
 ---
 
-## TranscriÃ§Ã£o 3 â€” ExecuÃ§Ã£o no Firebase Studio
+## TranscriêÂ§êÂ£o 3 ê¢â¬â ExecuêÂ§êÂ£o no Firebase Studio
 
 [0:00] Now we've arrived at the section where we will actually run the prompt we built
 [0:04] earlier, directly inside Firebase Studio.

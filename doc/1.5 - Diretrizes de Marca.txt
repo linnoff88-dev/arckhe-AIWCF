@@ -3,40 +3,40 @@
 Diretrizes de Marca
 
 
-* Detalhamento da â€“ Diretrizes da Marca**, incluindo:
+* Detalhamento da ê¢â¬â Diretrizes da Marca**, incluindo:
 
   * Identidade visual (tipografia, cores, formas, materiais)
-  * Motion & animaÃ§Ãµes (fÃ­sica de fluidos, parallax, scrolltelling)
-  * ExperiÃªncia mobile com qualidade premium
-* Aprendizado de como traduzir estÃ©tica e sensaÃ§Ã£o em linguagem clara para IA.
+  * Motion & animaêÂ§êÂµes (fêÂ­sica de fluidos, parallax, scrolltelling)
+  * ExperiêÂªncia mobile com qualidade premium
+* Aprendizado de como traduzir estêÂ©tica e sensaêÂ§êÂ£o em linguagem clara para IA.
 
 
-* EstruturaÃ§Ã£o da Etapa 3 â€“ ConteÃºdo, com:
+* EstruturaêÂ§êÂ£o da Etapa 3 ê¢â¬â ConteêÂºdo, com:
 
-  * SeparaÃ§Ã£o clara de cada seÃ§Ã£o do site no prompt
-  * DefiniÃ§Ã£o de 3 tipos de instruÃ§Ãµes:
+  * SeparaêÂ§êÂ£o clara de cada seêÂ§êÂ£o do site no prompt
+  * DefiniêÂ§êÂ£o de 3 tipos de instruêÂ§êÂµes:
 
-    1. O que entra (conteÃºdo)
+    1. O que entra (conteêÂºdo)
     2. Como se organiza (UI / layout)
     3. Como deve parecer e se mover (estilo e visual)
-* CriaÃ§Ã£o de um modelo final de estrutura de prompt, pronto para ser reutilizado.
-* Exemplo prÃ¡tico de detalhamento profundo de seÃ§Ãµes (como a **Hero Section**).
+* CriaêÂ§êÂ£o de um modelo final de estrutura de prompt, pronto para ser reutilizado.
+* Exemplo prêÂ¡tico de detalhamento profundo de seêÂ§êÂµes (como a **Hero Section**).
 
 ===============================
 
 
 ---
 
-## ðŸ”¹ 1. VariaÃ§Ã£o de ESTRUTURA **
+## ê°Å¸âÂ¹ 1. VariaêÂ§êÂ£o de ESTRUTURA **
 
 Ex.: One-page, SaaS, Authority, Creative, Conversion
-â†’ Define a ordem e o fluxo do site.
+ê¢â â Define a ordem e o fluxo do site.
 
 ---
 
-## ðŸ”¹ 2. VariaÃ§Ã£o de IDENTIDADE VISUAL
+## ê°Å¸âÂ¹ 2. VariaêÂ§êÂ£o de IDENTIDADE VISUAL
 
-Mesmo conteÃºdo, sensaÃ§Ã£o completamente diferente.
+Mesmo conteêÂºdo, sensaêÂ§êÂ£o completamente diferente.
 
 Exemplos:
 
@@ -46,27 +46,27 @@ Exemplos:
 * Neo-futurista / cyber
 * Editorial / luxury
 
-ðŸ‘‰ IA muda cores, tipografia, materiais e contraste.
+ê°Å¸ââ° IA muda cores, tipografia, materiais e contraste.
 
 ---
 
-## ðŸ”¹ 3. VariaÃ§Ã£o de MOTION & INTERAÃ‡ÃƒO
+## ê°Å¸âÂ¹ 3. VariaêÂ§êÂ£o de MOTION & INTERAêâ¡êÆO
 
 Define *como o site se move*.
 
 Exemplos:
 
-* Zero motion (estÃ¡tico, editorial)
-* MicrointeraÃ§Ãµes sutis
+* Zero motion (estêÂ¡tico, editorial)
+* MicrointeraêÂ§êÂµes sutis
 * Parallax suave
 * Scrollytelling pesado
-* Motion cARCKHÉtogrÃ¡fico
+* Motion cARCKHêtogrêÂ¡fico
 
-ðŸ‘‰ Impacta percepÃ§Ã£o de qualidade e modernidade.
+ê°Å¸ââ° Impacta percepêÂ§êÂ£o de qualidade e modernidade.
 
 ---
 
-## ðŸ”¹ 4. VariaÃ§Ã£o de DENSIDADE DE CONTEÃšDO
+## ê°Å¸âÂ¹ 4. VariaêÂ§êÂ£o de DENSIDADE DE CONTEêÅ¡DO
 
 Quanto o site fala.
 
@@ -75,228 +75,228 @@ Exemplos:
 * Ultra minimal (poucas palavras)
 * Equilibrado (copy + visual)
 * Informativo (text-heavy)
-* Visual-first (texto mÃ­nimo)
+* Visual-first (texto mêÂ­nimo)
 
-ðŸ‘‰ IA ajusta espaÃ§amento, ritmo e hierarquia.
+ê°Å¸ââ° IA ajusta espaêÂ§amento, ritmo e hierarquia.
 
 ---
 
-## ðŸ”¹ 5. VariaÃ§Ã£o de TIPO DE CTA
+## ê°Å¸âÂ¹ 5. VariaêÂ§êÂ£o de TIPO DE CTA
 
 Define o objetivo principal.
 
 Exemplos:
 
-* ConversÃ£o direta (Buy / Book / Sign up)
-* ExploraÃ§Ã£o (View work / Learn more)
+* ConversêÂ£o direta (Buy / Book / Sign up)
+* ExploraêÂ§êÂ£o (View work / Learn more)
 * Relacionamento (Join / Subscribe)
 * Autoridade (Read insights)
 
 ---
 
-## ðŸ”¹ 6. VariaÃ§Ã£o de DISPOSITIVO-PRIMEIRO
+## ê°Å¸âÂ¹ 6. VariaêÂ§êÂ£o de DISPOSITIVO-PRIMEIRO
 
 Onde o design nasce.
 
 Exemplos:
 
 * Mobile-first (app-like)
-* Desktop-first (cARCKHÉtogrÃ¡fico)
-* Touch-first (quiosque / exposiÃ§Ã£o)
+* Desktop-first (cARCKHêtogrêÂ¡fico)
+* Touch-first (quiosque / exposiêÂ§êÂ£o)
 
 ---
 
-## ðŸ”¹ 7. VariaÃ§Ã£o de TOM DA MARCA
+## ê°Å¸âÂ¹ 7. VariaêÂ§êÂ£o de TOM DA MARCA
 
 Como a marca fala.
 
 Exemplos:
 
-* TÃ©cnica / corporativa
+* TêÂ©cnica / corporativa
 * Confiante / premium
 * Criativa / ousada
-* Humana / prÃ³xima
+* Humana / prêÂ³xima
 
 ---
 
-## ðŸ§  O MODELO FINAL (direto)
+## ê°Å¸Â§Â  O MODELO FINAL (direto)
 
-VocÃªs nÃ£o tÃªm um modelo de site.
-VocÃªs tÃªm um framework com mÃºltiplos eixos de variaÃ§Ã£o:
+VocêÂªs nêÂ£o têÂªm um modelo de site.
+VocêÂªs têÂªm um framework com mêÂºltiplos eixos de variaêÂ§êÂ£o:
 
 SITE = Estrutura
      + Identidade Visual
      + Motion
-     + Densidade de ConteÃºdo
+     + Densidade de ConteêÂºdo
      + Tipo de CTA
      + Dispositivo-primeiro
      + Tom de Voz
 
-ðŸ‘‰ Isso permite dezenas de combinaÃ§Ãµes, mantendo:
+ê°Å¸ââ° Isso permite dezenas de combinaêÂ§êÂµes, mantendo:
 
-* ConsistÃªncia
+* ConsistêÂªncia
 * Qualidade
 * Previsibilidade com IA
 
-Abaixo estÃ£o 5 novos presets, cada um com personalidade clara, quando usar e o que muda.
+Abaixo estêÂ£o 5 novos presets, cada um com personalidade clara, quando usar e o que muda.
 
 ---
 
-## ðŸ§© BASELINE (referÃªncia)
+## ê°Å¸Â§Â© BASELINE (referêÂªncia)
 
-### Preset 0 â€” Premium Calm (Atual)
+### Preset 0 ê¢â¬â Premium Calm (Atual)
 
 Personalidade:
-Elegante Â· Educacional Â· Confiante Â· Atemporal
+Elegante êÂ· Educacional êÂ· Confiante êÂ· Atemporal
 
-CaracterÃ­sticas:
+CaracterêÂ­sticas:
 
 * Dark base
 * Glassmorphism sutil
 * Motion suave e lento
-* Ritmo espaÃ§ado
+* Ritmo espaêÂ§ado
 * Poucas cores, muito contraste
 
-ðŸ‘‰ Este Ã© o padrÃ£o institucional.
+ê°Å¸ââ° Este êÂ© o padrêÂ£o institucional.
 
 ---
 
-# ðŸ”¥ NOVOS PRESETS
+# ê°Å¸âÂ¥ NOVOS PRESETS
 
 ---
 
-## ðŸŽ¨ PRESET 1 â€” Youth Energy
+## ê°Å¸Å½Â¨ PRESET 1 ê¢â¬â Youth Energy
 
 Personalidade:
-Jovem Â· Curioso Â· Vivo Â· Inspirador
+Jovem êÂ· Curioso êÂ· Vivo êÂ· Inspirador
 
 O que muda:
 
 * Gradientes vivos (azul, roxo, ciano)
-* Motion contÃ­nuo no background
-* Ãcones animados em loop lento
+* Motion contêÂ­nuo no background
+* êÂcones animados em loop lento
 * Headlines com gradiente animado
-* Ritmo visual mais rÃ¡pido
+* Ritmo visual mais rêÂ¡pido
 
 Usar quando:
-Comunidade, onboarding, conteÃºdo introdutÃ³rio.
+Comunidade, onboarding, conteêÂºdo introdutêÂ³rio.
 
 ---
 
-## âš¡ PRESET 2 â€” Momentum
+## ê¢Å¡Â¡ PRESET 2 ê¢â¬â Momentum
 
 Personalidade:
-AÃ§Ã£o Â· Progresso Â· ConstruÃ§Ã£o Â· ExecuÃ§Ã£o
+AêÂ§êÂ£o êÂ· Progresso êÂ· ConstruêÂ§êÂ£o êÂ· ExecuêÂ§êÂ£o
 
 O que muda:
 
 * Scroll-driven animations
 * Stagger forte em entradas
-* Micro feedback em cada interaÃ§Ã£o
-* SeÃ§Ãµes com sensaÃ§Ã£o de avanÃ§o
+* Micro feedback em cada interaêÂ§êÂ£o
+* SeêÂ§êÂµes com sensaêÂ§êÂ£o de avanêÂ§o
 * CTAs mais frequentes
 
 Usar quando:
-Cursos prÃ¡ticos, automaÃ§Ã£o, â€œmÃ£os na massaâ€.
+Cursos prêÂ¡ticos, automaêÂ§êÂ£o, ê¢â¬ÅmêÂ£os na massaê¢â¬Â.
 
 ---
 
-## ðŸŒŠ PRESET 3 â€” Flow Learning
+## ê°Å¸ÅÅ  PRESET 3 ê¢â¬â Flow Learning
 
 Personalidade:
-Fluidez Â· ConexÃ£o Â· Aprendizado contÃ­nuo
+Fluidez êÂ· ConexêÂ£o êÂ· Aprendizado contêÂ­nuo
 
 O que muda:
 
 * Parallax mais presente
-* TransiÃ§Ãµes orgÃ¢nicas
-* SeÃ§Ãµes conectadas visualmente
+* TransiêÂ§êÂµes orgêÂ¢nicas
+* SeêÂ§êÂµes conectadas visualmente
 * Motion que guia o olhar
 * Menos quebras duras
 
 Usar quando:
-Trilhas educacionais, storytelling, explicaÃ§Ãµes profundas.
+Trilhas educacionais, storytelling, explicaêÂ§êÂµes profundas.
 
 ---
 
-## ðŸš€ PRESET 4 â€” Future Impact
+## ê°Å¸Å¡â¬ PRESET 4 ê¢â¬â Future Impact
 
 Personalidade:
-Futurista Â· VisionÃ¡rio Â· Provocador
+Futurista êÂ· VisionêÂ¡rio êÂ· Provocador
 
 O que muda:
 
 * Neon accents pontuais
-* PartÃ­culas, grids, luzes
-* Motion mais dramÃ¡tico
+* PartêÂ­culas, grids, luzes
+* Motion mais dramêÂ¡tico
 * Tipografia grande e ousada
 * Alto contraste visual
 
 Usar quando:
-Manifestos, lanÃ§amentos, keynote, visÃ£o de futuro.
+Manifestos, lanêÂ§amentos, keynote, visêÂ£o de futuro.
 
 ---
 
-## â¤ï¸ PRESET 5 â€” Human Pulse
+## ê¢ÂÂ¤ê¯Â¸Â PRESET 5 ê¢â¬â Human Pulse
 
 Personalidade:
-Humano Â· EmpÃ¡tico Â· PrÃ³ximo Â· Inspirador
+Humano êÂ· EmpêÂ¡tico êÂ· PrêÂ³ximo êÂ· Inspirador
 
 O que muda:
 
-* Paleta mais quente (coral, lilÃ¡s, azul claro)
+* Paleta mais quente (coral, lilêÂ¡s, azul claro)
 * Motion suave mas expressivo
 * Textos com entrada progressiva
-* Elementos orgÃ¢nicos
-* EspaÃ§os acolhedores
+* Elementos orgêÂ¢nicos
+* EspaêÂ§os acolhedores
 
 Usar quando:
-HistÃ³rias, comunidade, comportamento humano, empatia.
+HistêÂ³rias, comunidade, comportamento humano, empatia.
 
 ---
 
-## ðŸ§  COMO PENSAR OS PRESETS
+## ê°Å¸Â§Â  COMO PENSAR OS PRESETS
 
 Cada preset mexe apenas em:
 
-* ðŸŽ¨ Cor
-* ðŸŽ¥ Motion
-* ðŸŽ¶ Ritmo
+* ê°Å¸Å½Â¨ Cor
+* ê°Å¸Å½Â¥ Motion
+* ê°Å¸Å½Â¶ Ritmo
 
 E nunca em:
-âŒ Estrutura
-âŒ Mensagem central
-âŒ Pilares do ARCKHÉ AI
+ê¢ÂÅ Estrutura
+ê¢ÂÅ Mensagem central
+ê¢ÂÅ Pilares do ARCKHê AI
 
 ---
 
-## ðŸ“Œ FRASE DE POSICIONAMENTO
+## ê°Å¸âÅ FRASE DE POSICIONAMENTO
 
-> â€œARCKHÉ AI has one structure, one message, and multiple experiential presets.â€
+> ê¢â¬ÅARCKHê AI has one structure, one message, and multiple experiential presets.ê¢â¬Â
 
-Abaixo vou deixar explÃ­cita a diferenÃ§a de animaÃ§Ã£o, de forma visualizÃ¡vel, comparÃ¡vel e acionÃ¡vel.
-Pense nisso como nÃ­veis de intensidade e tipos de movimento, nÃ£o sÃ³ â€œmais ou menos animaÃ§Ã£oâ€.
+Abaixo vou deixar explêÂ­cita a diferenêÂ§a de animaêÂ§êÂ£o, de forma visualizêÂ¡vel, comparêÂ¡vel e acionêÂ¡vel.
+Pense nisso como nêÂ­veis de intensidade e tipos de movimento, nêÂ£o sêÂ³ ê¢â¬Åmais ou menos animaêÂ§êÂ£oê¢â¬Â.
 
 ---
 
-# ðŸŽ¥ MATRIZ DE MOTION â€” DIFERENÃ‡AS REAIS ENTRE PRESETS
+# ê°Å¸Å½Â¥ MATRIZ DE MOTION ê¢â¬â DIFERENêâ¡AS REAIS ENTRE PRESETS
 
-Vou usar 4 dimensÃµes de animaÃ§Ã£o, porque Ã© assim que designers e devs realmente diferenciam motion:
+Vou usar 4 dimensêÂµes de animaêÂ§êÂ£o, porque êÂ© assim que designers e devs realmente diferenciam motion:
 
 1. Entrada (Entrance)
 2. Scroll (Scroll-driven)
 3. Loop / Background
-4. InteraÃ§Ã£o (Hover / Feedback)
+4. InteraêÂ§êÂ£o (Hover / Feedback)
 
 ---
 
-## ðŸŸ¢ PRESET 0 â€” Premium Calm (Atual)
+## ê°Å¸Å¸Â¢ PRESET 0 ê¢â¬â Premium Calm (Atual)
 
 Entrada
 
-* Fade + translateY (8â€“12px)
-* DuraÃ§Ã£o: 0.6â€“0.8s
-* Delay mÃ­nimo
+* Fade + translateY (8ê¢â¬â12px)
+* DuraêÂ§êÂ£o: 0.6ê¢â¬â0.8s
+* Delay mêÂ­nimo
 
 Scroll
 
@@ -305,26 +305,26 @@ Scroll
 
 Loop / Background
 
-* Muito sutil (quase imperceptÃ­vel)
-* Ex: leve noise ou gradiente estÃ¡tico
+* Muito sutil (quase imperceptêÂ­vel)
+* Ex: leve noise ou gradiente estêÂ¡tico
 
-InteraÃ§Ã£o
+InteraêÂ§êÂ£o
 
 * Hover simples
 * Opacity / color change
 
-ðŸ‘‰ *Motion quase invisÃ­vel â†’ luxo silencioso*
+ê°Å¸ââ° *Motion quase invisêÂ­vel ê¢â â luxo silencioso*
 
 ---
 
-## ðŸŽ¨ PRESET 1 â€” Youth Energy
+## ê°Å¸Å½Â¨ PRESET 1 ê¢â¬â Youth Energy
 
 Entrada
 
-* Scale + fade (0.95 â†’ 1)
-* TranslateY mais curto (4â€“6px)
-* DuraÃ§Ã£o: 0.4â€“0.5s
-* Stagger visÃ­vel entre elementos
+* Scale + fade (0.95 ê¢â â 1)
+* TranslateY mais curto (4ê¢â¬â6px)
+* DuraêÂ§êÂ£o: 0.4ê¢â¬â0.5s
+* Stagger visêÂ­vel entre elementos
 
 Scroll
 
@@ -336,7 +336,7 @@ Loop / Background
 * Gradientes animados
 * Blobs ou waves lentos (loop infinito)
 
-InteraÃ§Ã£o
+InteraêÂ§êÂ£o
 
 * Hover com:
 
@@ -344,17 +344,17 @@ InteraÃ§Ã£o
   * Micro scale (1.02)
   * Cor animada
 
-ðŸ‘‰ *Site â€œrespiraâ€ o tempo todo*
+ê°Å¸ââ° *Site ê¢â¬Årespiraê¢â¬Â o tempo todo*
 
 ---
 
-## âš¡ PRESET 2 â€” Momentum
+## ê¢Å¡Â¡ PRESET 2 ê¢â¬â Momentum
 
 Entrada
 
 * Entrada lateral (X axis)
 * Stagger agressivo
-* DuraÃ§Ã£o curta (0.3â€“0.4s)
+* DuraêÂ§êÂ£o curta (0.3ê¢â¬â0.4s)
 
 Scroll
 
@@ -362,30 +362,30 @@ Scroll
 
   * Progresso
   * Barras
-  * SeÃ§Ãµes que â€œempurramâ€ a prÃ³xima
+  * SeêÂ§êÂµes que ê¢â¬Åempurramê¢â¬Â a prêÂ³xima
 
 Loop / Background
 
-* Quase nenhum (foco em aÃ§Ã£o)
+* Quase nenhum (foco em aêÂ§êÂ£o)
 
-InteraÃ§Ã£o
+InteraêÂ§êÂ£o
 
 * Click feedback:
 
   * Compress (scale 0.97)
   * Bounce curto ao soltar
 
-ðŸ‘‰ *SensaÃ§Ã£o de avanÃ§o constante*
+ê°Å¸ââ° *SensaêÂ§êÂ£o de avanêÂ§o constante*
 
 ---
 
-## ðŸŒŠ PRESET 3 â€” Flow Learning
+## ê°Å¸ÅÅ  PRESET 3 ê¢â¬â Flow Learning
 
 Entrada
 
 * Morph + fade
 * Elementos entram conectados
-* DuraÃ§Ã£o longa (0.8â€“1s)
+* DuraêÂ§êÂ£o longa (0.8ê¢â¬â1s)
 
 Scroll
 
@@ -396,147 +396,147 @@ Scroll
 
 Loop / Background
 
-* Fluxos contÃ­nuos
-* Linhas, partÃ­culas ou ribbons lentos
+* Fluxos contêÂ­nuos
+* Linhas, partêÂ­culas ou ribbons lentos
 
-InteraÃ§Ã£o
+InteraêÂ§êÂ£o
 
 * Hover quase inexistente
 * Foco em leitura fluida
 
-ðŸ‘‰ *Scroll vira narrativa*
+ê°Å¸ââ° *Scroll vira narrativa*
 
 ---
 
-## ðŸš€ PRESET 4 â€” Future Impact
+## ê°Å¸Å¡â¬ PRESET 4 ê¢â¬â Future Impact
 
 Entrada
 
 * Hard cuts + reveal masks
 * Clip-path animations
-* DuraÃ§Ã£o mÃ©dia (0.5â€“0.6s)
+* DuraêÂ§êÂ£o mêÂ©dia (0.5ê¢â¬â0.6s)
 
 Scroll
 
 * Trigger forte:
 
-  * SeÃ§Ãµes â€œativamâ€
-  * MudanÃ§as de estado
+  * SeêÂ§êÂµes ê¢â¬Åativamê¢â¬Â
+  * MudanêÂ§as de estado
 
 Loop / Background
 
-* PartÃ­culas ativas
+* PartêÂ­culas ativas
 * Grids 3D
 * Luz pulsante
 
-InteraÃ§Ã£o
+InteraêÂ§êÂ£o
 
-* Hover dramÃ¡tico:
+* Hover dramêÂ¡tico:
 
   * Glow forte
   * Distortion leve
 
-ðŸ‘‰ *Motion como espetÃ¡culo*
+ê°Å¸ââ° *Motion como espetêÂ¡culo*
 
 ---
 
-## â¤ï¸ PRESET 5 â€” Human Pulse
+## ê¢ÂÂ¤ê¯Â¸Â PRESET 5 ê¢â¬â Human Pulse
 
 Entrada
 
-* Fade + scale orgÃ¢nico
+* Fade + scale orgêÂ¢nico
 * Timing irregular (mais humano)
 
 Scroll
 
 * Scroll suave
-* Pouca interrupÃ§Ã£o
+* Pouca interrupêÂ§êÂ£o
 
 Loop / Background
 
-* Movimento orgÃ¢nico lento
-* Nada geomÃ©trico
+* Movimento orgêÂ¢nico lento
+* Nada geomêÂ©trico
 
-InteraÃ§Ã£o
+InteraêÂ§êÂ£o
 
 * Hover emocional:
 
   * Cor quente
   * Micro movimento lateral
 
-ðŸ‘‰ *Motion transmite empatia*
+ê°Å¸ââ° *Motion transmite empatia*
 
 ---
 
-## ðŸ§  RESUMO VISUAL (bem direto)
+## ê°Å¸Â§Â  RESUMO VISUAL (bem direto)
 
 | Preset        | Intensidade    | Tipo de Motion |
 | ------------- | -------------- | -------------- |
-| Premium Calm  | ðŸ”¹ Muito baixa | InvisÃ­vel      |
-| Youth Energy  | ðŸ”¸ MÃ©dia       | Viva           |
-| Momentum      | ðŸ”¶ Alta        | Direcional     |
-| Flow Learning | ðŸ”¹ðŸ”¸ MÃ©dia     | ContÃ­nua       |
-| Future Impact | ðŸ”¥ Muito alta  | DramÃ¡tica      |
-| Human Pulse   | ðŸ”¸ MÃ©dia       | OrgÃ¢nica       |
+| Premium Calm  | ê°Å¸âÂ¹ Muito baixa | InvisêÂ­vel      |
+| Youth Energy  | ê°Å¸âÂ¸ MêÂ©dia       | Viva           |
+| Momentum      | ê°Å¸âÂ¶ Alta        | Direcional     |
+| Flow Learning | ê°Å¸âÂ¹ê°Å¸âÂ¸ MêÂ©dia     | ContêÂ­nua       |
+| Future Impact | ê°Å¸âÂ¥ Muito alta  | DramêÂ¡tica      |
+| Human Pulse   | ê°Å¸âÂ¸ MêÂ©dia       | OrgêÂ¢nica       |
 
 ---
 
 ## FRASE FINAL (importante)
 
-> Agora sim: cada preset tem um comportamento de animaÃ§Ã£o claramente diferente, nÃ£o sÃ³ um â€œclimaâ€.
+> Agora sim: cada preset tem um comportamento de animaêÂ§êÂ£o claramente diferente, nêÂ£o sêÂ³ um ê¢â¬Åclimaê¢â¬Â.
 
-## ðŸ§  Como usar essa tabela
+## ê°Å¸Â§Â  Como usar essa tabela
 
-* Linha = experiÃªncia
-* Coluna = decisÃ£o de design
-* VocÃª escolhe um preset e sabe exatamente:
+* Linha = experiêÂªncia
+* Coluna = decisêÂ£o de design
+* VocêÂª escolhe um preset e sabe exatamente:
 
   * Como entra
   * Como se move
   * Como reage
-  * QuÃ£o intenso Ã©
+  * QuêÂ£o intenso êÂ©
 
 ---
 
-## ðŸ“Œ Leitura rÃ¡pida (atalhos)
+## ê°Å¸âÅ Leitura rêÂ¡pida (atalhos)
 
-* Quer luxo silencioso â†’ Premium Calm
-* Quer energia jovem â†’ Youth Energy
-* Quer aÃ§Ã£o e execuÃ§Ã£o â†’ Momentum
-* Quer aprendizado profundo â†’ Flow Learning
-* Quer impacto e visÃ£o â†’ Future Impact
-* Quer empatia e conexÃ£o â†’ Human Pulse
+* Quer luxo silencioso ê¢â â Premium Calm
+* Quer energia jovem ê¢â â Youth Energy
+* Quer aêÂ§êÂ£o e execuêÂ§êÂ£o ê¢â â Momentum
+* Quer aprendizado profundo ê¢â â Flow Learning
+* Quer impacto e visêÂ£o ê¢â â Future Impact
+* Quer empatia e conexêÂ£o ê¢â â Human Pulse
 
-Pense assim: cada coluna altera o â€œestado do sistemaâ€.
-
----
-
-# ðŸ§  O QUE REALMENTE ACONTECE EM CADA DIMENSÃƒO
+Pense assim: cada coluna altera o ê¢â¬Åestado do sistemaê¢â¬Â.
 
 ---
 
-## 1ï¸âƒ£ PRESET â€” *troca de estado global*
+# ê°Å¸Â§Â  O QUE REALMENTE ACONTECE EM CADA DIMENSêÆO
+
+---
+
+## 1ê¯Â¸Âê¢ÆÂ£ PRESET ê¢â¬â *troca de estado global*
 
 ### O que acontece de verdade
 
-* Um estado global Ã© ativado (`preset = 'youth'`, por exemplo)
-* Tokens visuais e de motion sÃ£o trocados
-* Nenhum conteÃºdo muda, sÃ³ o comportamento do sistema
+* Um estado global êÂ© ativado (`preset = 'youth'`, por exemplo)
+* Tokens visuais e de motion sêÂ£o trocados
+* Nenhum conteêÂºdo muda, sêÂ³ o comportamento do sistema
 
-### O usuÃ¡rio percebe
+### O usuêÂ¡rio percebe
 
-> â€œO site continua o mesmo, mas parece outro.â€
+> ê¢â¬ÅO site continua o mesmo, mas parece outro.ê¢â¬Â
 
 ---
 
-## 2ï¸âƒ£ PERSONALIDADE â€” *reprogramaÃ§Ã£o emocional*
+## 2ê¯Â¸Âê¢ÆÂ£ PERSONALIDADE ê¢â¬â *reprogramaêÂ§êÂ£o emocional*
 
 ### O que acontece
 
 * O sistema redefine:
 
-  * Velocidade mÃ©dia das animaÃ§Ãµes
-  * Quantidade de estÃ­mulo visual
+  * Velocidade mêÂ©dia das animaêÂ§êÂµes
+  * Quantidade de estêÂ­mulo visual
   * Peso dos elementos
 
 ### Exemplo real
@@ -544,20 +544,20 @@ Pense assim: cada coluna altera o â€œestado do sistemaâ€.
 * Personalidade calma:
 
   * Tudo entra devagar
-  * Nada â€œchama atenÃ§Ã£oâ€
+  * Nada ê¢â¬Åchama atenêÂ§êÂ£oê¢â¬Â
 * Personalidade ativa:
 
   * Elementos competem levemente pelo olhar
 
-### O usuÃ¡rio percebe
+### O usuêÂ¡rio percebe
 
-> â€œEsse site Ã© tranquiloâ€
+> ê¢â¬ÅEsse site êÂ© tranquiloê¢â¬Â
 > ou
-> â€œEsse site Ã© energÃ©ticoâ€
+> ê¢â¬ÅEsse site êÂ© energêÂ©ticoê¢â¬Â
 
 ---
 
-## 3ï¸âƒ£ CORES â€” *ativaÃ§Ã£o sensorial*
+## 3ê¯Â¸Âê¢ÆÂ£ CORES ê¢â¬â *ativaêÂ§êÂ£o sensorial*
 
 ### O que acontece
 
@@ -572,25 +572,25 @@ Pense assim: cada coluna altera o â€œestado do sistemaâ€.
 
 * Calm:
 
-  * Cor sÃ³ reforÃ§a hierarquia
+  * Cor sêÂ³ reforêÂ§a hierarquia
 * Energy:
 
   * Cor guia o olhar ativamente
 
-### O usuÃ¡rio percebe
+### O usuêÂ¡rio percebe
 
-> â€œSei onde olhar sem pensarâ€
+> ê¢â¬ÅSei onde olhar sem pensarê¢â¬Â
 
 ---
 
-## 4ï¸âƒ£ ENTRADA (ENTRANCE) â€” *primeiro impacto cognitivo*
+## 4ê¯Â¸Âê¢ÆÂ£ ENTRADA (ENTRANCE) ê¢â¬â *primeiro impacto cognitivo*
 
 ### O que acontece
 
 * Cada elemento recebe:
 
-  * Tipo de animaÃ§Ã£o
-  * DuraÃ§Ã£o
+  * Tipo de animaêÂ§êÂ£o
+  * DuraêÂ§êÂ£o
   * Delay
 * A IA / engine decide como o olho percorre a tela
 
@@ -598,20 +598,20 @@ Pense assim: cada coluna altera o â€œestado do sistemaâ€.
 
 * Fade lento:
 
-  * O cÃ©rebro relaxa
-* Slide rÃ¡pido:
+  * O cêÂ©rebro relaxa
+* Slide rêÂ¡pido:
 
-  * O cÃ©rebro entra em modo aÃ§Ã£o
+  * O cêÂ©rebro entra em modo aêÂ§êÂ£o
 
-### O usuÃ¡rio percebe
+### O usuêÂ¡rio percebe
 
-> â€œIsso Ã© calmoâ€
+> ê¢â¬ÅIsso êÂ© calmoê¢â¬Â
 > ou
-> â€œIsso Ã© rÃ¡pido e diretoâ€
+> ê¢â¬ÅIsso êÂ© rêÂ¡pido e diretoê¢â¬Â
 
 ---
 
-## 5ï¸âƒ£ SCROLL â€” *controle de narrativa*
+## 5ê¯Â¸Âê¢ÆÂ£ SCROLL ê¢â¬â *controle de narrativa*
 
 ### O que acontece
 
@@ -624,20 +624,20 @@ Pense assim: cada coluna altera o â€œestado do sistemaâ€.
 
 * Scroll neutro:
 
-  * Leitura contÃ­nua
+  * Leitura contêÂ­nua
 * Scroll-driven:
 
-  * SeÃ§Ãµes â€œrespondemâ€ ao avanÃ§o
+  * SeêÂ§êÂµes ê¢â¬Årespondemê¢â¬Â ao avanêÂ§o
 
-### O usuÃ¡rio percebe
+### O usuêÂ¡rio percebe
 
-> â€œEstou lendoâ€
+> ê¢â¬ÅEstou lendoê¢â¬Â
 > ou
-> â€œEstou avanÃ§andoâ€
+> ê¢â¬ÅEstou avanêÂ§andoê¢â¬Â
 
 ---
 
-## 6ï¸âƒ£ BACKGROUND MOTION â€” *sensaÃ§Ã£o de vida*
+## 6ê¯Â¸Âê¢ÆÂ£ BACKGROUND MOTION ê¢â¬â *sensaêÂ§êÂ£o de vida*
 
 ### O que acontece
 
@@ -649,54 +649,54 @@ Pense assim: cada coluna altera o â€œestado do sistemaâ€.
 
 ### Exemplo real
 
-* Fundo estÃ¡tico:
+* Fundo estêÂ¡tico:
 
-  * Interface sÃ³lida
+  * Interface sêÂ³lida
 * Fundo vivo:
 
-  * Interface â€œrespiraâ€
+  * Interface ê¢â¬Årespiraê¢â¬Â
 
-### O usuÃ¡rio percebe
+### O usuêÂ¡rio percebe
 
-> â€œIsso parece vivoâ€
+> ê¢â¬ÅIsso parece vivoê¢â¬Â
 > ou
-> â€œIsso parece estÃ¡ticoâ€
+> ê¢â¬ÅIsso parece estêÂ¡ticoê¢â¬Â
 
 ---
 
-## 7ï¸âƒ£ INTERAÃ‡ÃƒO (HOVER / CLICK) â€” *confirmaÃ§Ã£o de controle*
+## 7ê¯Â¸Âê¢ÆÂ£ INTERAêâ¡êÆO (HOVER / CLICK) ê¢â¬â *confirmaêÂ§êÂ£o de controle*
 
 ### O que acontece
 
-* Cada aÃ§Ã£o gera:
+* Cada aêÂ§êÂ£o gera:
 
   * Feedback visual
-  * Feedback fÃ­sico (scale, compress)
-* O sistema confirma: â€œeu ouvi vocÃªâ€
+  * Feedback fêÂ­sico (scale, compress)
+* O sistema confirma: ê¢â¬Åeu ouvi vocêÂªê¢â¬Â
 
 ### Exemplo real
 
 * Sem feedback:
 
-  * InseguranÃ§a
+  * InseguranêÂ§a
 * Feedback rico:
 
-  * ConfianÃ§a
+  * ConfianêÂ§a
 
-### O usuÃ¡rio percebe
+### O usuêÂ¡rio percebe
 
-> â€œIsso responde bemâ€
+> ê¢â¬ÅIsso responde bemê¢â¬Â
 
 ---
 
-## 8ï¸âƒ£ INTENSIDADE â€” *carga cognitiva total*
+## 8ê¯Â¸Âê¢ÆÂ£ INTENSIDADE ê¢â¬â *carga cognitiva total*
 
 ### O que acontece
 
 * O sistema regula:
 
-  * Quantos estÃ­mulos simultÃ¢neos existem
-  * Quanto tempo o usuÃ¡rio precisa processar
+  * Quantos estêÂ­mulos simultêÂ¢neos existem
+  * Quanto tempo o usuêÂ¡rio precisa processar
 
 ### Exemplo real
 
@@ -707,80 +707,80 @@ Pense assim: cada coluna altera o â€œestado do sistemaâ€.
 
   * Ideal para impacto
 
-### O usuÃ¡rio percebe
+### O usuêÂ¡rio percebe
 
-> â€œConsigo ficar aquiâ€
+> ê¢â¬ÅConsigo ficar aquiê¢â¬Â
 > ou
-> â€œIsso me empolgaâ€
+> ê¢â¬ÅIsso me empolgaê¢â¬Â
 
 ---
 
-## ðŸ§  COMO TUDO SE COMBINA (o ponto-chave)
+## ê°Å¸Â§Â  COMO TUDO SE COMBINA (o ponto-chave)
 
 Nenhuma coluna age sozinha.
 
-Quando vocÃª muda intensidade, o sistema automaticamente:
+Quando vocêÂª muda intensidade, o sistema automaticamente:
 
-* Ajusta duraÃ§Ã£o
+* Ajusta duraêÂ§êÂ£o
 * Ajusta delays
 * Ajusta quantidade de motion
 * Ajusta contraste
 
-ðŸ‘‰ Ã‰ um sistema de compensaÃ§Ã£o, nÃ£o de soma.
+ê°Å¸ââ° êâ° um sistema de compensaêÂ§êÂ£o, nêÂ£o de soma.
 
 ---
 
 ## FRASE MAIS IMPORTANTE
 
-> **VocÃª nÃ£o estÃ¡ mudando animaÃ§Ãµes.
-> VocÃª estÃ¡ mudando o comportamento cognitivo da interface.**
+> **VocêÂª nêÂ£o estêÂ¡ mudando animaêÂ§êÂµes.
+> VocêÂª estêÂ¡ mudando o comportamento cognitivo da interface.**
 
-## ðŸŽ¨ COMPARAÃ‡ÃƒO VISUAL â€” ANDYNOCODE vs ARCKHÉ AI
+## ê°Å¸Å½Â¨ COMPARAêâ¡êÆO VISUAL ê¢â¬â ANDYNOCODE vs ARCKHê AI
 
-| DimensÃ£o Visual        | ANDYNOCODE (Original)             | ARCKHÉ AI (Atual)                  | O que muda na prÃ¡tica                                  |
+| DimensêÂ£o Visual        | ANDYNOCODE (Original)             | ARCKHê AI (Atual)                  | O que muda na prêÂ¡tica                                  |
 | ---------------------- | --------------------------------- | ----------------------------------- | ------------------------------------------------------ |
-| Objetivo visual    | Performance, marketing, conversÃ£o | EducaÃ§Ã£o, transformaÃ§Ã£o, movimento  | O site deixa de â€œvenderâ€ e passa a ensinar e guiar |
-| Primeira impressÃ£o | Impacto comercial imediato        | ConfianÃ§a + acolhimento intelectual | Menos agressivo, mais convidativo                      |
-| Paleta base        | Dark + azul metÃ¡lico              | Dark + azul/violeta educacional     | Tons mais humanos e cognitivos                         |
-| Uso de cor         | Acentos raros, tÃ©cnicos           | Acentos narrativos e didÃ¡ticos      | Cor passa a explicar, nÃ£o sÃ³ destacar              |
-| Contraste          | Alto, orientado a CTA             | MÃ©dio-alto, orientado Ã  leitura     | Menos fadiga visual                                    |
-| Tipografia         | Muito grande, agressiva           | Grande, clara, pedagÃ³gica           | Menos â€œmarketing shoutâ€, mais clareza                  |
-| Ritmo visual       | RÃ¡pido, direto                    | Ritmo variÃ¡vel, respirado           | EspaÃ§os para reflexÃ£o                                  |
-| Glassmorphism      | Forte, â€œtech premiumâ€             | Suave, â€œcamada de conhecimentoâ€     | Menos espetÃ¡culo, mais funÃ§Ã£o                          |
+| Objetivo visual    | Performance, marketing, conversêÂ£o | EducaêÂ§êÂ£o, transformaêÂ§êÂ£o, movimento  | O site deixa de ê¢â¬Åvenderê¢â¬Â e passa a ensinar e guiar |
+| Primeira impressêÂ£o | Impacto comercial imediato        | ConfianêÂ§a + acolhimento intelectual | Menos agressivo, mais convidativo                      |
+| Paleta base        | Dark + azul metêÂ¡lico              | Dark + azul/violeta educacional     | Tons mais humanos e cognitivos                         |
+| Uso de cor         | Acentos raros, têÂ©cnicos           | Acentos narrativos e didêÂ¡ticos      | Cor passa a explicar, nêÂ£o sêÂ³ destacar              |
+| Contraste          | Alto, orientado a CTA             | MêÂ©dio-alto, orientado êÂ  leitura     | Menos fadiga visual                                    |
+| Tipografia         | Muito grande, agressiva           | Grande, clara, pedagêÂ³gica           | Menos ê¢â¬Åmarketing shoutê¢â¬Â, mais clareza                  |
+| Ritmo visual       | RêÂ¡pido, direto                    | Ritmo variêÂ¡vel, respirado           | EspaêÂ§os para reflexêÂ£o                                  |
+| Glassmorphism      | Forte, ê¢â¬Åtech premiumê¢â¬Â             | Suave, ê¢â¬Åcamada de conhecimentoê¢â¬Â     | Menos espetêÂ¡culo, mais funêÂ§êÂ£o                          |
 | Motion geral       | Controlado, funcional             | Fluido, narrativo                   | Motion passa a guiar aprendizado                   |
-| Scroll behavior    | Linear                            | Narrativo / progressivo             | Scroll vira parte da experiÃªncia                       |
-| Background         | Abstrato tech, neutro             | Abstrato educacional, vivo          | Fundo â€œrespiraâ€ mais                                   |
-| MicrointeraÃ§Ãµes    | TÃ©cnicas (hover clean)            | Humanizadas (feedback suave)        | Interface parece mais viva                             |
-| CTAs               | Fortes, frequentes                | Convidativos, espaÃ§ados             | Menos pressÃ£o, mais adesÃ£o                             |
-| SensaÃ§Ã£o final     | Produto premium                   | Ecossistema educacional             | De site para ambiente                              |
+| Scroll behavior    | Linear                            | Narrativo / progressivo             | Scroll vira parte da experiêÂªncia                       |
+| Background         | Abstrato tech, neutro             | Abstrato educacional, vivo          | Fundo ê¢â¬Årespiraê¢â¬Â mais                                   |
+| MicrointeraêÂ§êÂµes    | TêÂ©cnicas (hover clean)            | Humanizadas (feedback suave)        | Interface parece mais viva                             |
+| CTAs               | Fortes, frequentes                | Convidativos, espaêÂ§ados             | Menos pressêÂ£o, mais adesêÂ£o                             |
+| SensaêÂ§êÂ£o final     | Produto premium                   | Ecossistema educacional             | De site para ambiente                              |
 
 ---
 
-## ðŸ§  LEITURA RÃPIDA (diferenÃ§a-chave)
+## ê°Å¸Â§Â  LEITURA RêÂPIDA (diferenêÂ§a-chave)
 
 * ANDYNOCODE
-  â†’ *â€œConfie em nÃ³s, converta agora.â€*
+  ê¢â â *ê¢â¬ÅConfie em nêÂ³s, converta agora.ê¢â¬Â*
 
-* ARCKHÉ AI
-  â†’ *â€œAprenda, entenda, transforme-se.â€*
+* ARCKHê AI
+  ê¢â â *ê¢â¬ÅAprenda, entenda, transforme-se.ê¢â¬Â*
 
 ---
 
-## ðŸ“Œ FRASE DE POSICIONAMENTO VISUAL
+## ê°Å¸âÅ FRASE DE POSICIONAMENTO VISUAL
 
-> **ANDYNOCODE Ã© performance orientada a conversÃ£o.
-> ARCKHÉ AI Ã© clareza orientada Ã  transformaÃ§Ã£o.**
+> **ANDYNOCODE êÂ© performance orientada a conversêÂ£o.
+> ARCKHê AI êÂ© clareza orientada êÂ  transformaêÂ§êÂ£o.**
 
 ## RESPOSTA CURTA (objetiva)
 
-ðŸ‘‰ Se a landing page do ARCKHÉ AI for de conversÃ£o, ela NÃƒO pode usar o mesmo comportamento visual da versÃ£o educacional.
+ê°Å¸ââ° Se a landing page do ARCKHê AI for de conversêÂ£o, ela NêÆO pode usar o mesmo comportamento visual da versêÂ£o educacional.
 
-Ela precisa mudar o modo cognitivo do usuÃ¡rio:
+Ela precisa mudar o modo cognitivo do usuêÂ¡rio:
 
-* de *aprendizado* â†’ para *decisÃ£o*
-* de *exploraÃ§Ã£o* â†’ para *aÃ§Ã£o*
+* de *aprendizado* ê¢â â para *decisêÂ£o*
+* de *exploraêÂ§êÂ£o* ê¢â â para *aêÂ§êÂ£o*
 
-Isso Ã© design de conversÃ£o, nÃ£o estÃ©tica bonita.
+Isso êÂ© design de conversêÂ£o, nêÂ£o estêÂ©tica bonita.
 
 ---
 
@@ -788,66 +788,66 @@ Isso Ã© design de conversÃ£o, nÃ£o estÃ©tica bonita.
 
 Muita gente acha que:
 
-> â€œÃ© sÃ³ colocar um botÃ£o de CTAâ€
+> ê¢â¬ÅêÂ© sêÂ³ colocar um botêÂ£o de CTAê¢â¬Â
 
-âŒ Errado.
+ê¢ÂÅ Errado.
 
 Se o ritmo, motion e hierarquia continuam educacionais,
-o cÃ©rebro do usuÃ¡rio nÃ£o entra em modo de decisÃ£o.
+o cêÂ©rebro do usuêÂ¡rio nêÂ£o entra em modo de decisêÂ£o.
 
 ---
 
-## O QUE PRECISA MUDAR (na prÃ¡tica)
+## O QUE PRECISA MUDAR (na prêÂ¡tica)
 
-Abaixo estÃ¡ uma comparaÃ§Ã£o direta entre:
+Abaixo estêÂ¡ uma comparaêÂ§êÂ£o direta entre:
 
-* ARCKHÉ AI Educacional
-* ARCKHÉ AI ConversÃ£o
+* ARCKHê AI Educacional
+* ARCKHê AI ConversêÂ£o
 
 ---
 
 
-## COMO FICARIA UMA LANDING DE CONVERSÃƒO DO ARCKHÉ
+## COMO FICARIA UMA LANDING DE CONVERSêÆO DO ARCKHê
 
 ### Estrutura ideal
 
 HERO (oferta clara)
-BENEFÃCIOS (rÃ¡pidos)
-PROVA (nÃºmeros, depoimentos)
-O QUE VOCÃŠ VAI APRENDER
+BENEFêÂCIOS (rêÂ¡pidos)
+PROVA (nêÂºmeros, depoimentos)
+O QUE VOCêÅ  VAI APRENDER
 CTA FORTE
 FOOTER MINIMAL
 
 ---
 
-## EXEMPLO DE HERO (conversÃ£o)
+## EXEMPLO DE HERO (conversêÂ£o)
 
 Headline:
 
-> Learn how to work with AI â€” and turn knowledge into action.
+> Learn how to work with AI ê¢â¬â and turn knowledge into action.
 
 Subheadline:
 
 > A practical framework to communicate with machines, automate ideas, and understand people.
 
 CTA:
-ðŸ‘‰ Start now
-ðŸ‘‰ Join ARCKHÉ AI
+ê°Å¸ââ° Start now
+ê°Å¸ââ° Join ARCKHê AI
 
 ---
 
 ## FRASE MAIS IMPORTANTE (guarde isso)
 
-> **EducaÃ§Ã£o prepara.
-> ConversÃ£o empurra.**
+> **EducaêÂ§êÂ£o prepara.
+> ConversêÂ£o empurra.**
 
-Ambas sÃ£o vÃ¡lidas, mas nÃ£o podem usar o mesmo comportamento visual.
+Ambas sêÂ£o vêÂ¡lidas, mas nêÂ£o podem usar o mesmo comportamento visual.
 
 ---
 
-## CONCLUSÃƒO DIRETA
+## CONCLUSêÆO DIRETA
 
-Sim, se o objetivo for conversÃ£o, o ARCKHÉ AI:
+Sim, se o objetivo for conversêÂ£o, o ARCKHê AI:
 
 * Deve mudar ritmo
 * Deve aumentar contraste
@@ -855,17 +855,17 @@ Sim, se o objetivo for conversÃ£o, o ARCKHÉ AI:
 * Deve usar motion direcional
 * Deve repetir CTA
 
-ðŸ‘‰ O conteÃºdo pode ser o mesmo.
-ðŸ‘‰ A experiÃªncia nÃ£o pode.
+ê°Å¸ââ° O conteêÂºdo pode ser o mesmo.
+ê°Å¸ââ° A experiêÂªncia nêÂ£o pode.
 
-# ðŸ’° NOVOS PRESETS DE VENDAS â€” ARCKHÉ AI
+# ê°Å¸âÂ° NOVOS PRESETS DE VENDAS ê¢â¬â ARCKHê AI
 
-> Estes presets nÃ£o sÃ£o educacionais.
+> Estes presets nêÂ£o sêÂ£o educacionais.
 > Eles existem para converter.
 
 ---
 
-## ðŸ”¥ PRESET 6 â€” Sales Focused (Forte)
+## ê°Å¸âÂ¥ PRESET 6 ê¢â¬â Sales Focused (Forte)
 
 ### Objetivo
 
@@ -879,40 +879,40 @@ Ideal para:
 
 ---
 
-### ðŸ§  Estado cognitivo ativado
+### ê°Å¸Â§Â  Estado cognitivo ativado
 
-> â€œIsso Ã© claro, faz sentido e vale a pena.â€
+> ê¢â¬ÅIsso êÂ© claro, faz sentido e vale a pena.ê¢â¬Â
 
 ---
 
-### ðŸŽ¨ Visual
+### ê°Å¸Å½Â¨ Visual
 
 * Dark base mantido
-* Acentos fortes em 1 cor dominante (azul elÃ©trico ou violeta)
+* Acentos fortes em 1 cor dominante (azul elêÂ©trico ou violeta)
 * Headline com alto contraste
-* CTAs sempre visÃ­veis (sticky ou repetidos)
+* CTAs sempre visêÂ­veis (sticky ou repetidos)
 
 ---
 
-### ðŸŽ¥ Motion (bem definido)
+### ê°Å¸Å½Â¥ Motion (bem definido)
 
 Entrada
 
-* Slide + fade curto (0.3â€“0.4s)
-* TranslateY menor (4â€“6px)
-* Stagger rÃ¡pido
+* Slide + fade curto (0.3ê¢â¬â0.4s)
+* TranslateY menor (4ê¢â¬â6px)
+* Stagger rêÂ¡pido
 
 Scroll
 
 * Scroll-driven leve
-* SeÃ§Ãµes empurram a prÃ³xima (sensaÃ§Ã£o de progresso)
+* SeêÂ§êÂµes empurram a prêÂ³xima (sensaêÂ§êÂ£o de progresso)
 
 Background
 
-* Quase estÃ¡tico
+* Quase estêÂ¡tico
 * Nada que distraia do CTA
 
-InteraÃ§Ã£o
+InteraêÂ§êÂ£o
 
 * Hover:
 
@@ -921,83 +921,83 @@ InteraÃ§Ã£o
 * Click:
 
   * Compress (0.96)
-  * Release rÃ¡pido
+  * Release rêÂ¡pido
 
 ---
 
-### ðŸ“Œ Ritmo
+### ê°Å¸âÅ Ritmo
 
-* RÃ¡pido
-* Pouco espaÃ§o morto
-* Leitura escaneÃ¡vel
+* RêÂ¡pido
+* Pouco espaêÂ§o morto
+* Leitura escaneêÂ¡vel
 
 ---
 
-### ðŸ“¢ CTA
+### ê°Å¸âÂ¢ CTA
 
 * Direto, mas educado
   Ex:
-  â€œStart Nowâ€
-  â€œJoin ARCKHÉ AIâ€
+  ê¢â¬ÅStart Nowê¢â¬Â
+  ê¢â¬ÅJoin ARCKHê AIê¢â¬Â
 
 ---
 
-### ðŸ”¥ Intensidade
+### ê°Å¸âÂ¥ Intensidade
 
 Alta, mas controlada.
 
 ---
 
-## ðŸš¨ PRESET 7 â€” Sales Aggressive
+## ê°Å¸Å¡Â¨ PRESET 7 ê¢â¬â Sales Aggressive
 
 ### Objetivo
 
 Converter agora.
 Ideal para:
 
-* LanÃ§amentos
-* Ãšltimas vagas
+* LanêÂ§amentos
+* êÅ¡ltimas vagas
 * Ofertas com tempo
-* Campanhas de trÃ¡fego pago
+* Campanhas de trêÂ¡fego pago
 
 ---
 
-### ðŸ§  Estado cognitivo ativado
+### ê°Å¸Â§Â  Estado cognitivo ativado
 
-> â€œPreciso decidir agora.â€
+> ê¢â¬ÅPreciso decidir agora.ê¢â¬Â
 
 ---
 
-### ðŸŽ¨ Visual
+### ê°Å¸Å½Â¨ Visual
 
-* Contraste mÃ¡ximo
+* Contraste mêÂ¡ximo
 * Duas cores dominantes (ex: preto + vermelho / laranja)
 * CTAs grandes, repetidos
-* Elementos piscam atenÃ§Ã£o (com moderaÃ§Ã£o)
+* Elementos piscam atenêÂ§êÂ£o (com moderaêÂ§êÂ£o)
 
 ---
 
-### ðŸŽ¥ Motion (agressivo de verdade)
+### ê°Å¸Å½Â¥ Motion (agressivo de verdade)
 
 Entrada
 
 * Scale + snap-in
-* DuraÃ§Ã£o curta (0.2â€“0.3s)
+* DuraêÂ§êÂ£o curta (0.2ê¢â¬â0.3s)
 * Zero delay
 
 Scroll
 
-* Scroll trava seÃ§Ãµes
+* Scroll trava seêÂ§êÂµes
 * Snap scrolling
-* Elementos â€œativamâ€ agressivamente
+* Elementos ê¢â¬Åativamê¢â¬Â agressivamente
 
 Background
 
 * Pulsos leves
 * Luz radial no CTA
-* Gradiente dinÃ¢mico curto
+* Gradiente dinêÂ¢mico curto
 
-InteraÃ§Ã£o
+InteraêÂ§êÂ£o
 
 * Hover:
 
@@ -1010,145 +1010,145 @@ InteraÃ§Ã£o
 
 ---
 
-### ðŸ“Œ Ritmo
+### ê°Å¸âÅ Ritmo
 
-* Muito rÃ¡pido
+* Muito rêÂ¡pido
 * Pouca leitura
 * Muito direcionamento visual
 
 ---
 
-### ðŸ“¢ CTA
+### ê°Å¸âÂ¢ CTA
 
 * Imperativo
   Ex:
-  â€œEnroll Nowâ€
-  â€œSecure Your Spotâ€
-  â€œJoin Todayâ€
+  ê¢â¬ÅEnroll Nowê¢â¬Â
+  ê¢â¬ÅSecure Your Spotê¢â¬Â
+  ê¢â¬ÅJoin Todayê¢â¬Â
 
 ---
 
-### ðŸ”¥ Intensidade
+### ê°Å¸âÂ¥ Intensidade
 
 Muito alta (uso pontual).
 
 ---
 
-## ðŸ§  COMPARAÃ‡ÃƒO RÃPIDA
+## ê°Å¸Â§Â  COMPARAêâ¡êÆO RêÂPIDA
 
-| Preset           | Tipo        | EmoÃ§Ã£o    | Uso ideal             |
+| Preset           | Tipo        | EmoêÂ§êÂ£o    | Uso ideal             |
 | ---------------- | ----------- | --------- | --------------------- |
-| Sales Focused    | Forte       | ConfianÃ§a | ConversÃ£o principal   |
-| Sales Aggressive | Muito forte | UrgÃªncia  | LanÃ§amento / escassez |
+| Sales Focused    | Forte       | ConfianêÂ§a | ConversêÂ£o principal   |
+| Sales Aggressive | Muito forte | UrgêÂªncia  | LanêÂ§amento / escassez |
 
 ---
 
 ## FRASE IMPORTANTE (guarde isso)
 
-> **Venda nÃ£o Ã© estÃ©tica.
-> Ã‰ manipulaÃ§Ã£o consciente de ritmo, contraste e atenÃ§Ã£o.**
+> **Venda nêÂ£o êÂ© estêÂ©tica.
+> êâ° manipulaêÂ§êÂ£o consciente de ritmo, contraste e atenêÂ§êÂ£o.**
 
 -
 
-Aqui estÃ£o os melhores sites, repositÃ³rios e recursos para aprender e aplicar movimentos (animations) em sites, desde fundamentos com CSS atÃ© bibliotecas avanÃ§adas como GSAP e Framer Motion â€” com descriÃ§Ãµes do que cada um oferece ðŸ‘‡
+Aqui estêÂ£o os melhores sites, repositêÂ³rios e recursos para aprender e aplicar movimentos (animations) em sites, desde fundamentos com CSS atêÂ© bibliotecas avanêÂ§adas como GSAP e Framer Motion ê¢â¬â com descriêÂ§êÂµes do que cada um oferece ê°Å¸ââ¡
 
 ---
 
-## ðŸŒ 1. FreeFrontend â€” exemplos prÃ¡ticos de animaÃ§Ãµes CSS e JS
+## ê°Å¸ÅÂ 1. FreeFrontend ê¢â¬â exemplos prêÂ¡ticos de animaêÂ§êÂµes CSS e JS
 
-ðŸ”¹ 54 CSS Scroll Effects â€” FreeFrontend
-Uma coleÃ§Ã£o de efeitos de scroll com cÃ³digo e demos (masks, 3D, sticky, reveal, parallax). ([FreeFrontend][1])
-ðŸ‘‰ Excelente para ver exemplos que funcionam *sem frameworks* ou como inspiraÃ§Ã£o visual.
+ê°Å¸âÂ¹ 54 CSS Scroll Effects ê¢â¬â FreeFrontend
+Uma coleêÂ§êÂ£o de efeitos de scroll com cêÂ³digo e demos (masks, 3D, sticky, reveal, parallax). ([FreeFrontend][1])
+ê°Å¸ââ° Excelente para ver exemplos que funcionam *sem frameworks* ou como inspiraêÂ§êÂ£o visual.
 
-ðŸ”¹ 249 GSAP.js Examples â€” FreeFrontend
-Banco com quase 250 exemplos de animaÃ§Ãµes usando GSAP (timelines, stagger, scroll effects). ([FreeFrontend][2])
-ðŸ‘‰ Ideal se vocÃª quiser aprender animaÃ§Ãµes complexas com cÃ³digo pronto.
+ê°Å¸âÂ¹ 249 GSAP.js Examples ê¢â¬â FreeFrontend
+Banco com quase 250 exemplos de animaêÂ§êÂµes usando GSAP (timelines, stagger, scroll effects). ([FreeFrontend][2])
+ê°Å¸ââ° Ideal se vocêÂª quiser aprender animaêÂ§êÂµes complexas com cêÂ³digo pronto.
 
 ---
 
-## ðŸ“š 2. DocumentaÃ§Ã£o oficial e guias
+## ê°Å¸âÅ¡ 2. DocumentaêÂ§êÂ£o oficial e guias
 
-### ðŸ§  CSS nativo (sem libs)
+### ê°Å¸Â§Â  CSS nativo (sem libs)
 
-âœ¨ CSS Scroll-driven Animations â€” MDN Web Docs
-Guia oficial para animaÃ§Ãµes baseadas em scroll com CSS puro. ([MDN Web Docs][3])
-ðŸ‘‰ Ã“timo para aprender o que dÃ¡ para fazer *sem JS ou libs externas*.
+ê¢ÅÂ¨ CSS Scroll-driven Animations ê¢â¬â MDN Web Docs
+Guia oficial para animaêÂ§êÂµes baseadas em scroll com CSS puro. ([MDN Web Docs][3])
+ê°Å¸ââ° êâtimo para aprender o que dêÂ¡ para fazer *sem JS ou libs externas*.
 
-ðŸ“œ CSS animation on scroll (GeeksforGeeks)
+ê°Å¸âÅ CSS animation on scroll (GeeksforGeeks)
 Tutorial passo a passo com exemplos simples para animar durante o scroll. ([GeeksforGeeks][4])
-ðŸ‘‰ Bom para comeÃ§ar se vocÃª jÃ¡ sabe HTML/CSS.
+ê°Å¸ââ° Bom para comeêÂ§ar se vocêÂª jêÂ¡ sabe HTML/CSS.
 
 ---
 
-## ðŸ’¡ 3. Bibliotecas e ferramentas profissionais
+## ê°Å¸âÂ¡ 3. Bibliotecas e ferramentas profissionais
 
-### ðŸŸ¢ GSAP (GreenSock Animation Platform)
+### ê°Å¸Å¸Â¢ GSAP (GreenSock Animation Platform)
 
-ðŸŒ GSAP Docs & Getting Started
-Guia oficial para comeÃ§ar a animar com GSAP, uma das bibliotecas mais utilizadas em produÃ§Ã£o. ([GSAP][5])
-ðŸ‘‰ Perfeito para animaÃ§Ãµes complexas, sequÃªncias e scroll interactions.
+ê°Å¸ÅÂ GSAP Docs & Getting Started
+Guia oficial para comeêÂ§ar a animar com GSAP, uma das bibliotecas mais utilizadas em produêÂ§êÂ£o. ([GSAP][5])
+ê°Å¸ââ° Perfeito para animaêÂ§êÂµes complexas, sequêÂªncias e scroll interactions.
 
-ðŸ“ Exemplos e cursos (como GreenSock101 e vÃ­deos do YouTube) tambÃ©m estÃ£o disponÃ­veis com demonstraÃ§Ãµes de uso em projetos reais. ([Class Central][6])
-
----
-
-### ðŸ”· Framer Motion
-
-ðŸ“Œ Biblioteca de animaÃ§Ã£o para React moderna (foco em componentes e gestos). ([Motion][7])
-ðŸ‘‰ Excelente para interfaces interativas em SPA/React, com fÃ¡cil integraÃ§Ã£o e controles de estado.
+ê°Å¸âÂ Exemplos e cursos (como GreenSock101 e vêÂ­deos do YouTube) tambêÂ©m estêÂ£o disponêÂ­veis com demonstraêÂ§êÂµes de uso em projetos reais. ([Class Central][6])
 
 ---
 
-## ðŸ› ï¸ 4. Outras ferramentas Ãºteis
+### ê°Å¸âÂ· Framer Motion
 
-### ðŸŽ¨ Lottie Animation
-
-Recurso para animaÃ§Ãµes vetoriais leves (JSON) que podem rodar em webpages ou apps. ([FreeCodeCamp][8])
-ðŸ‘‰ Ideal para Ã­cones animados, microinteractions e elementos emocionais.
+ê°Å¸âÅ Biblioteca de animaêÂ§êÂ£o para React moderna (foco em componentes e gestos). ([Motion][7])
+ê°Å¸ââ° Excelente para interfaces interativas em SPA/React, com fêÂ¡cil integraêÂ§êÂ£o e controles de estado.
 
 ---
 
-## ðŸ“¦ 5. RepositÃ³rios e exemplos prÃ¡ticos
+## ê°Å¸âºÂ ê¯Â¸Â 4. Outras ferramentas êÂºteis
 
-ðŸ”¹ GitHub â€” Web Animation Demos (GSAP, Anime.js, Framer Motion)
+### ê°Å¸Å½Â¨ Lottie Animation
+
+Recurso para animaêÂ§êÂµes vetoriais leves (JSON) que podem rodar em webpages ou apps. ([FreeCodeCamp][8])
+ê°Å¸ââ° Ideal para êÂ­cones animados, microinteractions e elementos emocionais.
+
+---
+
+## ê°Å¸âÂ¦ 5. RepositêÂ³rios e exemplos prêÂ¡ticos
+
+ê°Å¸âÂ¹ GitHub ê¢â¬â Web Animation Demos (GSAP, Anime.js, Framer Motion)
 Exemplos para clonar, estudar e adaptar. ([GitHub][9])
-ðŸ‘‰ Ãštil para ver o cÃ³digo funcionando em projetos reais.
+ê°Å¸ââ° êÅ¡til para ver o cêÂ³digo funcionando em projetos reais.
 
 ---
 
-## ðŸ“Œ Como comeÃ§ar em etapas
+## ê°Å¸âÅ Como comeêÂ§ar em etapas
 
 Iniciante (sem JS)
 
 1. Aprenda CSS animations (`@keyframes`, transition, scroll-driven)
-   â†’ MDN Web Docs e ForFrontend exemplos. ([MDN Web Docs][3])
+   ê¢â â MDN Web Docs e ForFrontend exemplos. ([MDN Web Docs][3])
 
-IntermediÃ¡rio
+IntermediêÂ¡rio
 2. Combine CSS com JavaScript para scroll animations
-â†’ Tutoriais Tuts+ e GeeksforGeeks. ([Web Design Envato Tuts+][10])
+ê¢â â Tutoriais Tuts+ e GeeksforGeeks. ([Web Design Envato Tuts+][10])
 
-AvanÃ§ado
-3. Aprenda GSAP para sequÃªncias e controle fino
-â†’ GSAP official docs + FreeFrontend examples. ([GSAP][5])
+AvanêÂ§ado
+3. Aprenda GSAP para sequêÂªncias e controle fino
+ê¢â â GSAP official docs + FreeFrontend examples. ([GSAP][5])
 
 React
 4. Use Framer Motion em interfaces interativas
-â†’ Docs oficiais + exemplos. ([Motion][7])
+ê¢â â Docs oficiais + exemplos. ([Motion][7])
 
 ---
 
-## ðŸ“Œ ConclusÃ£o
+## ê°Å¸âÅ ConclusêÂ£o
 
-Se seu objetivo Ã© aplicar movimentos em sites profissionais, comece por:
+Se seu objetivo êÂ© aplicar movimentos em sites profissionais, comece por:
 
-âœ”ï¸ CSS scroll animations para efeitos leves e performÃ¡ticos
-âœ”ï¸ GSAP para controle absoluto e interaÃ§Ãµes complexas
-âœ”ï¸ Framer Motion se estiver usando React
-âœ”ï¸ Lottie para Ã­cones animados e microinteractions
+ê¢Åâê¯Â¸Â CSS scroll animations para efeitos leves e performêÂ¡ticos
+ê¢Åâê¯Â¸Â GSAP para controle absoluto e interaêÂ§êÂµes complexas
+ê¢Åâê¯Â¸Â Framer Motion se estiver usando React
+ê¢Åâê¯Â¸Â Lottie para êÂ­cones animados e microinteractions
 
 ---
 
-Quer que eu monte uma lista de cursos e vÃ­deos especÃ­ficos para cada tecnologia (GSAP, CSS, Framer)?
+Quer que eu monte uma lista de cursos e vêÂ­deos especêÂ­ficos para cada tecnologia (GSAP, CSS, Framer)?
 
 [1]: https://freefrontend.com/css-scroll-effects/?utm_source=chatgpt.com "54 CSS Scroll Effects - Free Frontend"
 [2]: https://freefrontend.com/gsap-js/?utm_source=chatgpt.com "249 GSAP.js Examples - Free Frontend"
@@ -1158,7 +1158,7 @@ Quer que eu monte uma lista de cursos e vÃ­deos especÃ­ficos para cada tecno
 [6]:
 
 https://www.classcentral.com/report/best-gsap-courses/?utm_source=chatgpt.com "Revolutionizing Web Animation: Best Ways to Learn GSAP in 2026"
-[7]: https://motion.dev/?utm_source=chatgpt.com "Framer - Motion â€” JavaScript & React animation library"
+[7]: https://motion.dev/?utm_source=chatgpt.com "Framer - Motion ê¢â¬â JavaScript & React animation library"
 [8]: https://www.freecodecamp.org/news/powerful-motion-graphics-frameworks-for-developers/?utm_source=chatgpt.com "Powerful Motion Graphics Frameworks for Developers"
 [9]: https://github.com/tinux-labs/web-animations?utm_source=chatgpt.com "GitHub - tinux-labs/web-animations: Interactive examples using GSAP ..."
 [10]: https://webdesign.tutsplus.com/animate-on-scroll-with-javascript--cms-36671t?utm_source=chatgpt.com "How to animate on scroll with vanilla JavaScript - Envato Tuts+"

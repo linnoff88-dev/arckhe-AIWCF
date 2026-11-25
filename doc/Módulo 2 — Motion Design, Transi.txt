@@ -1,163 +1,163 @@
-# MÃ³dulo 2 â€” Motion Design, TransiÃ§Ãµes CARCKHÉtogrÃ¡ficas e VÃ­deo com IA
+# MêÂ³dulo 2 ê¢â¬â Motion Design, TransiêÂ§êÂµes CARCKHêtogrêÂ¡ficas e VêÂ­deo com IA
 
-## VisÃ£o Geral do MÃ³dulo
+## VisêÂ£o Geral do MêÂ³dulo
 
-O MÃ³dulo 2 aborda a transformaÃ§Ã£o de um site estÃ¡tico em um **site vivo, interativo e cARCKHÉtogrÃ¡fico**. O foco estÃ¡ no uso estratÃ©gico de motion design, animaÃ§Ãµes modernas, interaÃ§Ãµes baseadas em scroll e integraÃ§Ã£o de vÃ­deos gerados por IA para criar experiÃªncias web mais profissionais, envolventes e memorÃ¡veis.
+O MêÂ³dulo 2 aborda a transformaêÂ§êÂ£o de um site estêÂ¡tico em um **site vivo, interativo e cARCKHêtogrêÂ¡fico**. O foco estêÂ¡ no uso estratêÂ©gico de motion design, animaêÂ§êÂµes modernas, interaêÂ§êÂµes baseadas em scroll e integraêÂ§êÂ£o de vêÂ­deos gerados por IA para criar experiêÂªncias web mais profissionais, envolventes e memorêÂ¡veis.
 
-O princÃ­pio central do mÃ³dulo Ã© que **motion nÃ£o Ã© decoraÃ§Ã£o**, mas sim uma ferramenta funcional para guiar, informar, engajar e criar conexÃ£o emocional com o usuÃ¡rio.
+O princêÂ­pio central do mêÂ³dulo êÂ© que **motion nêÂ£o êÂ© decoraêÂ§êÂ£o**, mas sim uma ferramenta funcional para guiar, informar, engajar e criar conexêÂ£o emocional com o usuêÂ¡rio.
 
 ---
 
-## CapÃ­tulo 1 â€” Fundamentos de Motion Design para Web
+## CapêÂ­tulo 1 ê¢â¬â Fundamentos de Motion Design para Web
 
-Este capÃ­tulo estabelece a base conceitual do motion design aplicado Ã  web.
+Este capêÂ­tulo estabelece a base conceitual do motion design aplicado êÂ  web.
 
-### TrÃªs Leis do Motion Digital
-- **Timing (DuraÃ§Ã£o):** define a velocidade das animaÃ§Ãµes e influencia diretamente a percepÃ§Ã£o do usuÃ¡rio.
-- **Easing (AceleraÃ§Ã£o):** garante movimentos naturais, suaves e fisicamente plausÃ­veis.
-- **Hierarquia Visual:** usa o motion para guiar a atenÃ§Ã£o e definir a ordem de leitura do conteÃºdo.
+### TrêÂªs Leis do Motion Digital
+- **Timing (DuraêÂ§êÂ£o):** define a velocidade das animaêÂ§êÂµes e influencia diretamente a percepêÂ§êÂ£o do usuêÂ¡rio.
+- **Easing (AceleraêÂ§êÂ£o):** garante movimentos naturais, suaves e fisicamente plausêÂ­veis.
+- **Hierarquia Visual:** usa o motion para guiar a atenêÂ§êÂ£o e definir a ordem de leitura do conteêÂºdo.
 
 ### Tipos de Motion
-- **Motion EstÃ©tico:** microinteraÃ§Ãµes sutis que melhoram usabilidade e feedback (ex: hover de botÃµes).
-- **Motion CARCKHÉtogrÃ¡fico:** movimentos expressivos e narrativos que criam fluxo e storytelling.
+- **Motion EstêÂ©tico:** microinteraêÂ§êÂµes sutis que melhoram usabilidade e feedback (ex: hover de botêÂµes).
+- **Motion CARCKHêtogrêÂ¡fico:** movimentos expressivos e narrativos que criam fluxo e storytelling.
 
-### PropÃ³sitos do Motion
-- Guiar a atenÃ§Ã£o  
+### PropêÂ³sitos do Motion
+- Guiar a atenêÂ§êÂ£o  
 - Fornecer feedback  
-- Encantar e criar conexÃ£o emocional  
+- Encantar e criar conexêÂ£o emocional  
 
 ---
 
-## CapÃ­tulo 2 â€” Motion Aplicado Ã  Estrutura do Site
+## CapêÂ­tulo 2 ê¢â¬â Motion Aplicado êÂ  Estrutura do Site
 
-O motion passa a ser aplicado de forma progressiva nas seÃ§Ãµes do site, criando uma experiÃªncia fluida e controlada.
+O motion passa a ser aplicado de forma progressiva nas seêÂ§êÂµes do site, criando uma experiêÂªncia fluida e controlada.
 
 ### Principais Conceitos
-- ConteÃºdo revelado conforme o scroll
-- SeÃ§Ãµes entrando de forma suave e natural
-- Evitar que tudo apareÃ§a ao mesmo tempo
+- ConteêÂºdo revelado conforme o scroll
+- SeêÂ§êÂµes entrando de forma suave e natural
+- Evitar que tudo apareêÂ§a ao mesmo tempo
 
-### SeÃ§Ãµes Trabalhadas
+### SeêÂ§êÂµes Trabalhadas
 - Hero
 - About
-- PortfÃ³lio / Cards
+- PortfêÂ³lio / Cards
 - Call to Action (CTA)
 - Footer
 
-O objetivo Ã© fazer o usuÃ¡rio **sentir que controla a experiÃªncia** ao navegar.
+O objetivo êÂ© fazer o usuêÂ¡rio **sentir que controla a experiêÂªncia** ao navegar.
 
 ---
 
-## CapÃ­tulo 3 â€” Foco Visual, Ritmo e Boas PrÃ¡ticas
+## CapêÂ­tulo 3 ê¢â¬â Foco Visual, Ritmo e Boas PrêÂ¡ticas
 
-Este capÃ­tulo ensina a controlar a atenÃ§Ã£o do usuÃ¡rio e evitar excesso de movimento.
+Este capêÂ­tulo ensina a controlar a atenêÂ§êÂ£o do usuêÂ¡rio e evitar excesso de movimento.
 
-### Boas PrÃ¡ticas
+### Boas PrêÂ¡ticas
 - Animar apenas **3 a 5 elementos** por vez
-- Elementos secundÃ¡rios devem permanecer estÃ¡ticos
-- MicrointeraÃ§Ãµes rÃ¡pidas (cliques, hovers)
-- AnimaÃ§Ãµes grandes mais suaves e elegantes
+- Elementos secundêÂ¡rios devem permanecer estêÂ¡ticos
+- MicrointeraêÂ§êÂµes rêÂ¡pidas (cliques, hovers)
+- AnimaêÂ§êÂµes grandes mais suaves e elegantes
 
 ### Erros Comuns
 - Animar tudo ao mesmo tempo
-- Usar animaÃ§Ãµes muito lentas em tudo
-- Aplicar o mesmo timing para microinteraÃ§Ãµes e grandes transiÃ§Ãµes
-- Alterar layout constantemente (tamanho/posiÃ§Ã£o)
+- Usar animaêÂ§êÂµes muito lentas em tudo
+- Aplicar o mesmo timing para microinteraêÂ§êÂµes e grandes transiêÂ§êÂµes
+- Alterar layout constantemente (tamanho/posiêÂ§êÂ£o)
 
 ---
 
-## CapÃ­tulo 4 â€” TransiÃ§Ãµes CARCKHÉtogrÃ¡ficas
+## CapêÂ­tulo 4 ê¢â¬â TransiêÂ§êÂµes CARCKHêtogrêÂ¡ficas
 
-O site passa a ser tratado como uma **histÃ³ria visual contÃ­nua**, nÃ£o como seÃ§Ãµes isoladas.
+O site passa a ser tratado como uma **histêÂ³ria visual contêÂ­nua**, nêÂ£o como seêÂ§êÂµes isoladas.
 
 ### Conceitos-Chave
-- RevelaÃ§Ã£o sequencial de elementos
-- TransiÃ§Ãµes suaves entre seÃ§Ãµes
-- Cada seÃ§Ã£o tem um â€œmomento cARCKHÉtogrÃ¡ficoâ€
+- RevelaêÂ§êÂ£o sequencial de elementos
+- TransiêÂ§êÂµes suaves entre seêÂ§êÂµes
+- Cada seêÂ§êÂ£o tem um ê¢â¬Åmomento cARCKHêtogrêÂ¡ficoê¢â¬Â
 
 ### Exemplo de Fluxo
 - Hero funciona como abertura de filme
-- SeÃ§Ãµes se dissolvem umas nas outras
+- SeêÂ§êÂµes se dissolvem umas nas outras
 - Footer encerra a narrativa visual
 
-O foco Ã© criar **ritmo, emoÃ§Ã£o e intenÃ§Ã£o** na navegaÃ§Ã£o.
+O foco êÂ© criar **ritmo, emoêÂ§êÂ£o e intenêÂ§êÂ£o** na navegaêÂ§êÂ£o.
 
 ---
 
-## CapÃ­tulo 5 â€” Visual Focus Aplicado a Prompts de IA
+## CapêÂ­tulo 5 ê¢â¬â Visual Focus Aplicado a Prompts de IA
 
-Este capÃ­tulo aprofunda como escrever prompts eficazes para gerar motion de qualidade com IA.
+Este capêÂ­tulo aprofunda como escrever prompts eficazes para gerar motion de qualidade com IA.
 
 ### Diretrizes de Prompt
 - Limitar quantidade de elementos animados
-- Definir timings diferentes para interaÃ§Ãµes pequenas e grandes
+- Definir timings diferentes para interaêÂ§êÂµes pequenas e grandes
 - Priorizar movimento e opacidade (slide, lift, fade)
-- Evitar alteraÃ§Ãµes que quebrem o layout
-- Garantir consistÃªncia entre desktop e mobile
+- Evitar alteraêÂ§êÂµes que quebrem o layout
+- Garantir consistêÂªncia entre desktop e mobile
 
 ---
 
-## CapÃ­tulo 6 â€” IntegraÃ§Ã£o de VÃ­deo com IA
+## CapêÂ­tulo 6 ê¢â¬â IntegraêÂ§êÂ£o de VêÂ­deo com IA
 
-Apresenta o processo de criaÃ§Ã£o e integraÃ§Ã£o de vÃ­deos gerados por IA no site.
+Apresenta o processo de criaêÂ§êÂ£o e integraêÂ§êÂ£o de vêÂ­deos gerados por IA no site.
 
 ### Etapas
-1. CriaÃ§Ã£o do vÃ­deo via prompt (clipe curto, ~5s)
-2. ExportaÃ§Ã£o em MP4
-3. Hospedagem do vÃ­deo (ex: Cloudinary)
-4. IntegraÃ§Ã£o via URL
+1. CriaêÂ§êÂ£o do vêÂ­deo via prompt (clipe curto, ~5s)
+2. ExportaêÂ§êÂ£o em MP4
+3. Hospedagem do vêÂ­deo (ex: Cloudinary)
+4. IntegraêÂ§êÂ£o via URL
 
-### Uso do VÃ­deo
+### Uso do VêÂ­deo
 - Background do hero
-- Scroll scrubbing (vÃ­deo sincronizado com scroll)
+- Scroll scrubbing (vêÂ­deo sincronizado com scroll)
 - Overlay escuro para legibilidade
-- Fallback para imagem estÃ¡tica no mobile
+- Fallback para imagem estêÂ¡tica no mobile
 
-O vÃ­deo deve â€œ**respirar com o scroll**â€, criando imersÃ£o.
+O vêÂ­deo deve ê¢â¬Å**respirar com o scroll**ê¢â¬Â, criando imersêÂ£o.
 
 ---
 
-## CapÃ­tulo 7 â€” OtimizaÃ§Ã£o, Performance e RevisÃ£o Final
+## CapêÂ­tulo 7 ê¢â¬â OtimizaêÂ§êÂ£o, Performance e RevisêÂ£o Final
 
 Foco em garantir fluidez, estabilidade e boa performance.
 
-### OtimizaÃ§Ãµes
-- CompressÃ£o adequada do vÃ­deo
+### OtimizaêÂ§êÂµes
+- CompressêÂ£o adequada do vêÂ­deo
 - Lazy loading eficiente
 - Mapeamento preciso do scroll
-- DefiniÃ§Ã£o de fallbacks para baixa performance
+- DefiniêÂ§êÂ£o de fallbacks para baixa performance
 
 ### Testes
-- VerificaÃ§Ã£o em desktop
-- VerificaÃ§Ã£o em mobile
-- Checagem de animaÃ§Ãµes, hovers e interaÃ§Ãµes
+- VerificaêÂ§êÂ£o em desktop
+- VerificaêÂ§êÂ£o em mobile
+- Checagem de animaêÂ§êÂµes, hovers e interaêÂ§êÂµes
 
 ---
 
-## Resultado Final do MÃ³dulo
+## Resultado Final do MêÂ³dulo
 
-Ao final do MÃ³dulo 2, o site se torna:
+Ao final do MêÂ³dulo 2, o site se torna:
 - Interativo
-- CARCKHÉtogrÃ¡fico
+- CARCKHêtogrêÂ¡fico
 - Fluido
 - Responsivo
 - Profissional e polido
 
-O usuÃ¡rio deixa de apenas rolar a pÃ¡gina e passa a **vivenciar uma narrativa visual contÃ­nua**. O mÃ³dulo encerra incentivando experimentaÃ§Ã£o, iteraÃ§Ã£o e personalizaÃ§Ã£o dos projetos.
+O usuêÂ¡rio deixa de apenas rolar a pêÂ¡gina e passa a **vivenciar uma narrativa visual contêÂ­nua**. O mêÂ³dulo encerra incentivando experimentaêÂ§êÂ£o, iteraêÂ§êÂ£o e personalizaêÂ§êÂ£o dos projetos.
 
 ---
 
-# MÃ³dulo 2 â€” ConteÃºdo Original dos VÃ­deos (TranscriÃ§Ãµes)
+# MêÂ³dulo 2 ê¢â¬â ConteêÂºdo Original dos VêÂ­deos (TranscriêÂ§êÂµes)
 
 ---
 
-## IntroduÃ§Ã£o ao MÃ³dulo 2 â€” De Site EstÃ¡tico para Site Vivo
+## IntroduêÂ§êÂ£o ao MêÂ³dulo 2 ê¢â¬â De Site EstêÂ¡tico para Site Vivo
 
 Now, we are in module two. So after we built the static page in the previous module, we're now going to move on to building a living website. This is the point where things start to feel more real and more interactive.
 
 I'm going to walk you through the transition from a static page to something that actually feels alive, responsive, and engaging so you can clearly understand what changes and why it matters.
 
-Here, we can create a cARCKHÉtic website using modern web animation together with video AI. This is where we start adding motion and visual flow to the experience.
+Here, we can create a cARCKHêtic website using modern web animation together with video AI. This is where we start adding motion and visual flow to the experience.
 
 Before we jump into the hands-on part of prompt development, I want to first give you a short introduction. In this section, I'm going to explain a bit about what motion actually is and how we should think about it in web design.
 
@@ -169,7 +169,7 @@ The key thing to remember is balance. Motion should help clarify what's happenin
 
 ---
 
-## CapÃ­tulo 1 â€” Motion Design para Web (Fundamentos)
+## CapêÂ­tulo 1 ê¢â¬â Motion Design para Web (Fundamentos)
 
 Now we're going to chapter one, where I'll introduce motion design for the web. At this stage, we're setting the foundation for how motion should behave and feel.
 
@@ -185,17 +185,17 @@ Instead, we want movement that feels natural, smooth, and physically believable.
 
 The last law is visual hierarchy. This is about using motion to guide the user's attention to what matters most, creating a clear and intuitive flow through the page.
 
-When it comes to motion, there are generally two types we'll be working with. The first one is aesthetic motion, and the second one is cARCKHÉtic motion.
+When it comes to motion, there are generally two types we'll be working with. The first one is aesthetic motion, and the second one is cARCKHêtic motion.
 
 Aesthetic motion is usually more subtle and functional. It focuses on small animations that improve usability and clarity. A simple example would be a button hover effect.
 
-CARCKHÉtic motion is more immersive and expressive. It's designed to create a sense of story and flow between different sections of the website.
+CARCKHêtic motion is more immersive and expressive. It's designed to create a sense of story and flow between different sections of the website.
 
 Motion should always have a purpose. The first purpose is to guide attention. The second is to provide feedback. The third is to delight the user.
 
 ---
 
-## CapÃ­tulo 2 â€” AplicaÃ§Ã£o de Motion nas SeÃ§Ãµes do Site
+## CapêÂ­tulo 2 ê¢â¬â AplicaêÂ§êÂ£o de Motion nas SeêÂ§êÂµes do Site
 
 The main idea is that as users move down the page, I want each section to come alive naturally instead of appearing all at once.
 
@@ -209,7 +209,7 @@ Next is the footer section. For the footer, I want the content to rise smoothly 
 
 ---
 
-## CapÃ­tulo 3 â€” Visual Focus, Ritmo e Timing
+## CapêÂ­tulo 3 ê¢â¬â Visual Focus, Ritmo e Timing
 
 Now let's look at an example focused on visual focus. In a correct prompt, we should limit motion so only a small handful of elements are moving at any given moment.
 
@@ -219,7 +219,7 @@ A wrong prompt would be asking the AI to animate every element on the page as th
 
 For rhythm and timing, quick feedback animations like button presses or hover effects should feel almost instant.
 
-At the same time, larger cARCKHÉtic reveals such as entire sections entering the screen should feel smooth and graceful.
+At the same time, larger cARCKHêtic reveals such as entire sections entering the screen should feel smooth and graceful.
 
 Using the same long animation timing for tiny interactions and big transitions makes the experience feel confusing and unresponsive.
 
@@ -227,9 +227,9 @@ We should focus on animating movement and opacity and avoid constantly changing 
 
 ---
 
-## CapÃ­tulo 4 â€” TransiÃ§Ãµes CARCKHÉtogrÃ¡ficas
+## CapêÂ­tulo 4 ê¢â¬â TransiêÂ§êÂµes CARCKHêtogrêÂ¡ficas
 
-Now we've arrived at chapter four, which is cARCKHÉtic transition.
+Now we've arrived at chapter four, which is cARCKHêtic transition.
 
 The idea is to adjust how content is revealed so it feels more dramatic and intentional when users first enter the page or move through it.
 
@@ -239,11 +239,11 @@ For the hero section, I want the reveal to feel like a movie opening. The backgr
 
 Transitions between sections should feel smooth and continuous, like sections dissolving into each other.
 
-The final goal is for the website to feel like one continuous cARCKHÉtic sequence rather than separate animations stacked together.
+The final goal is for the website to feel like one continuous cARCKHêtic sequence rather than separate animations stacked together.
 
 ---
 
-## CapÃ­tulo 6 â€” IntegraÃ§Ã£o de VÃ­deo com IA
+## CapêÂ­tulo 6 ê¢â¬â IntegraêÂ§êÂ£o de VêÂ­deo com IA
 
 Now we're moving into chapter six, which is AI video integration.
 
@@ -259,7 +259,7 @@ On mobile devices, the experience should fall back to a static image to ensure p
 
 ---
 
-## CapÃ­tulo 7 â€” OtimizaÃ§Ã£o e RevisÃ£o Final
+## CapêÂ­tulo 7 ê¢â¬â OtimizaêÂ§êÂ£o e RevisêÂ£o Final
 
 This chapter focuses on optimization for smooth playback, especially for scroll scrubbing video.
 
@@ -267,7 +267,7 @@ We compress the video, adjust lazy loading, refine scroll mapping, and define fa
 
 After refining the prompt, the interaction feels smooth and performs well on both desktop and mobile.
 
-In the final review, we confirm that scroll-based motion works correctly, cARCKHÉtic effects trigger as expected, and all interactions feel natural.
+In the final review, we confirm that scroll-based motion works correctly, cARCKHêtic effects trigger as expected, and all interactions feel natural.
 
 At this point, the website feels complete, interactive, and polished.
 

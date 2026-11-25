@@ -1,28 +1,28 @@
-# Vibe Coding — Criação de Sites com Um Único Prompt
+# Vibe Coding — Criaçêo de Sites com Um Único Prompt
 
 Este documento consolida **todo o conteúdo apresentado nas três transcrições** do curso, organizado de forma clara e prática, servindo como referência completa do método.
 
 ---
 
-## Visão Geral
-O curso apresenta uma nova abordagem para criação de sites chamada **Vibe Coding**, onde o criador descreve a intenção visual, estrutural e de experiência do site em linguagem natural, e a **IA gera automaticamente o código** (HTML, CSS e interações).
+## Visêo Geral
+O curso apresenta uma nova abordagem para criaçêo de sites chamada **Vibe Coding**, onde o criador descreve a intençêo visual, estrutural e de experiência do site em linguagem natural, e a **IA gera automaticamente o código** (HTML, CSS e interações).
 
-O objetivo é permitir que qualquer pessoa crie **sites profissionais, modernos e prontos para produção**, sem escrever código manualmente.
+O objetivo é permitir que qualquer pessoa crie **sites profissionais, modernos e prontos para produçêo**, sem escrever código manualmente.
 
 ---
 
 ## ETAPA 1 — Fundamentos e Mentalidade do Vibe Coding
 
 ### O que é Vibe Coding
-Vibe Coding é o processo de **descrever o “clima” (vibe)** do site — layout, hierarquia, espaçamento, tipografia, estilo visual, movimento e sensação — em vez de programar linha por linha.
+Vibe Coding é o processo de **descrever o “clima” (vibe)** do site — layout, hierarquia, espaçamento, tipografia, estilo visual, movimento e sensaçêo — em vez de programar linha por linha.
 
-Você atua como um **diretor criativo**, enquanto a IA cuida da execução técnica.
+Você atua como um **diretor criativo**, enquanto a IA cuida da execuçêo técnica.
 
 ### Principais Características
-- Não exige experiência técnica
-- Foco em criatividade e intenção
+- Nêo exige experiência técnica
+- Foco em criatividade e intençêo
 - IA converte linguagem natural em código
-- Criação rápida e acessível
+- Criaçêo rápida e acessível
 
 ### Objetivo Inicial do Curso
 - Criar um **site profissional de uma página**
@@ -40,7 +40,7 @@ O prompt possui **três pilares principais**:
 
 1. Estrutura da página
 2. Branding e identidade visual
-3. Conteúdo detalhado por seção
+3. Conteúdo detalhado por seçêo
 
 ---
 
@@ -57,7 +57,7 @@ Antes da IA gerar qualquer coisa, ela precisa de um **mapa claro do site**.
 - Footer
 
 Essa estrutura cria um fluxo natural:
-**apresentação → credibilidade → oferta → conversão**
+**apresentaçêo → credibilidade → oferta → conversêo**
 
 A estrutura funciona como o esqueleto onde todo o design será aplicado.
 
@@ -91,7 +91,7 @@ Aqui você define como o site deve **parecer e se comportar visualmente**.
 - Elementos surgindo com fluidez
 
 **Experiência Mobile**
-- Sensação de app nativo
+- Sensaçêo de app nativo
 - Áreas de toque grandes
 - Imagens em largura total
 
@@ -99,32 +99,32 @@ Esses detalhes evitam resultados genéricos e garantem um visual premium.
 
 ---
 
-### 2.3 Conteúdo Detalhado por Seção
+### 2.3 Conteúdo Detalhado por Seçêo
 
-Cada seção do site deve ser **claramente rotulada** no prompt (Header, Hero, etc.).
+Cada seçêo do site deve ser **claramente rotulada** no prompt (Header, Hero, etc.).
 
-Para cada seção, sempre incluir **três tipos de instrução**:
+Para cada seçêo, sempre incluir **três tipos de instruçêo**:
 
 #### 1. Content Inputs (Textos)
 Textos exatos que devem aparecer:
 - Headlines
 - Subtítulos
 - CTAs
-- Navegação
+- Navegaçêo
 - Bios e estatísticas
 
 Isso evita que a IA invente conteúdo.
 
 #### 2. Content Elements (Layout e UI)
-Define como os elementos são organizados:
+Define como os elementos sêo organizados:
 - Grids
 - Cards
 - Botões
-- Navegação
+- Navegaçêo
 - Hierarquia visual
 
 #### 3. Styling e Visual
-Define o visual da seção:
+Define o visual da seçêo:
 - Fundos
 - Tipografia
 - Efeitos
@@ -144,7 +144,7 @@ Isso reduz aleatoriedade e ancora a IA em um estilo específico.
 
 ---
 
-## ETAPA 3 — Execução no Firebase Studio
+## ETAPA 3 — Execuçêo no Firebase Studio
 
 ### Acesso ao Firebase Studio
 - URL: https://studio.firebase.google.com
@@ -152,7 +152,7 @@ Isso reduz aleatoriedade e ancora a IA em um estilo específico.
 
 ---
 
-### Execução do Prompt
+### Execuçêo do Prompt
 
 1. Colar o prompt completo no campo principal
 2. Clicar em **“Prototype with AI”**
@@ -166,9 +166,9 @@ O site já nasce:
 
 ---
 
-### Refinamento Pós-Geração
+### Refinamento Pós-Geraçêo
 
-Após a geração, é possível ajustar:
+Após a geraçêo, é possível ajustar:
 - Textos
 - Cores
 - Tipografia
@@ -185,7 +185,7 @@ A IA interpreta essas instruções e aplica as mudanças.
 
 ---
 
-### Visualização e Edição de Código
+### Visualizaçêo e Ediçêo de Código
 
 - Acesso completo ao código gerado
 - Possibilidade de ajustes manuais
@@ -193,7 +193,7 @@ A IA interpreta essas instruções e aplica as mudanças.
 
 ---
 
-### Integração com GitHub
+### Integraçêo com GitHub
 
 - Conectar o projeto a um repositório
 - Versionamento completo
@@ -201,7 +201,7 @@ A IA interpreta essas instruções e aplica as mudanças.
 
 ---
 
-### Publicação
+### Publicaçêo
 
 O site pode ser:
 - Publicado diretamente pelo Firebase
@@ -222,11 +222,11 @@ Quando você combina:
 - Instruções visuais específicas
 - Linguagem clara
 
-A IA é capaz de gerar **interfaces prontas para produção com um único prompt**.
+A IA é capaz de gerar **interfaces prontas para produçêo com um único prompt**.
 
 Essa é a essência do **Vibe Coded Web Development**:
 
-> Você projeta com intenção. A IA faz o trabalho pesado.
+> Você projeta com intençêo. A IA faz o trabalho pesado.
 
 ---
 
@@ -235,8 +235,8 @@ Essa é a essência do **Vibe Coded Web Development**:
 - Sites modernos
 - Visual premium
 - Consistência visual
-- Alta velocidade de produção
-- Total controle pós-geração
+- Alta velocidade de produçêo
+- Total controle pós-geraçêo
 
 Este documento representa a **base completa do curso e do método**.
 

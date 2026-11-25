@@ -2,13 +2,13 @@
 
 Direto e objetivo:
 
-➡️ Comparado com soluções de mercado (como construtores no-code tradicionais, CMS ou builders com IA), esse modelo não é apenas uma ferramenta — é uma *metodologia estruturada*.
+➡️ Comparado com soluções de mercado (como construtores no-code tradicionais, CMS ou builders com IA), esse modelo nêo é apenas uma ferramenta — é uma *metodologia estruturada*.
 
-Ele é a estrutura de um framework de produção de sites, onde cada site é criado seguindo regras claras de:
+Ele é a estrutura de um framework de produçêo de sites, onde cada site é criado seguindo regras claras de:
 
-✔️ Estruturação (layout base padronizado)
+✔️ Estruturaçêo (layout base padronizado)
 ✔️ Diretrizes de marca (visual, motion, experiência)
-✔️ Separação e instruções de conteúdo
+✔️ Separaçêo e instruções de conteúdo
 ✔️ Modelo de prompt reutilizável e preciso
 
 Esse modelo é mais do que um gerador aleatório de layouts:
@@ -16,10 +16,10 @@ Esse modelo é mais do que um gerador aleatório de layouts:
 
 Em termos de mercado, ele funciona como um:
 
-### 🔹 *Framework de criação de websites baseado em IA*
+### 🔹 *Framework de criaçêo de websites baseado em IA*
 
-Não é apenas “usar IA para gerar um site” —
-É ter um padrão repetível assim como soluções profissionais utilizam em workflows corporativos.
+Nêo é apenas “usar IA para gerar um site” —
+É ter um padrêo repetível assim como soluções profissionais utilizam em workflows corporativos.
 
 ✅ Estrutura
 ✅ Identidade visual definida
@@ -33,7 +33,7 @@ Se quiser colocar isso numa frase de impacto:
 
 ### “Temos um modelo estruturado para criar sites com IA — mais próximo de um framework profissional do que de um simples gerador de páginas.”
 
-Abaixo estão 5 modelos estruturais diferentes, todos compatíveis com o método AI WCF👇
+Abaixo estêo 5 modelos estruturais diferentes, todos compatíveis com o método AI WCF👇
 (seja direto, reutilizável e claro)
 
 ---
@@ -51,7 +51,7 @@ FOOTER
 
 Uso:
 
-* Mais conversão
+* Mais conversêo
 * Mais simples
 * Alta clareza para IA
 
@@ -64,7 +64,7 @@ Uso:
 HEADER
 HERO
 AUTHORITY PROOF (stats, logos, social proof)
-ABOUT (story + visão)
+ABOUT (story + visêo)
 SERVICES
 CTA
 FOOTER
@@ -91,7 +91,7 @@ FOOTER
 Diferença-chave:
 
 * Menos storytelling
-* Mais explicação funcional
+* Mais explicaçêo funcional
 * Estrutura orientada a produto
 
 ---
@@ -111,7 +111,7 @@ FOOTER
 Diferença-chave:
 
 * Visual antes do texto
-* Emoção > explicação
+* Emoçêo > explicaçêo
 * IA recebe mais instruções estéticas
 
 ---
@@ -131,13 +131,13 @@ Diferença-chave:
 
 * Header pode ser embutido
 * CTA aparece múltiplas vezes
-* Estrutura agressiva de conversão
+* Estrutura agressiva de conversêo
 
 ---
 
-## 🧠 Conclusão direta
+## 🧠 Conclusêo direta
 
-✔️ O modelo NÃO é rígido
+✔️ O modelo NêO é rígido
 ✔️ Você pode ter 5 (ou mais) estruturas oficiais
 ✔️ Todas usam:
 
@@ -146,4 +146,4 @@ Diferença-chave:
 * Conteúdo bem separado
 * Prompt estruturado
 
-### 👉 Isso transforma o método em um framework modular de criação de sites com IA.
+### 👉 Isso transforma o método em um framework modular de criaçêo de sites com IA.

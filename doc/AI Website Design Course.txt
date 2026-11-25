@@ -1,47 +1,47 @@
 AI Website Design Course
 
 1. One-Page Demo Website
-1.1 â€” Understanding Vibecoding
-1.2 â€” The â€œOne Prompt Websiteâ€ Formula
-1.3 â€” Building the Site in Firebase Studio
+1.1 ê¢â¬â Understanding Vibecoding
+1.2 ê¢â¬â The ê¢â¬ÅOne Prompt Websiteê¢â¬Â Formula
+1.3 ê¢â¬â Building the Site in Firebase Studio
 1.4 - Arquitetura do Site
 1.5 - Diretrizes de Marca
 2. Animation + Micro-Interactions
-2.1 â€” Introduction to Motion Design for the Web
-2.2 â€” Scroll-Based Motion
-2.3 â€” Micro-Interactions
-2.4 â€” CARCKHÉtic Transitions
-2.5 â€” AI Video Integration (Flow / Veo / Runway)
-2.6 â€” Optimization for Smooth Playback
-2.7 â€” Final Check
+2.1 ê¢â¬â Introduction to Motion Design for the Web
+2.2 ê¢â¬â Scroll-Based Motion
+2.3 ê¢â¬â Micro-Interactions
+2.4 ê¢â¬â CARCKHêtic Transitions
+2.5 ê¢â¬â AI Video Integration (Flow / Veo / Runway)
+2.6 ê¢â¬â Optimization for Smooth Playback
+2.7 ê¢â¬â Final Check
 3. Deployment, Domain & Infrastructure
-3.1 â€” Choosing Your Hosting Platform
-3.2 â€” Setting Up Firebase
-3.3 â€” Connecting a Custom Domain
-3.4 â€” Infrastructure Foundations
-3.5 â€” Adding Contact Forms
-3.6 â€” Adding a Simple CMS for Text Updates
+3.1 ê¢â¬â Choosing Your Hosting Platform
+3.2 ê¢â¬â Setting Up Firebase
+3.3 ê¢â¬â Connecting a Custom Domain
+3.4 ê¢â¬â Infrastructure Foundations
+3.5 ê¢â¬â Adding Contact Forms
+3.6 ê¢â¬â Adding a Simple CMS for Text Updates
 4. SEO Foundations for AI-Designed Websites
-4.1 â€” SEO Basics for Motion Websites
-4.2 â€” On-Page SEO Setup
-4.3 â€” Speed Optimization
-4.4 â€” Technical SEO
-4.5 â€” AI-Optimized Content Writing
-4.6 â€” Indexing & Search Console
+4.1 ê¢â¬â SEO Basics for Motion Websites
+4.2 ê¢â¬â On-Page SEO Setup
+4.3 ê¢â¬â Speed Optimization
+4.4 ê¢â¬â Technical SEO
+4.5 ê¢â¬â AI-Optimized Content Writing
+4.6 ê¢â¬â Indexing & Search Console
 5. Security Fundamentals for AI-Generated Websites
-5.1 â€” Web Security Basics (Beginner-Friendly)
-5.2 â€” Firebase Security Rules
-5.3 â€” HTTPS, SSL & Domain Security
-5.4 â€” Form & API Protection
-5.5 â€” Access Controls, Backup & Version Control
-5.6 â€” Backup & Version Control
-5.6 â€” Backup & Version Control
+5.1 ê¢â¬â Web Security Basics (Beginner-Friendly)
+5.2 ê¢â¬â Firebase Security Rules
+5.3 ê¢â¬â HTTPS, SSL & Domain Security
+5.4 ê¢â¬â Form & API Protection
+5.5 ê¢â¬â Access Controls, Backup & Version Control
+5.6 ê¢â¬â Backup & Version Control
+5.6 ê¢â¬â Backup & Version Control
 
 
 1.1/5 - AI Website Design Course
 https://t.me/c/3650752323/964
 
-1.2/5 - A FÃ³rmula do Site de Um Ãšnico Ponto de Interesse
+1.2/5 - A FêÂ³rmula do Site de Um êÅ¡nico Ponto de Interesse
 https://t.me/c/3650752323/991
 
 1.3/5 - Construindo o site no Firebase Studio
@@ -54,46 +54,46 @@ https://t.me/c/3650752323/1263
 https://t.me/c/3650752323/1274
 
 
-2.0/5 -  AnimaÃ§Ã£o + MicrointeraÃ§Ãµes
-2.0/5 -  IntroduÃ§Ã£o ao Motion Design para a Web  
+2.0/5 -  AnimaêÂ§êÂ£o + MicrointeraêÂ§êÂµes
+2.0/5 -  IntroduêÂ§êÂ£o ao Motion Design para a Web  
 https://t.me/c/3650752323/1047
 
 2.2/5 - Movimento baseado em rolagem
 https://t.me/c/3650752323/1064
 
-2.3/5 - MicrointeraÃ§Ãµes
+2.3/5 - MicrointeraêÂ§êÂµes
 https://t.me/c/3650752323/1082
 
-2.4/5 - TransiÃ§Ãµes CARCKHÉtogrÃ¡ficas
+2.4/5 - TransiêÂ§êÂµes CARCKHêtogrêÂ¡ficas
 https://t.me/c/3650752323/1109
 
-2.5/5 - IntegraÃ§Ã£o de vÃ­deo com IA (Flow / Veo / Runway)
+2.5/5 - IntegraêÂ§êÂ£o de vêÂ­deo com IA (Flow / Veo / Runway)
 https://t.me/c/3650752323/1123
 
-2.6/5 - OtimizaÃ§Ã£o para reproduÃ§Ã£o fluida
+2.6/5 - OtimizaêÂ§êÂ£o para reproduêÂ§êÂ£o fluida
 https://t.me/c/3650752323/1140
 
-2.7/5 - VerificaÃ§Ã£o Final
-https://t.me/c/3650752323/11552.0/5 -  AnimaÃ§Ã£o + MicrointeraÃ§Ãµes
-2.0/5 -  IntroduÃ§Ã£o ao Motion Design para a Web  
+2.7/5 - VerificaêÂ§êÂ£o Final
+https://t.me/c/3650752323/11552.0/5 -  AnimaêÂ§êÂ£o + MicrointeraêÂ§êÂµes
+2.0/5 -  IntroduêÂ§êÂ£o ao Motion Design para a Web  
 https://t.me/c/3650752323/1047
 
 2.2/5 - Movimento baseado em rolagem
 https://t.me/c/3650752323/1064
 
-2.3/5 - MicrointeraÃ§Ãµes
+2.3/5 - MicrointeraêÂ§êÂµes
 https://t.me/c/3650752323/1082
 
-2.4/5 - TransiÃ§Ãµes CARCKHÉtogrÃ¡ficas
+2.4/5 - TransiêÂ§êÂµes CARCKHêtogrêÂ¡ficas
 https://t.me/c/3650752323/1109
 
-2.5/5 - IntegraÃ§Ã£o de vÃ­deo com IA (Flow / Veo / Runway)
+2.5/5 - IntegraêÂ§êÂ£o de vêÂ­deo com IA (Flow / Veo / Runway)
 https://t.me/c/3650752323/1123
 
-2.6/5 - OtimizaÃ§Ã£o para reproduÃ§Ã£o fluida
+2.6/5 - OtimizaêÂ§êÂ£o para reproduêÂ§êÂ£o fluida
 https://t.me/c/3650752323/1140
 
-2.7/5 - VerificaÃ§Ã£o Final
+2.7/5 - VerificaêÂ§êÂ£o Final
 https://t.me/c/3650752323/1155
 
 
@@ -105,16 +105,16 @@ https://t.me/c/3650752323/1155
 
 ---
 
-## ðŸ”¹ 1. VariaÃ§Ã£o de ESTRUTURA **
+## ê°Å¸âÂ¹ 1. VariaêÂ§êÂ£o de ESTRUTURA **
 
 Ex.: One-page, SaaS, Authority, Creative, Conversion
-â†’ Define a ordem e o fluxo do site.
+ê¢â â Define a ordem e o fluxo do site.
 
 ---
 
-## ðŸ”¹ 2. VariaÃ§Ã£o de IDENTIDADE VISUAL
+## ê°Å¸âÂ¹ 2. VariaêÂ§êÂ£o de IDENTIDADE VISUAL
 
-Mesmo conteÃºdo, sensaÃ§Ã£o completamente diferente.
+Mesmo conteêÂºdo, sensaêÂ§êÂ£o completamente diferente.
 
 Exemplos:
 
@@ -124,27 +124,27 @@ Exemplos:
 * Neo-futurista / cyber
 * Editorial / luxury
 
-ðŸ‘‰ IA muda cores, tipografia, materiais e contraste.
+ê°Å¸ââ° IA muda cores, tipografia, materiais e contraste.
 
 ---
 
-## ðŸ”¹ 3. VariaÃ§Ã£o de MOTION & INTERAÃ‡ÃƒO
+## ê°Å¸âÂ¹ 3. VariaêÂ§êÂ£o de MOTION & INTERAêâ¡êÆO
 
 Define *como o site se move*.
 
 Exemplos:
 
-* Zero motion (estÃ¡tico, editorial)
-* MicrointeraÃ§Ãµes sutis
+* Zero motion (estêÂ¡tico, editorial)
+* MicrointeraêÂ§êÂµes sutis
 * Parallax suave
 * Scrollytelling pesado
-* Motion cARCKHÉtogrÃ¡fico
+* Motion cARCKHêtogrêÂ¡fico
 
-ðŸ‘‰ Impacta percepÃ§Ã£o de qualidade e modernidade.
+ê°Å¸ââ° Impacta percepêÂ§êÂ£o de qualidade e modernidade.
 
 ---
 
-## ðŸ”¹ 4. VariaÃ§Ã£o de DENSIDADE DE CONTEÃšDO
+## ê°Å¸âÂ¹ 4. VariaêÂ§êÂ£o de DENSIDADE DE CONTEêÅ¡DO
 
 Quanto o site fala.
 
@@ -153,66 +153,66 @@ Exemplos:
 * Ultra minimal (poucas palavras)
 * Equilibrado (copy + visual)
 * Informativo (text-heavy)
-* Visual-first (texto mÃ­nimo)
+* Visual-first (texto mêÂ­nimo)
 
-ðŸ‘‰ IA ajusta espaÃ§amento, ritmo e hierarquia.
+ê°Å¸ââ° IA ajusta espaêÂ§amento, ritmo e hierarquia.
 
 ---
 
-## ðŸ”¹ 5. VariaÃ§Ã£o de TIPO DE CTA
+## ê°Å¸âÂ¹ 5. VariaêÂ§êÂ£o de TIPO DE CTA
 
 Define o objetivo principal.
 
 Exemplos:
 
-* ConversÃ£o direta (Buy / Book / Sign up)
-* ExploraÃ§Ã£o (View work / Learn more)
+* ConversêÂ£o direta (Buy / Book / Sign up)
+* ExploraêÂ§êÂ£o (View work / Learn more)
 * Relacionamento (Join / Subscribe)
 * Autoridade (Read insights)
 
 ---
 
-## ðŸ”¹ 6. VariaÃ§Ã£o de DISPOSITIVO-PRIMEIRO
+## ê°Å¸âÂ¹ 6. VariaêÂ§êÂ£o de DISPOSITIVO-PRIMEIRO
 
 Onde o design nasce.
 
 Exemplos:
 
 * Mobile-first (app-like)
-* Desktop-first (cARCKHÉtogrÃ¡fico)
-* Touch-first (quiosque / exposiÃ§Ã£o)
+* Desktop-first (cARCKHêtogrêÂ¡fico)
+* Touch-first (quiosque / exposiêÂ§êÂ£o)
 
 ---
 
-## ðŸ”¹ 7. VariaÃ§Ã£o de TOM DA MARCA
+## ê°Å¸âÂ¹ 7. VariaêÂ§êÂ£o de TOM DA MARCA
 
 Como a marca fala.
 
 Exemplos:
 
-* TÃ©cnica / corporativa
+* TêÂ©cnica / corporativa
 * Confiante / premium
 * Criativa / ousada
-* Humana / prÃ³xima
+* Humana / prêÂ³xima
 
 ---
 
-## ðŸ§  O MODELO FINAL (direto)
+## ê°Å¸Â§Â  O MODELO FINAL (direto)
 
-VocÃªs nÃ£o tÃªm um modelo de site.
-VocÃªs tÃªm um framework com mÃºltiplos eixos de variaÃ§Ã£o:
+VocêÂªs nêÂ£o têÂªm um modelo de site.
+VocêÂªs têÂªm um framework com mêÂºltiplos eixos de variaêÂ§êÂ£o:
 
 SITE = Estrutura
      + Identidade Visual
      + Motion
-     + Densidade de ConteÃºdo
+     + Densidade de ConteêÂºdo
      + Tipo de CTA
      + Dispositivo-primeiro
      + Tom de Voz
 
-ðŸ‘‰ Isso permite dezenas de combinaÃ§Ãµes, mantendo:
+ê°Å¸ââ° Isso permite dezenas de combinaêÂ§êÂµes, mantendo:
 
-* ConsistÃªncia
+* ConsistêÂªncia
 * Qualidade
 * Previsibilidade com IA
 
@@ -220,42 +220,42 @@ SITE = Estrutura
 
 Criei um documento completo, estruturado e profissional no canvas com:
 
-* ExplicaÃ§Ã£o clara do Vibecoding
-* DefiniÃ§Ã£o do One Prompt Website
+* ExplicaêÂ§êÂ£o clara do Vibecoding
+* DefiniêÂ§êÂ£o do One Prompt Website
 * 5 modelos de estrutura de sites
-* Todos os eixos de variaÃ§Ã£o (visual, motion, conteÃºdo, CTA, etc.)
-* A matriz de decisÃ£o
-* FinalizaÃ§Ã£o com o prompt paramÃ©trico automÃ¡tico, pronto para uso
+* Todos os eixos de variaêÂ§êÂ£o (visual, motion, conteêÂºdo, CTA, etc.)
+* A matriz de decisêÂ£o
+* FinalizaêÂ§êÂ£o com o prompt paramêÂ©trico automêÂ¡tico, pronto para uso
 
-ðŸ‘‰ Esse documento jÃ¡ estÃ¡ no nÃ­vel de:
+ê°Å¸ââ° Esse documento jêÂ¡ estêÂ¡ no nêÂ­vel de:
 
-* Material didÃ¡tico
-* Base de metodologia prÃ³pria
-* Framework apresentÃ¡vel para clientes, alunos ou produto
+* Material didêÂ¡tico
+* Base de metodologia prêÂ³pria
+* Framework apresentêÂ¡vel para clientes, alunos ou produto
 
 
 
-## ðŸ§  Como usar essa tabela
+## ê°Å¸Â§Â  Como usar essa tabela
 
-* Linha = experiÃªncia
-* Coluna = decisÃ£o de design
-* VocÃª escolhe um preset e sabe exatamente:
+* Linha = experiêÂªncia
+* Coluna = decisêÂ£o de design
+* VocêÂª escolhe um preset e sabe exatamente:
 
   * Como entra
   * Como se move
   * Como reage
-  * QuÃ£o intenso Ã©
+  * QuêÂ£o intenso êÂ©
 
 ---
 
-## ðŸ“Œ Leitura rÃ¡pida (atalhos)
+## ê°Å¸âÅ Leitura rêÂ¡pida (atalhos)
 
-* Quer luxo silencioso â†’ Premium Calm
-* Quer energia jovem â†’ Youth Energy
-* Quer aÃ§Ã£o e execuÃ§Ã£o â†’ Momentum
-* Quer aprendizado profundo â†’ Flow Learning
-* Quer impacto e visÃ£o â†’ Future Impact
-* Quer empatia e conexÃ£o â†’ Human Pulse
+* Quer luxo silencioso ê¢â â Premium Calm
+* Quer energia jovem ê¢â â Youth Energy
+* Quer aêÂ§êÂ£o e execuêÂ§êÂ£o ê¢â â Momentum
+* Quer aprendizado profundo ê¢â â Flow Learning
+* Quer impacto e visêÂ£o ê¢â â Future Impact
+* Quer empatia e conexêÂ£o ê¢â â Human Pulse
 
 
-por q entender de WEB novamente Ã© Importante,  estamos em uma mudanca onde o ecommerce comeca incorporar a IA, entao nao Ã© mais link e sim conteudo e contexto.  entao qual sera o papel da web. como ser relevante nas pesquisas da iapor q entender de WEB novamente Ã© Importante,  estamos em uma mudanca onde o ecommerce comeca incorporar a IA, entao nao Ã© mais link e sim conteudo e contexto.  entao qual sera o papel da web. como ser relevante nas pesquisas da ia
+por q entender de WEB novamente êÂ© Importante,  estamos em uma mudanca onde o ecommerce comeca incorporar a IA, entao nao êÂ© mais link e sim conteudo e contexto.  entao qual sera o papel da web. como ser relevante nas pesquisas da iapor q entender de WEB novamente êÂ© Importante,  estamos em uma mudanca onde o ecommerce comeca incorporar a IA, entao nao êÂ© mais link e sim conteudo e contexto.  entao qual sera o papel da web. como ser relevante nas pesquisas da ia
